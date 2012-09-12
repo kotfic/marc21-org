@@ -1,0 +1,439 @@
+* 00X: Control Fields
+** 001 - Control Number 
+*** Full
+*** Concise
+** 003 - Control Number Identifier 
+*** Full
+*** Concise
+** 005 - Date and Time of Latest Transaction 
+*** Full
+*** Concise
+** 006 - Fixed-Length Data Elements - Additional Material Characteristics 
+*** Full
+*** Concise
+** 007 - Physical Description Fixed Field 
+*** Full
+*** Concise
+** 008 - Fixed-Length Data Elements 
+*** Full
+*** Concise
+* 01X-09X: Numbers and Code Fields
+** DEFINITION AND SCOPE  
+   Fields 01X-09X contain standard numbers, classification numbers, codes, and other data elements relating to the record.
+** CONTENT DESIGNATOR HISTORY
+   Field 011 - Linking Library of Congress Control Number (BK, MP, MU, VM, SE, USMARC only) [OBSOLETE, 1993]
+   Both indicator positions were undefined. A subfield $a (Linking LC control number) was defined. Linking Library of Congress control numbers may be recorded in the 760-787 linking entry fields.
+
+   Field 026 - Fingerprint Identifier [NEW, 2002]
+
+   Field 031 - Musical Incipits Information [NEW, 2004]
+
+   Field 038 - Record Content Licensor [NEW, 2002]
+
+   Field 039 - Level of Bibliographic Control and Coding Detail [OBSOLETE, 1986]
+   Field 039 was made obsolete when Leader/17 (Encoding level) code 7 was redefined to identify cataloging that conforms to national minimal level requirements. Field 039 was defined in 1980 to allow an organization to characterize the fullness of various cataloging aspects of records contributed to a national database.
+
+   First indicator position specified the standard against which the data were applied (0 = U.S. national level bibliographic record; 8 = Other); the second indicator was undefined. The subfield codes and the defined codes for each were: $a Level of rules used in bibliographic description (0 = No level defined by rules, 1 = Minimal, 2 = Less than full, 3 = Full); $b Level of effort used to assign nonsubject heading access points (2 = Less than full, 3 = Full); $c Level of effort used to assign subject headings (0 = None, 2 = Less than full, 3 = Full); $d Level of effort used to assign classification (0 = None, 2 = Less than full, 3 = Full); $e Number of fixed field character positions coded (0 = None, 1 = Minimal, 2 = Most necessary, 3 = Full).
+
+   Field 046 - Special Coded Dates [REDEFINED, 2002]
+   Field 046 was redefined as a repeatable field.
+
+   Field 047 - Form of musical composition code [REDEFINED, 2006]
+   Field 047 was redefined as a repeatable field.
+
+   Field 083 - Additional Dewey Decimal Classification number [NEW, 2008]
+
+   Field 085 - Synthesized classification number components [NEW, 2008] 
+
+   Field 087 - Report Number [OBSOLETE, 1997] [CAN/MARC only]
+   Both indicator positions were undefined. The subfield codes were: $a (Report number) and subfield $z (Canceled/invalid report number).
+
+   Field 088 - Document Shelving Number (CODOC) [REDEFINED, 1997] [CAN/MARC only]
+   Both indicator positions were undefined. The subfield codes were: $a (Report number) and subfield $z (Canceled/invalid report number).
+** 010 - Library of Congress Control Number (NR) 
+*** Full 
+*** Concise
+** 013 - Patent Control Information (R) 
+*** Full 
+*** Concise
+** 015 - National Bibliography Number (R) 
+*** Full 
+*** Concise
+** 016 - National Bibliographic Agency Control Number (R) 
+*** Full 
+*** Concise
+** 017 - Copyright or Legal Deposit Number (R) 
+*** Full 
+*** Concise
+** 018 - Copyright Article-Fee Code (NR) 
+*** Full 
+*** Concise
+** 020 - International Standard Book Number (R) 
+*** Full 
+*** Concise
+** 022 - International Standard Serial Number (R) 
+*** Full 
+*** Concise
+** 024 - Other Standard Identifier (R) 
+*** Full 
+*** Concise
+** 025 - Overseas Acquisition Number (R) 
+*** Full 
+*** Concise
+** 026 - Fingerprint Identifier (R) 
+*** Full 
+*** Concise
+** 027 - Standard Technical Report Number (R) 
+*** Full 
+*** Concise
+** 028 - Publisher Number (R) 
+*** Full 
+*** Concise
+** 030 - CODEN Designation (R) 
+*** Full 
+*** Concise
+** 031 - Musical Incipits Information (R) 
+*** Full 
+*** Concise
+** 032 - Postal Registration Number (R) 
+*** Full 
+*** Concise
+** 033 - Date/Time and Place of an Event (R) 
+*** Full 
+*** Concise
+** 034 - Coded Cartographic Mathematical Data (R) 
+*** Full 
+*** Concise
+** 035 - System Control Number (R) 
+*** Full 
+*** Concise
+** 036 - Original Study Number for Computer Data Files (NR) 
+*** Full 
+*** Concise
+** 037 - Source of Acquisition (R) 
+*** Full 
+*** Concise
+** 038 - Record Content Licensor (NR) 
+*** Full 
+*** Concise
+** 040 - Cataloging Source (NR) 
+*** Full 
+*** Concise
+** 041 - Language Code (R) 
+*** Full 
+*** Concise
+** 042 - Authentication Code (NR) 
+*** Full 
+*** Concise
+** 043 - Geographic Area Code (NR) 
+*** Full 
+*** Concise
+** 044 - Country of Publishing/Producing Entity Code (NR) 
+*** Full 
+*** Concise
+** 045 - Time Period of Content (NR) 
+*** Full 
+*** Concise
+** 046 - Special Coded Dates (R) 
+*** Full 
+*** Concise
+** 047 - Form of Musical Composition Code (NR) 
+*** Full 
+*** Concise
+** 048 - Number of Musical Instruments or Voices Codes (R) 
+*** Full 
+*** Concise
+** 050 - Library of Congress Call Number (R) 
+*** Full 
+*** Concise
+** 051 - Library of Congress Copy, Issue, Offprint Statement (R) 
+*** Full 
+*** Concise
+** 052 - Geographic Classification (R) 
+*** Full 
+*** Concise
+** 055 - Classification Numbers Assigned in Canada (R) 
+*** Full 
+*** Concise
+** 060 - National Library of Medicine Call Number (R) 
+*** Full 
+*** Concise
+** 061 - National Library of Medicine Copy Statement (R) 
+*** Full 
+*** Concise
+** 066 - Character Sets Present (NR) 
+*** Full 
+*** Concise
+** 070 - National Agricultural Library Call Number (R) 
+*** Full 
+*** Concise
+** 071 - National Agricultural Library Copy Statement (R) 
+*** Full 
+*** Concise
+** 072 - Subject Category Code (R) 
+*** Full 
+*** Concise
+** 074 - GPO Item Number (R) 
+*** Full 
+*** Concise
+** 080 - Universal Decimal Classification Number (R) 
+*** Full 
+*** Concise
+** 082 - Dewey Decimal Classification Number (R) 
+*** Full 
+*** Concise
+** 083 - Additional Dewey Decimal Classification Number (R) 
+*** Full 
+*** Concise
+** 084 - Other Classification Number (R) 
+*** Full 
+*** Concise
+** 085 - Synthesized Classification Number Components (R) 
+*** Full 
+*** Concise
+** 086 - Government Document Classification Number (R) 
+*** Full 
+*** Concise
+** 088 - Report Number (R) 
+*** Full 
+*** Concise
+** 09X - Local Call Numbers 
+*** Full 
+*** Concise
+
+* 1XX: Main Entry Fields
+** DEFINITION AND SCOPE
+Fields 100, 110, 111 and 130 contain a name or a uniform title heading used as main entry.
+
+For mixed material, this idea of authorship is not always clear-cut. The main entry may contain the name of the person, family, or entity responsible for bringing the materials together. Alternatively, the main entry may contain the name of the person, family, or entity for whom or which a collection is named.
+
+Descriptions of the first indicator and all subfield codes, as well as input conventions for the 100, 110, 111, and 130 fields, are given in the following General Information sections: X00, X10, X11, and X30. The second indicator is described in the specific section for each field.
+** 100 - Main Entry - Personal Name (NR) 
+*** Full
+*** Concise
+** 110 - Main Entry - Corporate Name (NR) 
+*** Full
+*** Concise
+** 111 - Main Entry - Meeting Name (NR) 
+*** Full
+*** Concise
+** 130 - Main Entry - Uniform Title (NR) 
+*** Full
+*** Concise
+
+* 20X-24X: Title and Title-Related Fields
+** DEFINITION AND SCOPE
+   Title of the item described in the record and variant and former titles that also apply to that item. Field 245 (Title Statement) contains the title as it appears on the chief title source for an item (or substitute for such, formulated according to cataloging guidelines). The uniform title is the primary collecting title for items appearing under multiple titles and the key title is a special unique title for serials. These fields may be used to generate access points and display notes for the various titles, frequently guided by indicator values associated with the fields when entered under a name heading.
+
+** CONTENT DESIGNATOR HISTORY
+   Field 211 - Acronym or Shortened Title (CF) [OBSOLETE, 1993]
+   Field 211 was made obsolete with the redefinition of field 246       (Varying Form of Title) to include variant titles not found on a piece. The first indicator position specified whether a title added entry should be generated (values 0,1); the second was defined for nonfiling characters (values 0-9). The subfield codes were: $a (Acronym or shortened title), $6 (Linkage).
+
+   Field 212 - Variant Access Title (SE) [OBSOLETE, 1993]
+   Field 212 was made obsolete with the redefinition of field 246 (Varying Form of Title) to include variant titles not found on a piece. The first indicator position specified whether a title added entry should be generated (values 0,1); the second was undefined. The subfield codes were: $a (Variant access title), $6 (Linkage).
+   
+   Field 214 - Augmented Title (BK, CF) [OBSOLETE, 1993]
+   Field 214 was made obsolete with the redefinition of field 246 (Varying Form of Title) to include variant titles not found on a piece. The first indicator position specified whether a title added entry should be generated (values 0,1); the second was defined for nonfiling characters (values 0-9). The subfield codes were: $a (Augmented title), $6 (Linkage).
+   
+   Field 241 - Romanized Title (BK, AM, CF, MP, MU, VM) [OBSOLETE, 1982]
+   Field 241 was made obsolete when field 880 (Alternate Graphic Representation) was defined. The field contained the romanized form of a bibliographic title that was transcribed in nonroman characters in a manual catalog record. The first indicator position specified whether a title added entry should be generated (values 0, 1); the second was defined for nonfiling characters (values 0-9). The subfield codes were: $a (Romanized title), $h (Medium).
+   
+   Field 246 - Varying Form of Title [REDEFINED, 1993]
+   Prior to the redefinition of field 246 in 1993 to include all variant titles associated with the item, whether they are or are not on the piece, some variant titles were contained in the following three fields that are now obsolete: 211 (Acronym or Shortened Title), 212 (Variant Access Title), and 214 (Augmented Title).
+   
+   In 1993, field 246 was also defined for all forms of material. Prior to that date, added entries for variant titles for other than serials and serially-issued computer files were contained in the added entry variant title 740 field which has been redefined as "Added Entry-Uncontrolled Related/Analytical Title."
+   
+   Field 247 - Former Title [RENAMED, 2002]
+   In 2002, the field was renamed from "Former title or title variations" to differentiate it from field 246 (Varying Form of Title)
+** 210 - Abbreviated Title (R) 
+*** Full
+*** Concise
+** 222 - Key Title (R) 
+*** Full
+*** Concise
+** 240 - Uniform Title (NR) 
+*** Full
+*** Concise
+** 242 - Translation of Title by Cataloging Agency (R) 
+*** Full
+*** Concise
+** 243 - Collective Uniform Title (NR) 
+*** Full
+*** Concise
+** 245 - Title Statement (NR) 
+*** Full
+*** Concise
+** 246 - Varying Form of Title (R) 
+*** Full
+*** Concise
+** 247 - Former Title (R) 
+*** Full
+*** Concise
+* 25X-28X: Edition, Imprint, Etc. Fields
+** DEFINITION AND SCOPE
+Descriptive information concerning the item described in a bibliographic record other than title related data. Data recorded includes the edition statement, imprint and other publication source information, addresses, descriptive data related to specific forms of material, and addresses. Together with the other 2XX and the 3XX fields, this data constitutes what is referred to as the body of the bibliographic record.
+** CONTENT DESIGNATOR HISTORY
+   Field 257 - Country of Producing Entity for Archival Films [RENAMED, 2009]
+   Field 258 - Philatelic Issue Data [NEW, 2004]
+   Field 261 - Imprint Statement for Films (Pre-AACR 1 Revised) [USMARC only]
+   Field 262 - Imprint Statement for Sound Recordings (Pre-AACR 2) [USMARC only]
+   Field 264 - Production, Publication, Distribution, Manufacture, and Copyright Notice [NEW, 2011]
+   Field 265 - Source for Acquisition/Subscription Address (AM, MC) [OBSOLETE, 1983]
+   Field 265 - Source for Acquisition/Subscription Address (BK, CF, MP, MU, VM, SE) [OBSOLETE, 1993]
+   Both indicator positions were undefined. The subfield codes were: $a (Source for acquisition/subscription address) and $6 (Linkage). Source information may be contained in subfield $b (Source of stock number/acquisition) of field 037 (Source of Acquisition).
+** 250 - Edition Statement (NR)  
+*** Full
+*** Concise
+** 254 - Musical Presentation Statement (NR)  
+*** Full
+*** Concise
+** 255 - Cartographic Mathematical Data (R)  
+*** Full
+*** Concise
+** 256 - Computer File Characteristics (NR)  
+*** Full
+*** Concise
+** 257 - Country of Producing Entity (R)  
+*** Full
+*** Concise
+** 258 - Philatelic Issue Data (R)  
+*** Full
+*** Concise
+** 260 - Publication, Distribution, etc. (Imprint) (R)  
+*** Full
+*** Concise
+** 263 - Projected Publication Date (NR)  
+*** Full
+*** Concise
+** 264 - Production, Publication, Distribution, Manufacture, and Copyright Notice (R)  
+*** Full
+*** Concise
+** 270 - Address (R)  
+*** Full
+*** Concise
+* 3XX: Physical Description, Etc. Fields
+** DEFINITION AND SCOPE
+Information pertaining to physical characteristics, graphic representation, physical arrangement, publication frequency, and security information. For digital items, fields are provided for recording reference and coordinate data.
+** CONTENT DESIGNATOR HISTORY
+   Field 301 - Physical Description for Films (Pre-AACR 2) (VM, USMARC only) [OBSOLETE, 1983]
+   Field 302 - Page Count (BK) [OBSOLETE, 1990]
+   Field 303 - Unit Count (AM, USMARC only) [OBSOLETE, 1983]
+   Field 304 - Linear Footage (AM, USMARC only) [OBSOLETE, 1983]
+   Field 305 - Physical Description for Sound Recordings (Pre-AACR 2) (MU) [OBSOLETE, 1993]
+   Field 308 - Physical Description for Films (Archival) (VM) [OBSOLETE, 1990]
+   Field 315 - Frequency (CF, MP) [OBSOLETE, 1993]
+   Field 336 - Content Type [NEW, 2009]
+   Field 337 - Media Type [NEW, 2009]
+   Field 338 - Carrier Type [NEW, 2009]
+   Field 344 - Sound Characteristics [NEW, 2011]
+   Field 345 - Projection Characteristics of Moving Image [NEW, 2011]
+   Field 346 - Video Characteristics [NEW, 2011]
+   Field 347 - Digital File Characteristics [NEW, 2011]
+   Field 350 - Price (BK, AM, MU, VM) [OBSOLETE, 1983]
+   Field 350 - Price (CF, SE) [OBSOLETE, 1993]
+   Field 359 - Rental Price (VM) [OBSOLETE, 1983]
+   Field 363 - Normalized Date and Sequential Designation [NEW, 2007]
+   Field 365 - Trade Price [NEW, 2003]
+   Field 366 - Trade Availability Information [NEW, 2003]
+   Field 377 - Associated Language [NEW, 2011]
+   Field 380 - Form of Work [NEW, 2010]
+   Field 381 - Other Distinguishing Characteristics of Work or Expression [NEW, 2010]
+   Field 382 - Medium of Performance [NEW, 2010]
+   Field 383 - Numeric Designation of Musical Work [NEW, 2010]
+   Field 384 - Key [NEW, 2010]
+** 300 - Physical Description (R)  
+*** Full
+*** Concise
+** 306 - Playing Time (NR)  
+*** Full
+*** Concise
+** 307 - Hours, etc. (R)  
+*** Full
+*** Concise
+** 310 - Current Publication Frequency (NR)  
+*** Full
+*** Concise
+** 321 - Former Publication Frequency (R)  
+*** Full
+*** Concise
+** 336 - Content Type (R)  
+*** Full
+*** Concise
+** 337 - Media Type (R)  
+*** Full
+*** Concise
+** 338 - Carrier Type (R)  
+*** Full
+*** Concise
+** 340 - Physical Medium (R)  
+*** Full
+*** Concise
+** 342 - Geospatial Reference Data (R)  
+*** Full
+*** Concise
+** 343 - Planar Coordinate Data (R)  
+*** Full
+*** Concise
+** 344 - Sound Characteristics (R)  
+*** Full
+*** Concise
+** 345 - Projection Characteristics of Moving Image (R)  
+*** Full
+*** Concise
+** 346 - Video Characteristics (R)  
+*** Full
+*** Concise
+** 347 - Digital File Characteristics (R)  
+*** Full
+*** Concise
+** 351 - Organization and Arrangement of Materials (R)  
+*** Full
+*** Concise
+** 352 - Digital Graphic Representation (R)  
+*** Full
+*** Concise
+** 355 - Security Classification Control (R)  
+*** Full
+*** Concise
+** 357 - Originator Dissemination Control (NR)  
+*** Full
+*** Concise
+** 362 - Dates of Publication and/or Sequential Designation (R)  
+*** Full
+*** Concise
+** 363 - Normalized Date and Sequential Designation (R)  
+*** Full
+*** Concise
+** 365 - Trade Price (R)  
+*** Full
+*** Concise
+** 366 - Trade Availability Information (R)  
+*** Full
+*** Concise
+** 377 - Associated Language (R)  
+*** Full
+*** Concise
+** 380 - Form of Work (R)  
+*** Full
+*** Concise
+** 381 - Other Distinguishing Characteristics of Work or Expression (R)  
+*** Full
+*** Concise
+** 382 - Medium of Performance (R)  
+*** Full
+*** Concise
+** 383 - Numeric Designation of Musical Work (R)  
+*** Full
+*** Concise
+** 384 - Key (NR)  
+*** Full
+*** Concise
+* 4XX: Series Statement Fields
+* 5XX: Note Fields
+* 6XX: Subject Access Fields
+* 70X-75X: Added Entry Fields
+* 76X-78X: Linking Entry Fields
+* 80X-83X: Series Added Entry Fields
+* 841-88X: Holdings, Location, Alternate Graphics, Etc. Fields
+
+* Heading Fields - General Information
