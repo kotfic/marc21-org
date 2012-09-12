@@ -53,105 +53,1351 @@
 ** 010 - Library of Congress Control Number (NR) 
 *** Full 
 *** Concise
+    Unique number assigned to a MARC record by the Library of Congress. Valid MARC
+    prefixes for LC control numbers are published in MARC 21 Format for
+    Bibliographic Data.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: LC control number (NR)
+  + $b :: NUCMC control number (R)
+  + $z :: Canceled/invalid LC control number (R)
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     010 ##$anuc76039265#
+     010 ##$a##2001627090
+     010 ##$a##2001336783
+
 ** 013 - Patent Control Information (R) 
 *** Full 
 *** Concise
+    Information used to control patent documents. In addition to information about
+    patents, this field may contain information relating to inventors'
+    certificates, utility certificates, utility models, patents or certificates of
+    addition, inventors' certificates of addition, utility certificates of
+    addition, and published applications for any of these.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Number (NR)
+  + $b :: Country (NR)
+	  Code representing the country or jurisdiction associated with the patent
+	  document. Code from: MARC_Code_List_for_Countries.
+  + $c :: Type of number (NR)
+	  Type of patent document identifier
+  + $d :: Date (R)
+	  Date a patent or certificate was granted, or the date of acceptance of an
+	  application. The date requires 8 numeric characters in the pattern yyyymmdd (4
+	  for the year, 2 for the month, and 2 for the day).
+  + $e :: Status (R)
+	  Text that explains or clarifies the status of the patent document identified by
+	  the number in the field.
+  + $f :: Party to document (R)
+	  Information that identifies the country or agency that is party to the
+	  document, usually an application for patent or related document. Codes from:
+	  MARC_Code_List_for_Countries and MARC_Code_List_for_Organizations.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     013 ##$a67-SC41534$bgw#$cC1$d19671108
+     013 ##$a70-121204$bxxu$cpatent$d19700822
+     013 ##$a73-19001$bit$cB$d19730102
+     013 ##$a82-US1336$cA$d19820928$fSzGeWIPO[entity other than a country]
+     013 ##$a67-SC41534$bgw#$cC1$d19671108
+     013 ##$a84-948$bnl#$coktrooi$d19840326
+     013 ##$a70-123456$bxxu$cstatutory invention
+     registration$d19700414$egranted$d19710419$eeffective
+     013 ##$a93-10077$bxxu$cpatent$d19930322$econtinuation
+     013 ##$a74-2202467$bxxu$cpatent$d19740305$epublished
+     013 ##$a82-57623$cpriority application$d19820213$fCmYaOAPI[Code "CmYaOAPI"
+     identifies the Organisation africaine de propriété intellectuelle
+     (Africa Intellectual Property Organization), in Yaoundé, Cameroon.]
+
 ** 015 - National Bibliography Number (R) 
 *** Full 
 *** Concise
+    Bibliography entry number(s) for cataloging information that is derived from a
+    national bibliography.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: National bibliography number (R)
+  + $z :: Canceled/invalid national bibliography number (R)
+  + $2 :: Source (NR)
+	  Code that identifies the source of the National Bibliography Number. Code from:
+	  National_Bibliography_Number_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     015 ##$aF84-3117
+     015 ##$aB67-20987$aB67-20988 (pbk)
+     015 ##$aGFR67-A14-54$aAu67-6
+     015 ##$aF67-835 (v. 1)$aF67-9455 (v. 2)
+     015 ##$a06,A29,1122$z05,N51,1204$2dnb
+     015 ##$a06,A29,0382$z05,A21,0597$z04,N48,0463$2dnb
+     015 ##$a84-3117$2bnf
+     015 ##$a67-A14-54$2dnb
+
 ** 016 - National Bibliographic Agency Control Number (R) 
 *** Full 
 *** Concise
+    Unique numbers that have been assigned to a record by a national bibliographic
+    agency other than the Library of Congress. The control number may also appear
+    in field 001 (Control Number) in records distributed by the same national
+    agency. This number is a record control number used in a national bibliographic
+    agency system, rather than a number used for an entry in a national
+    bibliographic, field 015 (National Bibliography Number).
+**** Indicators
+***** First - National bibliographic agency
+      # - Library and Archives Canada
+      7 - Source specified in subfield $2
+      Used when the source of the control number is indicated by a code in subfield
+      $2. Codes from: MARC_Code_List_for_Organizations.
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Record control number (NR)
+  + $z :: Canceled/invalid control number (R)
+  + $2 :: Source (NR)
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     016 ##$a#730032015##rev
+     016 ##$a#84074272XE#
+     016 7#$a94.763966.7$2GyFmDB[Record control number is for the Deutsche
+     Bibliothek.]
+     016 7#$aPTBN000004618$2PoLiBN[Record control number is for the Biblioteca
+     Nacional, Portugal.]
+     016 ##$a#890000298##rev$z#89000298##
+     016 7#$ab9117951$zE000214460$2Uk[Code "Uk" identifies the British Library
+     as the source of the control numbers]
+
 ** 017 - Copyright or Legal Deposit Number (R) 
 *** Full 
 *** Concise
+    Copyright registration or legal deposit number for an item that was acquired by
+    copyright or legal deposit.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Display constant controller
+      # - Copyright or legal deposit number
+      8 - No display constant generated
+**** Subfield Codes
+  + $a :: Copyright or legal deposit number (R)
+  + $b :: Assigning agency (NR)
+  + $d :: Date (NR)
+  + $i :: Display text (NR)
+  + $z :: Canceled/invalid copyright or legal deposit number (R)
+  + $2 :: Source (NR)
+	  Code from: Copyright_and_Legal_Deposit_Number_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     017 ##$aEU781596$bU.S. Copyright Office
+     017 ##$aPA52-758 (English subtitled version)$aPA52-759 (English language
+     dubbed version)$bU.S. Copyright Office
+     017 ##$aDL1377-1984$bBibliothèque nationale de France
+     017 ##$aVA26037$aVA26038$aVA26039$aVA26040$aVA26041$aVA26042$aVA26043$bU.S.
+     Copyright Office
+     017 ##$aPA111636$bU.S. Copyright Office$d19990828
+     017 #8$iSuppl. reg.:$aPA001116455$bU.S. Copyright Office$d20020725
+     017 #8$iOrig. reg.$aJP732$bU.S. Copyright Office$d19510504
+     017 ##$aM44120-2006$zM444120-2006
+
 ** 018 - Copyright Article-Fee Code (NR) 
 *** Full 
 *** Concise
+    Unique identification code for component parts appearing in monographs or
+    continuing resources.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a - Copyright article::fee code (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     018 ##$a0844021842/78/010032-08$01.25/1
+     018 ##$a03043923/78/050243-03$00.95/0
+
 ** 020 - International Standard Book Number (R) 
 *** Full 
 *** Concise
+    International Standard Book Number (ISBN) assigned to a monographic publication
+    by designated agencies in each country participating in the program. The field
+    may include terms of availability and canceled or invalid ISBNs, such as ISBNs
+    with invalid check digits or that are not applicable to the item being
+    cataloged. It may be repeated for multiple numbers associated with the item
+    (e.g., ISBNs for the hard bound and paperback manifestations; ISBNs for a set
+    as a whole and for the individual parts in the set).
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: International Standard Book Number (NR)
+	     Valid ISBN and any parenthetical qualifying information, such as the publisher/
+	     distributor, binding/format, and volume numbers. ISBN and the embedded hyphens
+	     may be generated for display.
+  + $c :: Terms of availability (NR)
+	  Price or a brief statement of availability and any parenthetical qualifying
+	  information concerning the item.
+  + $z :: Canceled/invalid ISBN (R)
+	  Canceled or invalid ISBN and any parenthetical qualifying information. ISBN
+	  (invalid) and the embedded hyphens may be generated for display.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     020 ##$a0491001304
+     020 ##$a0914378260 (pbk. : v. 1) :$c$5.00
+     020 ##$a0394502884 (Random House) :$c$12.50
+     020 ##$a0877790019 (black leather)$z0877780116 :$c$14.00
+     020 ##$a0456789012 (reel 1)
+     020 ##$c$8.95
+     020 ##$cRs15.76 ($5.60 U.S.)
+     020 ##$cRental material
+     020 ##$cFor sale ($200.00 for 3/4 in.; $150.00 for 1/2 in.)
+     020 ##$c$3.60 (pbk.)[Two prices for two items on one catalog record; no
+     ISBNs are known.]
+
 ** 022 - International Standard Serial Number (R) 
 *** Full 
 *** Concise
+    International Standard Serial Number (ISSN), a unique identification number
+    assigned to a continuing resource, and/or any incorrect or canceled ISSN.
+    [Link_disclaimer]
+**** Indicators
+***** First - Level of international interest
+      # - No level specified
+      0 - Continuing resource of international interest
+      1 - Continuing resource not of international interest
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: International Standard Serial Number (NR)
+	     Valid ISSN for the continuing resource. ISSN may be generated for display.
+  + $l - ISSN::L (NR)
+    ISSN that links together various media versions of a continuing resource. ISSN-
+    L may be generated for display.
+  + $m - Canceled ISSN::L (R)
+    Canceled ISSN-L that has been associated with the resource. Each canceled ISSN-
+    L is contained in a separate subfield $m. ISSN-L (canceled) may be generated
+    for display.
+  + $y :: Incorrect ISSN (R)
+	  ISSN (incorrect) may be generated for display.
+  + $z :: Canceled ISSN (R)
+	  ISSN (canceled) may be generated for display.
+  + $2 :: Source (NR)
+	  Code from: ISSN National Centres code list online at: www.issn.org, National
+	  Centres.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     022 ##$a0376-4583
+     022 0#$a1234-1231$l1234-1231
+     022 0#$a1560-1560$l1234-1231$m1560-1560
+     022 0#$a0046-225X$y0046-2254
+     022 0#$a0145-0808$z0361-7106
+     022 0#$z0027-3473
+
 ** 024 - Other Standard Identifier (R) 
 *** Full 
 *** Concise
+    Standard number or code published on an item which cannot be accommodated in
+    another field (e.g., field 020 (International Standard Book Number), 022
+    (International Standard Serial Number) , and 027 (Standard Technical Report
+    Number)). The type of standard number or code is identified in the first
+    indicator position or in subfield $2 (Source of number or code).
+**** Indicators
+***** First - Type of standard number or code
+      0 - International Standard Recording Code
+      1 - Universal Product Code
+      2 - International Standard Music Number
+      3 - International Article Number
+      4 - Serial Item and Contribution Identifier
+      7 - Source specified in subfield $2
+      8 - Unspecified type of standard number or code
+***** Second - Difference indicator
+      # - No information provided
+      0 - No difference
+      1 - Difference
+**** Subfield Codes
+     + $a :: Standard number or code (NR)
+  + $c :: Terms of availability (NR)
+  + $d :: Additional codes following the standard number or code (NR)
+  + $z :: Canceled/invalid standard number or code (R)
+  + $2 :: Source of number or code (NR)
+	  Code from: Standard_Identifier_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     024 0#$aFRZ039101231
+     024 10$a070993005955$d35740
+     024 30$a9780449906200$d51000
+     024 41$a875623247541986340134QTP1[Scanned SICI for the same article. Both
+     the eye-readable and the scanned SICIs appear in the same record.]
+     024 3#$a9780449906200$d51000
+     024 1#$z5539143515
+     024 7#$a0A3200912B4A1057$2istc
+     024 0#$aNLC018413261$zNLC018403261
+     024 10$a070993005955$d35740[UPC for a paperback book]
+     024 2#$aM571100511
+     024 3#$a9780838934326$d90000
+     024 4#$a8756-2324(198603/04)65:2L.4:QTP:1-P
+
 ** 025 - Overseas Acquisition Number (R) 
 *** Full 
 *** Concise
+    Number assigned by the Library of Congress to works acquired through one of its
+    overseas acquisition programs.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Overseas acquisition number (R)
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     025 ##$aLACAP67-3676
+     025 ##$aPL480:I-E-8421
+     025 ##$aAe-F-355$aAe-F-562
+
 ** 026 - Fingerprint Identifier (R) 
 *** Full 
 *** Concise
+    Used to assist in the identification of antiquarian books by recording
+    information comprising groups of characters taken from specified positions on
+    specified pages of the book, in accordance with the principles laid down in
+    various published guidelines.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: First and second groups of characters (NR)
+  + $b :: Third and fourth groups of characters (NR)
+  + $c :: Date (NR)
+  + $d :: Number of volume or part (R)
+  + $e :: Unparsed fingerprint (NR)
+  + $2 :: Source (NR)
+	  MARC code that identifies the guidelines followed to establish the fingerprint.
+	  Code from: Fingerprint_Scheme_Source_Codes.
+  + $5 :: Institution to which field applies (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     026 ##$adete nkck$bvess lodo 3$cAnno Domini MDCXXXVI$d3$2fei$5UkCU
+     026 ##$edete nkck vess lodo 3 Anno Domini MDCXXXVI 3$2fei$5UkCU
+
 ** 027 - Standard Technical Report Number (R) 
 *** Full 
 *** Concise
+    International Standard Technical Report number (ISRN) or a Standard Technical
+    Report Number (STRN)assigned to a technical report. Assignment of STRNs is
+    coordinated by the National Technical Information Service (NTIS), which also
+    maintains an assignment registry.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Standard technical report number (NR)
+  + $z :: Canceled/invalid number (R)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+	  Example
+	  027 ##$aMPC-387
+
 ** 028 - Publisher Number (R) 
 *** Full 
 *** Concise
+    Formatted number used for sound recordings, videorecordings, printed music, and
+    other music-related material. Publisher's numbers that are given in an
+    unformatted form are recorded in field 500 (General Note). A print constant
+    identifying the kind of publisher number may be generated based on the value in
+    the first indicator position.
+**** Indicators
+***** First - Type of publisher number
+      0 - Issue number
+      Number used to identify the issue designation, or serial identification,
+      assigned by a publisher to a specific sound recording, side of a sound
+      recording, or performance on a sound recording or to a group of sound
+      recordings issued as a set.
+      1 - Matrix number
+      Master from which the specific recording was pressed.
+      2 - Plate number
+      Assigned by a publisher to a specific music publication.
+      3 - Other music number
+      4 - Videorecording number
+      5 - Other publisher number
+***** Second - Note/added entry controller
+      0 - No note, no added entry
+      1 - Note, added entry
+      2 - Note, no added entry
+      3 - No note, added entry
+**** Subfield Codes
+     + $a :: Publisher number (NR)
+  + $b :: Source (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     028 01$aSTMA 8007$bTamla Motown[An issue number]
+     028 11$a256A090$bDeutsche Grammophon Gesellschaft[A matrix number]
+     028 22$aB. &amp; H. 8797$bBreitkopf &amp; Hartel
+     028 42$aVM5108$bVidmark Entertainment
+     028 42$aMV600167$bMGM/UA
+     028 40$aMV600167$bMGM/UA[A videorecording number for which no note or
+     added entry are desired.]
+
 ** 030 - CODEN Designation (R) 
 *** Full 
 *** Concise
+    CODEN designation for a bibliographic title. The CODEN is assigned by the
+    International CODEN Section of Chemical Abstracts Service.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: CODEN (NR)
+	     Valid CODEN for the title.
+  + $z :: Canceled/invalid CODEN (R)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     030 ##$aJACSAT
+     030 ##$aASIRAF$zASITAF
+
 ** 031 - Musical Incipits Information (R) 
 *** Full 
 *** Concise
+    Coded data representing the musical incipit for music using established
+    notation schemes that employ ordinary ASCII symbols. Primarily used to identify
+    music manuscripts, but can be applied to any material containing music.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Number of work (NR)
+  + $b :: Number of movement (NR)
+  + $c :: Number of excerpt (NR)
+  + $d :: Caption or heading (R)
+  + $e :: Role (NR)
+  + $g :: Clef (NR)
+  + $m :: Voice/instrument (NR)
+  + $n :: Key signature (NR)
+  + $o :: Time signature (NR)
+  + $p :: Musical notation (NR)
+  + $q :: General note (R)
+  + $r :: Key or mode (NR)
+  + $s :: Coded validity note (R)
+  + $t :: Text incipit (R)
+  + $u :: Uniform Resource Identifier (R)
+  + $y :: Link text (R)
+  + $z :: Public note (R)
+  + $2 :: System code (NR)
+	  MARC code that identifies the encoding system used to transcribe the musical
+	  notation in subfield $p (Musical notation). Use of subfield $2 is mandatory if
+	  subfield $p is present. Code from: Musical_Incipit_Scheme_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     031 ##$a01$b01$c01$mS$dAria$tRei d’impuniti eccessi$re$gC-1$oc$p'2B4B8BB/
+     4G8GxF4FF/4xA8AA4.At8B/4B$2pe
+     031 ##$aa$b01$c02$mS$eSara$dScena. Largo$gC-1$nbBEA$oc$tChi per pietà mi
+     dice il figlio mio che fà$p=5/4-''6C3CC6DEgF6CC8-6ED/q8D4C8C'nB''4D-/
+     2-/$2pe
+     031 ##$a01$b02$c01$mvl1$dAria. Allegro$gG-2$nbBEA$oc$p6{'EDEF}{GABG}{EDEF}
+     {GABG}/{''C'BAG}{FEDC},4B-/$2pe
+     031 ##$a01$b01$c01$mOb. 1$gG-2$nbB$oc$pRE 9S(( 8)) 9(( 8 9 8)) 9E( 6) 7
+     ( 6S( 5)) / 4S(( 3 2 3))/$uhttp://www.classicalarchives.com/cgi-bin/
+     n.cgi/prep/6/jsbbrc11.mid$2da
+
 ** 032 - Postal Registration Number (R) 
 *** Full 
 *** Concise
+    Number assigned to a publication for which the specified postal service permits
+    the use of a special mailing class privilege.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Postal registration number (NR)
+	     Numbers are right justified and each unused position contains a zero. The
+	     hyphen that may appear between the third and fourth digits on printed sources
+	     is not carried in the MARC record; it may be generated.
+  + $b :: Source agency assigning number (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     032 ##$a686310$bUSPS
+     032 ##$a063480$bUSPS
+     032 ##$a686310$bUSPS
+
 ** 033 - Date/Time and Place of an Event (R) 
 *** Full 
 *** Concise
+    Formatted date/time and/or coded place of creation, capture, recording,
+    filming, execution, or broadcast associated with an event or the finding of a
+    naturally occurring object. This information in textual form is contained in
+    field 518 (Date/Time and Place of an Event Note).
+**** Indicators
+***** First - Type of date in subfield $a
+      # - No date information
+      0 - Single date
+      1 - Multiple single dates
+      2 - Range of dates
+***** Second - Type of event
+      # - No information provided
+      0 - Capture
+      Pertains to the recording of sound, the filming of visual images, the making or
+      producing of an item, or other form of creation of an item.
+      1 - Broadcast
+      Pertains to the broadcasting (i.e., transmission) or re-broadcasting of sound
+      or visual images.
+      2 - Finding
+      Pertains to the finding of a naturally occurring object.
+**** Subfield Codes
+     + $a :: Formatted date/time (R)
+	     Seventeen characters, recorded in the pattern yyyymmddhhmm+-hmm, that indicate
+	     the actual or approximate date (yyyymmdd)/time (hhmm) of capture, finding, or
+	     broadcast and Time Differential Factor (+-hhmm) information. A hyphen (-) is
+	     used for unknown digits in the year/month/day segment. Within each segment, the
+	     data is right justified and any unused position contains a zero.
+  + $b :: Geographic classification area code (R)
+	  Four to six character numeric code for the main geographic area associated with
+	  an item. The code consists of the appropriate classification number from the
+	  range G3190-G9980 derived from the Library of Congress Classification--Class G
+	  by dropping the letter G.
+  + $c :: Geographic classification subarea code (R)
+	  Alphanumeric Cutter number for a geographic subarea, derived from the Library
+	  of Congress Classification-Class G or expanded Cutter number lists for place
+	  names. Cutter numbers for places in the United States are also published in
+	  Geographic Cutters. Class G, Geographic Cutters, and the expanded Cutter lists
+	  are maintained by the Library of Congress.
+  + $p :: Place of event (R)
+  + $0 :: Record control number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $2 :: Source of term (R)
+	  MARC code that identifies the source of the term used in $p when it is from a
+	  controlled list.
+	  Code from: Subject_Heading_and_Term_Source_Codes.
+  + $3 :: Materials specified (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     033 00$a1858----[An original or historical graphic item that was executed
+     in 1858.]
+     033 02$a19750305$b4034$cR4[A meteorite that was found on March 5, 1975, in
+     Richmond, Texas.]
+     033 01$a195410171930-0700[A television program.]
+     033 11$a198709071900-0400$a198710012030-0400[A radio program.]
+     033 21$a197809102000-0400$a197809142000-0400[A television mini-series.]
+     033 01$a1962----2130[An episode of a television series with the specific
+     broadcast date unknown, but known to have been broadcast at 9:30 p.m.
+     (EST).]
+     033 01$a198707281409+0530$b7654$cC2[A radio program broadcast at 2 hours,
+     9 minutes and 23 seconds past noon on July 28, 1987 in Calcutta, India
+     (five and one-half hours different from the Universal Time and east of
+     the Greenwich Meridian).]
+     033 00$a19780916$b3964$cN2[A videorecording that was filmed in Nashville,
+     Tennessee on September 16, 1978.]
+     033 20$a197601--$a197606--$b6714$cR7$b6714$cV4[A motion picture that was
+     filmed on location in Rome and Venice from January through June 1976.]
+     033 10$a19770115$a19770210$b3824$cP5$b3804$cN4
+     033 00$a200008--$b5754$cL7$pAbbey Road Studio 1, London
+     033 00$3Horse$a1925----[A horse component of a sculpture group that was
+     cast in 1925.]
+     033 10$a19770115$a19770210$b3824$cP5$b3804$cN4
+
 ** 034 - Coded Cartographic Mathematical Data (R) 
 *** Full 
 *** Concise
+    Coded form of the mathematical data contained in field 255 (Mathematical Data
+    Area) of the bibliographic record.
+**** Indicators
+***** First - Type of scale   Specifies the type of scale information given.
+     0 - Scale indeterminable/No scale recorded
+         Used when no representative fraction is given in field 255.
+     1 - Single scale
+     3 - Range of scales
+***** Second - Type of ring
+     # - Not applicable
+     0 - Outer ring
+     1 - Exclusion ring
+**** Subfield Codes 
+     + $a :: Category of scale (NR)
+	     One-character alphabetic code indicating the type of scale of the item.
+	     a - Linear scale
+	     b - Angular scale
+	     z - Other type of scale
+     + $b :: Constant ratio linear horizontal scale (R)
+	     Denominator of the representative fraction for the horizontal scale.
+     + $c :: Constant ratio linear vertical scale (R)
+	     Denominator of the representative fraction for the vertical scale of
+	     relief models and other three-dimensional items.
+     + $d :: Coordinates - westernmost longitude (NR)
+     + $e :: Coordinates - easternmost longitude (NR)
+     + $f :: Coordinates - northernmost latitude (NR)
+     + $g :: Coordinates - southernmost latitude (NR)
+	     Subfields $d, $e, $f, and $g always appear together. The coordinates may
+	     be recorded in the form hdddmmss (hemisphere-degrees-minutes-seconds),
+	     however, other forms are also allowed, such as decimal degrees. The
+	     subelements are each right justified and unused positions contain zeros.
+     + $h :: Angular scale (R)
+	     Scale, if known, for celestial charts.
+     + $j :: Declination - northern limit (NR)
+     + $k :: Declination - southern limit (NR)
+     + $m :: Right ascension - eastern limit (NR)
+     + $n :: Right ascension - western limit (NR)
+	     Subfields $j and $k are each eight characters in length and record the
+	     declination in the form hdddmmss (hemisphere-degrees-minutes-seconds).
+	     The degree, minute and second elements are each right justified and the
+	     unused positions contain zeros. (If declination of center is known, it is
+	     repeated in both subfields).
+	     Subfields $m and $n are each six characters in length and record the
+	     right ascension in the form hhmmss (hour-minute-seconds). The hour,
+	     minute and second elements are each right justified and the unused
+	     positions contain zeros. (If the right ascension of center is known, it
+	     is repeated in both subfields).
+     + $p :: Equinox (NR)
+	     Equinox or epoch for a celestial chart. Usually recorded in the form yyyy
+	     (year) according to the Gregorian calendar, but may include a decimal
+	     including the month in the form yyyy.mm (year-month).
+     + $r :: Distance from earth (NR)
+	     Distance of celestial bodies, such as planets or stars, from the Earth in
+	     light-years in star atlases.
+     + $s :: G-ring latitude (R)
+     + $t :: G-ring longitude (R)
+     + $x :: Beginning date (NR)
+	     Beginning of the time frame specific to the coordinates. The date is
+	     structured in the form of yyyymmdd. When no date is recorded, it is
+	     assumed that the coordinate information is current.
+     + $y :: Ending date (NR)
+	     Ending of the time frame specific to the coordinates. The date is
+	     structured in the form of yyyymmdd. When no date is recorded, it is
+	     assumed that the coordinate information is current.
+     + $z :: Name of extraterrestrial body (NR)
+	     Name of a planet or other extraterrestrial body specified when the
+	     coordinate data recorded in subfields $d, $e, $f and $g do not describe
+	     an entity on Earth.
+     + $0 :: Authority record control number or standard number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $2 :: Source (NR)
+	     MARC code that identifies the source of the data recorded in field 034.
+	     If different sources are recorded, separate fields should be used. Code
+	     from: Cartographic_Data_Source_Codes.
+     + $3 :: Materials specified (NR)
+	     Information that specifies the part of the entity to which the field
+	     applies.
+     + $6 :: Linkage (NR)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $8 :: Field link and sequence number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     034 1#$aa$b100000
+     034 0#$aa
+     034 1#$aa$b744000$c96000
+     034 1#$aa$b253440$dE0790000$eE0860000$fN0200000$gN0120000
+     034 1#$aa$dE079.533265$eE086.216635$fS012.583377$gS020.419532
+     034 1#$aa$d+079.533265$e+086.216635$f-012.583377$g-020.419532
+     034 0#$ab$jN0300000$kN0300000$m021800$n021800
+     034 0#$ab$p1950
+     034 ##$dE0110000$eE0320000$fN0690000$gN0550000$x17210000$y19171200
+     034 ##$dE0110000$eE0240000$fN0690000$gN0550000$x19171200
+     034 ##$dW2450000$eE2570000$fN0160000$gN0190000$zMars$2gpn
+
 ** 035 - System Control Number (R) 
 *** Full 
 *** Concise
+    Control number of a system other than the one whose control number is contained
+    in field 001 (Control Number), field 010 (Library of Congress Control Number)
+    or field 016 (National Bibliographic Agency Control Number).
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: System control number (NR)
+	     MARC code (enclosed in parentheses) of the organization originating the system
+	     control number, followed immediately by the number. See Appendix I:
+	     Organization_Code_Sources for a listing of sources used in MARC 21 records.
+  + $z :: Canceled/invalid control number (R)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     035 ##$a(CaOTULAS)41063988
+     035 ##$a(WaOLN)wln7986864
+     035 ##$a(DNLM)S30545600(s)
+     035 ##$a(OCoLC)814782$z(OCoLC)7374506
+
 ** 036 - Original Study Number for Computer Data Files (NR) 
 *** Full 
 *** Concise
+    Original study number assigned by the producer of the computer file.
+    Introductory phrase Original study: may be generated based on the field tag.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Original study number (NR)
+  + $b :: Source agency assigning number (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     036 ##$aCNRS 84115$bCentre national de la recherche scientifique.
+     036 ##$aCPS 495441$bCenter for Political Studies, University of Michigan,
+     Ann Arbor.
+
 ** 037 - Source of Acquisition (R) 
 *** Full 
 *** Concise
+    Source of acquisition information for the item or its reproduction.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Stock number (NR)
+	     Numbers such as distributor, publisher, or vendor numbers are also recorded in
+	     this subfield.
+  + $b :: Source of stock number/acquisition (NR)
+  + $c :: Terms of availability (R)
+  + $f :: Form of issue (R)
+  + $g :: Additional format characteristics (R)
+  + $n :: Note (R)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     037 ##$a001689 E$bVienna Tourist Board
+     037 ##$aC CPS 68 003$bU.S. Bureau of the Census
+     037 ##$bRuth Duarte, P.O. Box 74, Napa, CA$c$25.00
+     037 ##$bU.S. Geological Survey, Denver, Colo. 80255
+     037 ##$a149866$bGAO (202) 512-6000 (Voice); (301) 258-4066 (Fax)
+     037 ##$aFSWEC-77/0420$bNational Technical Information Service,
+     Springfield, VA 22161$fMagnetic tape$c$175.00
+     037 ##$aPB-363547$bNTIS$fpaper copy$c$4.00$fmicrofiche$c$3.00
+     037 ##$bAmerican Institute of Physics, 335 E. 45th St., New York, N.Y.
+     10017$c$24.00 (institution, U.S.)$c$26.00 (institution,
+     foreign)$c$14.00 (individual, U.S.)$c$16.00 (individual, foreign)
+     037 ##$aLC-USZ62-94085$bDLC$c(b&amp;w film copy neg., after preservation)
+     037 ##$gARCE
+     037 ##$bEROS Data Center$f9-track tape;$gDEM;$c$40 (per file)$c$20 (per
+     file in groups of 2 to 6)$c$90 base fee plus $7 per file (in groups of
+     7 or more).$gASCII recording mode; available with no internal labels
+     or with ANSI standard labels; logical record length is 1024 bytes;
+     block size is a multiple of 1024 up to 31744 bytes; 1600 or 6250
+     characters per inch.
+     037 ##$bUniversity Microfilms$fmicrofiche$c$15.95$nAvailable only without
+     color
+
 ** 038 - Record Content Licensor (NR) 
 *** Full 
 *** Concise
+    MARC code of the organization that licenses the intellectual property rights to
+    the data contained in the record, such as with contractual arrangements. See
+    Appendix I: Organization_Code_Sources for a listing of sources used in MARC 21
+    records.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Record content licensor (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     038 ##$aUk
+
 ** 040 - Cataloging Source (NR) 
 *** Full 
 *** Concise
+    MARC code for or the name of the organization(s) that created the original
+    bibliographic record, assigned MARC content designation and transcribed the
+    record into machine-readable form, or modified (except for the addition of
+    holdings symbols) an existing MARC record. These data and the code in 008/39
+    (Cataloging source) specify the parties responsible for the bibliographic
+    record. See: MARC_Code_List_for_Organizations for a listing of sources used in
+    MARC 21 records.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Original cataloging agency (NR)
+  + $b :: Language of cataloging (NR)
+	  MARC code for the language of cataloging in the record. Code from: MARC_Code
+	  List_for_Languages.
+  + $c :: Transcribing agency (NR)
+  + $d :: Modifying agency (R)
+  + $e :: Description conventions (R)
+	  Code from: Description_Convention_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     040 ##$aMt$cMt
+     040 ##$aDLC$cDLC
+     040 ##$aCaOTY$beng$cCaOTY
+     040 ##$aCaQQLA$bfre$cCaOONL
+     040 ##$aDLC$cCtY$dMH
+     040 ##$aDCE-C$cDNTIS$dWU-D$dMiAnI
+     040 ##$aCSt-H$cCSt-H$eappm
+     040 ##$aDNA$cCtY$dCtY$eNARS Staff Bulletin No. 16
+     040 ##$aDLC$cDLC$erda$edcrmb
+
 ** 041 - Language Code (R) 
 *** Full 
 *** Concise
+    Codes for languages associated with an item when the language code in field
+    008/35-37 of the record is insufficient to convey full information. Includes
+    records for multilingual items, items that involve translation, and items where
+    the medium of communication is a sign language. Sources of the codes are: MARC
+    Code_List_for_Languages or other code lists such as ISO 639-1 (Codes for the
+    representation of names of languages - Part 1 : alpha-2 code).
+**** Indicators
+***** First - Translation indication
+    # - No information provided
+    0 - Item not a translation/does not include a translation
+    1 - Item is or includes a translation
+***** Second - Source of code
+    # - MARC language code
+    7 - Source specified in subfield $2
+**** Subfield Codes
+     + $a :: Language code of text/sound track or separate title (R)
+     + $b :: Language code of summary or abstract (R)
+     + $d :: Language code of sung or spoken text (R)
+     + $e :: Language code of librettos (R)
+     + $f :: Language code of table of contents (R)
+     + $g :: Language code of accompanying material other than librettos (R)
+     + $h :: Language code of original (R)
+     + $j :: Language code of subtitles or captions (R)
+     + $k :: Language code of intermediate translations (R)
+     + $m :: Language code of original accompanying materials other than librettos
+	     (R)
+     + $n :: Language code of original libretto (R)
+     + $2 :: Source of code (NR)
+	     Source of the language code scheme used in the field. Code from: Language
+	     Code_and_Term_Source_Codes.
+     + $6 :: Linkage (NR)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $8 :: Field link and sequence number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+**** Examples 
+     041 ##$aeng$afre$aswe
+     041 ##$adut$afre$ager$aita$aspa$beng
+     041 0#$aeng$afre
+     041 1#$aeng$hrus
+     041 1#$aeng$hger$hswe
+     041 07$aen$afr$ait$2iso639-1
+     041 0#$aeng$afre$ager
+     041 0#$arus$aeng
+     041 0#$aeng$afre$ager$ahun$apor$arus
+     041 0#$asgn$aeng
+     041 1#$aeng$hfre
+     041 1#$aeng$kger$hswe
+     041 1#$aeng$agrc$hgrc
+     041 1#$aeng$hund
+     041 1#$aeng$hmul
+     041 0#$aeng$bfre$bger$bspa
+     041 0#$arum$ffre$fger$frus
+     041 ##$ager$geng
+     041 ##$gfre
+     041 1#$deng$hfre$hger$hita
+     041 1#$afre$efre$eger$hfre
+     041 1#$aeng$bger$jger
+     041 1#$aeng$kchi$hsan
+     041 1#$dfre$hita$eeng$efre$eger$eita$geng$gfre$gger$gita$mger
+     041 1#$deng$hrus$eeng$nrus$geng$gfre$gger
+     041 07$aen$afr$ait$2iso639-1
+     041 0#$aeng$afre
+     041 07$aen$afr$2iso639-1
+
 ** 042 - Authentication Code (NR) 
 *** Full 
 *** Concise
+    One or more authentication codes indicating that the record, existing in a
+    national database, has been reviewed in a specific way. Used for codes
+    associated with specifically designated authentication agencies. Code from:
+    MARC_Authentication_Action_Code_List.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Authentication code (R)
+**** Examples
+     042 ##$alc$ansdp
+     042 ##$ansdp$alcd
+     042 ##$alcnuc
+     042 ##$aissnuk
+
 ** 043 - Geographic Area Code (NR) 
 *** Full 
 *** Concise
+    Geographic area codes associated with an item. Code from: MARC_Code_List_for
+    Geographic_Areas. The source of a local code in subfield $b is indicated in
+    subfield $2. The source of codes in subfield $c is ISO 3166, Codes for the
+    representation of names of countries and their subdivisions - Part 1 : Country
+    codes or Part 2 : Country subdivision codes.
+**** Indicators
+***** First - Undefined
+     # - Undefined
+***** Second - Undefined
+     # - Undefined
+**** Subfield Codes 
+     + $a :: Geographic area code (R)
+     + $b :: Local GAC code (R)
+     + $c :: ISO code (R)
+     + $0 :: Authority record control number or standard number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $2 :: Source of local code (R)
+	     Code from: Geographic_Area_Code_and_Term_Source_Codes.
+     + $6 :: Linkage (NR)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $8 :: Field link and sequence number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     043 ##$an-us---$ae-fr---$aa-ja---
+     043 ##$anl-----
+     043 ##$afw-----
+     043 ##$aa-np---
+     043 ##$an-us-md
+     043 ##$an-uso--$an-usm--
+     043 ##$as-bl---$bs-bl-ba$2BlRjBN
+     043 ##$cus
+
 ** 044 - Country of Publishing/Producing Entity Code (NR) 
 *** Full 
 *** Concise
+    Two- or three-character code for the country of the publishing or producing
+    entity when field 008/15-17 (Place of publication, production, or execution) is
+    insufficient to convey full information for an item published or produced in
+    more than one country. Code from: MARC_Code_List_for_Countries. May be used to
+    include country and subentity codes from ISO 3166, Codes for the representation
+    of names of countries and their subdivisions - Part 1 : Country codes or Part 2
+    : Country subdivision codes.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: MARC country code (R)
+	     Code appearing in 008/15-17 is given as the first subfield $a.
+  + $b :: Local subentity code (R)
+  + $c :: ISO country code (R)
+  + $2 :: Source of local subentity code (R)
+	  Source from which the local code was assigned. Code from: Country_Code_and_Term
+	  Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     044 ##$ait$afr$asp
+     044 ##$axxk$axxu
+     044 ##$aat$bxna$2ausmarc
+     044 ##$asz$cch-zh
+     044 ##$aat$bqea$2ausmarc
+
 ** 045 - Time Period of Content (NR) 
 *** Full 
 *** Concise
+    Time period code (subfield $a) and/or a formatted time period (subfield $b and/
+    or $c) associated with an item.
+**** Indicators
+***** First - Type of time period in subfield $b or $c
+      # - Subfield $b or $c not present
+      0 - Single date/time
+      1 - Multiple single dates/times
+      Multiple $b and/or $c subfields are present, each containing a date/time.
+      2 - Range of dates/times
+      Two $b and/or $c subfields are present and contain a range of dates/times.
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Time period code (R)
+	     Four-character alphanumeric code derived from the "Time Period Code Table" for
+	     B.C. and A.D. time periods.
+	     Table is found in MARC 21 Format for Bibliographic Data under the description
+	     of field 045.
+  + $b :: Formatted 9999 B.C. through C.E. time period (R)
+	  Specific time period recorded in the pattern yyyymmddhh and preceded by a code
+	  for the era (c for B.C.; d for C.E.).
+  + $c - Formatted pre::9999 B.C. time period (R)
+    Formatted time period that consists of as many numeric characters as are needed
+    to represent the number of pre-9999 years B.C.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     045 ##$aa0d6
+     045 0#$c2500000000
+     045 1#$bd1972$bd1975
+     045 2#$bd186405$bd186408
+     045 2#$c25000$c15000
+     045 ##$ad7d9
+     045 ##$aa-c-
+     045 ##$ax-x-
+     045 ##$ad8h2
+     045 2#$ad7n6$bc0221$bd0960
+     045 2#$c225000000$c70000000
+
 ** 046 - Special Coded Dates (R) 
 *** Full 
 *** Concise
+    Date of item information that cannot be recorded in 008/06-14 (Type of date/
+    Publication status, Date 1, Date 2) because such information involves one or
+    more Before Common Era (B.C.) dates, incorrect dates, dates when resources have
+    been modified or created, and date spans when resources are valid. When field
+    046 is used for B.C. dates, 008/06 is set to code b (No date given; B.C. date
+    involved) and field 008/07-10 and 008/11-14 contain blanks (####). When field
+    046 is used for incorrect dates, field 008/06 is coded for the type of
+    corrected data and field 008/07-10 and 008/11-14 contain correct dates.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Type of date code (NR)
+	     Codes
+	     i Inclusive dates of collection
+	     k Bulk of collection
+	     m Multiple dates
+	     n Unknown date
+	     p Distribution/release/issue and production/recording session dates
+	     q Questionable date
+	     r Reissue and original dates
+	     s Single known/probable date
+	     t Publication and copyright dates
+	     x Incorrect dates
+  + $b :: Date 1, B.C. date (NR)
+  + $c :: Date 1, C.E. date (NR)
+  + $d :: Date 2, B.C. date (NR)
+  + $e :: Date 2, C.E. date (NR)
+  + $j :: Date resource modified (NR)
+  + $k :: Beginning or single date created (NR)
+  + $l :: Ending date created (NR)
+  + $m :: Beginning of date valid (NR)
+  + $n :: End of date valid (NR)
+  + $2 :: Source of date (NR)
+	  Code from: Date_and_Time_Scheme_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     046 ##$ak$b1000$d500
+     046 ##$aq$b250$e100
+     046 ##$as$b245
+     046 ##$ar$c1936$d210
+     046 ##$ai$b99$e99
+     046 ##$m20011008$n20011027
+     046 ##$j2001-07-12$2w3cdtf
+
 ** 047 - Form of Musical Composition Code (NR) 
 *** Full 
 *** Concise
+    Codes that indicate the form of musical composition of printed and manuscript
+    music and musical sound recordings when character positions 18 and 19 (Form of
+    composition) of field 008 (Fixed-Length Data Elements) for music contains the
+    code mu for multiple forms or for non-MARC codes. MARC codes are listed under
+    field 008 Music, /18-19 (Form of composition).
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Source of code
+      # - MARC musical composition code
+      7 - Source specified in subfield $2
+**** Subfield Codes
+  + $a :: Form of musical composition code (R)
+  + $2 :: Source of code (NR)
+	  A code that identifies the source from which the musical composition code was
+	  assigned. Code from: Musical_Composition_Form_Code_Source_Codes.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     047 #7$argg$2[code for controlled list]
+     047 ##$aor$act
+     047 ##$arg$app
+     047 #7$argg$2[code for controlled list]
+     047 #7$ahum$2[code for controlled list]
+
 ** 048 - Number of Musical Instruments or Voices Codes (R) 
 *** Full 
 *** Concise
+    Two-character code that indicates the medium of performance for a musical
+    composition. Also contains the number of parts, indicated by a two-digit number
+    immediately following the code for the musical instruments or voices (e.g.,
+    va02, a two-part composition for Voices - Soprano). The number of parts may be
+    omitted if not specified.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Source of code
+      # - MARC code
+      7 - Source specified in subfield ‡2
+**** Subfield Codes
+  + $a :: Performer or ensemble (R)
+	     Two-character code for a performer or ensemble (from the list below) and, if
+	     applicable, a two-digit number specifying the number of parts.
+  + $b :: Soloist (R)
+	  Two-character alphabetic code for a soloist (from the list below) and, if
+	  applicable, a two-digit number specifying the number of parts.
+  + $2 :: Source of code (NR)
+	  Code from: Musical_Instrumentation_and_Voice_Code_Source_Codes.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+	  MARC 21 Instruments or Voices Codes
+	  ba Brass - Horn
+	  bb Brass - Trumpet
+	  bc Brass - Cornet
+	  bd Brass - Trombone
+	  be Brass - Tuba
+	  bf Brass - Baritone
+	  bn Brass - Unspecified
+	  bu Brass - Unknown
+	  by Brass - Ethnic
+	  bz Brass - Other
+	  ca Choruses - Mixed
+	  cb Choruses - Women's
+	  cc Choruses - Men's
+	  cd Choruses - Children's
+	  cn Choruses - Unspecified
+	  cu Choruses - Unknown
+	  cy Choruses - Ethnic
+	  ea Electronic - Synthesizer
+	  eb Electronic - Tape
+	  ec Electronic - Computer
+	  ed Electronic - Ondes Martinot
+	  en Electronic - Unspecified
+	  eu Electronic - Unknown
+	  ez Electronic - Other
+	  ka Keyboard - Piano
+	  kb Keyboard - Organ
+	  kc Keyboard - Harpsichord
+	  kd Keyboard - Clavichord
+	  ke Keyboard - Continuo
+	  kf Keyboard - Celeste
+	  kn Keyboard - Unspecified
+	  ku Keyboard - Unknown
+	  ky Keyboard - Ethnic
+	  kz Keyboard - Other
+	  oa Larger ensemble - Full orchestra
+	  ob Larger ensemble - Chamber orch.
+	  oc Larger ensemble - String orchestra
+	  od Larger ensemble - Band
+	  oe Larger ensemble - Dance orchestra
+	  of Larger ensemble - Brass band (brass with some doubling, with or without
+	  percussion)
+	  on Larger ensemble - Unspecified
+	  ou Larger ensemble - Unknown
+	  oy Larger ensemble - Ethnic
+	  oz Larger ensemble - Other
+	  pa Percussion - Timpani
+	  pb Percussion - Xylophone
+	  pc Percussion - Marimba
+	  pd Percussion - Drum
+	  pn Percussion - Unspecified
+	  pu Percussion - Unknown
+	  py Percussion - Ethnic
+	  pz Percussion - Other
+	  sa Strings, bowed - Violin
+	  sb Strings, bowed - Viola
+	  sc Strings, bowed - Violoncello
+	  sd Strings, bowed - Double bass
+	  se Strings, bowed - Viol
+	  sf Strings, bowed - Viola d'amore
+	  sg Strings, bowed - Viola da gamba
+	  sn Strings, bowed - Unspecified
+	  su Strings, bowed - Unknown
+	  sy Strings, bowed - Ethnic
+	  sz Strings, bowed - Other
+	  ta Strings, plucked - Harp
+	  tb Strings, plucked - Guitar
+	  tc Strings, plucked - Lute
+	  td Strings, plucked - Mandolin
+	  tn Strings, plucked - Unspecified
+	  tu Strings, plucked - Unknown
+	  ty Strings, plucked - Ethnic
+	  tz Strings, plucked - Other
+	  va Voices - Soprano
+	  vb Voices - Mezzo Soprano
+	  vc Voices - Alto
+	  vd Voices - Tenor
+	  ve Voices - Baritone
+	  vf Voices - Bass
+	  vg Voices - Counter tenor
+	  vh Voices - High voice
+	  vi Voices - Medium voice
+	  vj Voices - Low voice
+	  vn Voices - Unspecified
+	  vu Voices - Unknown
+	  vy Voices - Ethnic
+	  wa Woodwinds - Flute
+	  wb Woodwinds - Oboe
+	  wc Woodwinds - Clarinet
+	  wd Woodwinds - Bassoon
+	  we Woodwinds - Piccolo
+	  wf Woodwinds - English horn
+	  wg Woodwinds - Bass clarinet
+	  wh Woodwinds - Recorder
+	  wi Woodwinds - Saxophone
+	  wn Woodwinds - Unspecified
+	  wu Woodwinds - Unknown
+	  wy Woodwinds - Ethnic
+	  wz Woodwinds - Other
+	  zn Unspecified instruments
+	  zu Unknown
+**** Examples
+     048 #7$bvso01$atth01$atch01$akor01$2[code for controlled list]
+     048 #7$apcg01$apct01$apxy02$apta01$2[code for controlled list]
+     048 ##$aka01$asa01$asc01
+     048 ##$bvi01$aka01
+     048 ##$akb01
+     048 ##$boe01$aoa
+     048 ##$bva02$bvc01$bvd01$bvf02$aca04$aoc
+
 ** 050 - Library of Congress Call Number (R) 
 *** Full 
 *** Concise
+    Classification or call number that is taken from Library of Congress
+    Classification or LC Classification Additions and Changes. The brackets that
+    customarily surround alternate class/call numbers are not carried in the MARC
+    record; they may be generated based on the presence of repeated ‡a subfields.
+**** Indicators
+***** First - Existence in LC collection
+      # - No information provided
+      Used for all call numbers assigned by agencies other than the Library of
+      Congress.
+      0 - Item is in LC
+      Other agencies should use this value when transcribing from LC cataloging copy
+      on which the call number is neither enclosed within brackets nor preceded by a
+      Maltese cross.
+      1 - Item is not in LC
+      Used by other agencies when transcribing from LC copy on which the call number
+      appears in brackets or is preceded by a Maltese cross. Brackets that
+      customarily surround call numbers for items not in LC are not carried in the
+      MARC record; they may be generated for display.
+***** Second - Source of call number
+      0 - Assigned by LC
+      Used when an institution is transcribing from LC cataloging copy.
+      4 - Assigned by agency other than LC
+**** Subfield Codes
+  + $a :: Classification number (R)
+  + $b :: Item number (NR)
+	  Organizations that use the Cutter-Sanborn Three-Figure Author Table may conform
+	  to Library of Congress item number practice by applying Subject Cataloging
+	  Manual: Shelflisting conventions.
+  + $3 :: Materials specified (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     050 #4$aNB933.F44$bT6
+     050 10$aBJ1533.C4$bL49
+     050 00$aJK609$b.M2
+     050 00$aZ7164.N3$bL34 no. 9$aZ7165.R42$aHC517.R42
+
 ** 051 - Library of Congress Copy, Issue, Offprint Statement (R) 
 *** Full 
 *** Concise
+    Information added to a bibliographic record by the Library of Congress that
+    relates to copies, issues, and/or offprints, etc. of the described material
+    that are in its collections.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Classification number (NR)
+  + $b :: Item number (NR)
+  + $c :: Copy information (NR)
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     051 ##$aQE75$b.G4$c2d set.
+     051 ##$aMicrofilm$b3741 HV$cMicrofilm.[A microfilm shelf number for a
+     book.]
+     051 ##$aRC310$b.W59$cOffprint. Cover dated 1947.
+
 ** 052 - Geographic Classification (R) 
 *** Full 
 *** Concise
+
 ** 055 - Classification Numbers Assigned in Canada (R) 
 *** Full 
 *** Concise
@@ -344,91 +1590,1170 @@ Information pertaining to physical characteristics, graphic representation, phys
 ** 300 - Physical Description (R)  
 *** Full
 *** Concise
+Physical description of the described item, including its extent, dimensions,
+and such other physical details as a description of any accompanying materials
+and unit type and size.
+**** Indicators
+***** First - Undefined
+# - Undefined
+***** Second - Undefined
+# - Undefined
+**** Subfield Codes
+  + $a :: Extent (R)
+Number of physical pages, volumes, cassettes, total playing time, etc., of of
+each type of unit.
+  + $b :: Other physical details (NR)
+Physical characteristics such as illustrative matter, coloration, playing
+speed, groove characteristics, presence and kind of sound, number of channels,
+motion picture presentation format, etc.
+  + $c :: Dimensions (R)
+Expressed in centimeters, millimeters, or inches; may include a parenthetical
+qualifier giving the format of the item (e.g., (fol.), (8vo)).
+  + $e :: Accompanying material (NR)
+May include a parenthetical physical description of the accompanying material.
+  + $f :: Type of unit (R)
+Terms such as page, volumes, boxes, cu. ft., linear ft., etc. that are used to
+identify the configuration of material and how it is stored.
+  + $g :: Size of unit (R)
+Size of a type of unit given in the preceding subfield $f.
+Repeatable when additional forms of extent data are given.
+  + $3 :: Materials specified (NR)
+Part of the described materials to which the field applies.
+  + $6 :: Linkage (NR)
+See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+300 ##$a149 p. ;$c23 cm.
+300 ##$a1 score (16 p.) ;$c29 cm.
+300 ##$a11 v. :$bill. ;$c24 cm.
+300 ##$a1 sound disc (20 min.) :$banalog, 33 1/3 rpm, stereo. ;$c12 in.
+300 ##$a160 slides :$bcol. ;$c2 x 2 in.
+300 ##$a8 reels of 8 (7557 ft.) :$bsd., col. ;$c35 mm.$3dupe neg nitrate
+    (copy 2).
+300 ##$a1 videocassette of 1 (Beta) (30 min.) :$bsd., col. ;$c1/2 in.$3(2
+    copies)
+300 ##$a1 computer disk :$bsd., col. ;$c3 1/2 in.
+300 ##$a42$fcu. ft.
+300 ##$3poems$a1$fpage ;$c108 cm. x 34.5 cm.
+300 ##$adiary$a1$fvolume$a(463$fpages) ;$c17 cm. x 34.5 cm.
+300 ##$a17$fboxes$a(7$flinear ft.)[Repeated subfield $a for archival
+    materials.]
+300 ##$a1 reel (312 ft.) :$bsi., b&amp;w ;$c16 mm.$3ref print.
+300 ##$a65 prints :$brelief process ;$c29 x 22 cm.
+300 ##$a1 score (30 p.) ;$c20 cm. +$a16 parts ;$c32 cm.
+300 ##$a1 globe :$bcol., wood, mounted on brass stand ;$c12 cm. in diam.
+300 ##$a1 sound disc (20 min.) :$banalog, 33 1/3 rpm, stereo. ;$c12 in.
+300 ##$a1 sound disc (56 min.) :$bdigital, stereo. ;$c4 3/4 in.
+300 ##$a149 p. ;$c23 cm.
+300 ##$3poems$a1$fpage ;$c108 cm. x 34.5 cm.
+300 ##$a40 p. :$bill. (woodcuts) ;$c20 cm. (8vo)
+300 ##$a271 p. :$bill. ;$c21 cm. +$eatlas (37 p., 19 leaves of plates : 19
+    col. maps ; 37 cm.)
+300 ##$a1 computer disk ;$c3 1/2 in. +$ereference manual.
+300 ##$a24$ffile drawers.
+300 ##$3records$a1$fbox$g2 x 4 x 3 1/2 ft.
+
 ** 306 - Playing Time (NR)  
 *** Full
 *** Concise
+Six numeric characters, in the pattern hhmmss, that represent the playing time
+for a sound recording, videorecording, etc. or the stated duration of
+performance of printed or manuscript music. If the playing time is less than 1
+hour, the hour (hh) is recorded as two zeroes; if less than a minute, the
+minute (mm) is also recorded as two zeroes.
+**** Indicators
+***** First - Undefined
+# - Undefined
+***** Second - Undefined
+# - Undefined
+**** Subfield Codes
+  + $a :: Playing time (R)
+  + $6 :: Linkage (NR)
+See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+306 ##$a002016
+306 ##$a003100$a001839
+
 ** 307 - Hours, etc. (R)  
 *** Full
 *** Concise
+    Chronological information identifying the days and/or times an item is
+    available or accessible. Used primarily in records for electronic resources.
+**** Indicators
+***** First - Display constant controller
+      # - Hours
+      8 - No display constant generated
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Hours (NR)
+  + $b :: Additional information (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     307 ##$aM-F, 9:30am-3:30pm, USA EST.
+     307 8#$aDate: Dec. 1, 1993, 2:00 p.m.
+     307 ##$aM-F, 6:30am-9:00pm (EST);$bwith brief interruptions for periodic
+     update/backup of data.
+     307 ##$aDaily, 7am-7pm;$btext files only.
+
 ** 310 - Current Publication Frequency (NR)  
 *** Full
 *** Concise
+    Current stated publication frequency of either an item or an update to an item.
+    Dates are included when the beginning date of the current frequency is not the
+    same as the beginning date of publication.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Current publication frequency (NR)
+  + $b :: Date of current publication frequency (NR)
+	  Used when the date is different from the beginning date of the publication and
+	  a former publication frequency is given in field 321.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     310 ##$aMonthly
+     310 ##$aMonthly, including annual cumulation
+     310 ##$aBimonthly (monthly June-July)
+     310 ##$aContinuously updated
+     310 ##$aAnnual,$b1983-
+     310 ##$aMonthly,$bJan. 1984
+     310 ##$a5 no. a year,$b1946-1948
+     310 ##$aUpdated irregularly,$b2001-
+    
 ** 321 - Former Publication Frequency (R)  
 *** Full
 *** Concise
+    Former publication frequency of either an item or an update to an item when a
+    current publication frequency is given in field 310 (Current Publication
+    Frequency).
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Former publication frequency (NR)
+  + $b :: Dates of former publication frequency (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     321 ##$aTen no. a year,$b1982-1984
+     321 ##$aMonthly,$bMar. 1972-Dec. 1980
+     321 ##$aSemiannual,$b1981-1982
+     321 ##$aFrequency varies,$b1966-1983
+     321 ##$aFrequency of update varies
+     321 ##$aUpdated monthly,$b1998-2000
+
 ** 336 - Content Type (R)  
 *** Full
 *** Concise
+    The form of communication through which a work is expressed. Used in
+    conjunction with Leader /06 (Type of record), which indicates the general type
+    of content of the resource. Field 336 information enables expression of more
+    specific content types and content types from various lists.
+    Multiple content types from the same source vocabulary or code list may be
+    recorded in the same field in separate occurrences of subfield $a (Content type
+    term) and subfield $b (Content type code). Terms from different source
+    vocabularies are recorded in separate occurrences of the field.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Content type term (R)
+  + $b :: Content type code (R)
+  + $2 :: Source (NR)
+	  Code from: Genre/Form_Code_and_Term_Source_Codes.
+  + $3 :: Materials specified (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     336 ##$aperformed music$2rdacontent
+     336 ##$atwo-dimensional moving image$btdi$2rdacontent
+     336 ##$bprm$2rdacontent
+     336 ##$btxt$2rdacontent$3liner notes
+     336 ##$btdm$2rdacontent
+     336 ##$atext$2rdacontent$3liner notes
+
 ** 337 - Media Type (R)  
 *** Full
 *** Concise
+    Media type reflects the general type of intermediation device required to view,
+    play, run, etc., the content of a resource. Used as an alternative to or in
+    addition to the coded expression of Media type in field 007/00 (Category of
+    material). Field 337 information enables indication of more specific media
+    types and media types from various lists.
+    Multiple media types from the same source vocabulary or code list may be
+    recorded in the same field in separate occurrences of subfield $a (Media type
+    term) and subfield $b (Media type code). Terms from different source
+    vocabularies are recorded in separate occurrences of the field.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Media type term (R)
+  + $b :: Media type code (R)
+  + $2 :: Source (NR)
+	  Code from: Genre/Form_Code_and_Term_Source_Codes.
+  + $3 :: Materials specified (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     337 ##$aaudio$2rdamedia
+     337 ##$avideo$bv$2rdamedia
+     337 ##$bs$2rdamedia
+     337 ##$bn$2rdamedia$3liner notes
+     337 ##$bv$2rdamedia
+     337 ##$aunmediated$2rdamedia$3liner notes
+
+     Former publication frequency of either an item or an update to an item when a
+     current publication frequency is given in field 310 (Current Publication
+     Frequency).
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Former publication frequency (NR)
+  + $b :: Dates of former publication frequency (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     321 ##$aTen no. a year,$b1982-1984
+     321 ##$aMonthly,$bMar. 1972-Dec. 1980
+     321 ##$aSemiannual,$b1981-1982
+     321 ##$aFrequency varies,$b1966-1983
+     321 ##$aFrequency of update varies
+     321 ##$aUpdated monthly,$b1998-2000
 ** 338 - Carrier Type (R)  
 *** Full
 *** Concise
+    Carrier type reflects the format of the storage medium and housing of a carrier
+    in combination with the media type (which indicates the intermediation device
+    required to view, play, run, etc., the content of a resource). Used as an
+    alternative to or in addition to the coded expression of carrier type in field
+    007/01 (Specific material designation). Field 338 information enables
+    indication of more specific carrier types and carrier types from various lists.
+    Multiple media types from the same source vocabulary or code list may be
+    recorded in the same field in separate occurrences of subfield $a (Carrier type
+    term) and subfield $b (Carrier type code). Terms from different source
+    vocabularies are recorded in separate occurrences of the field.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Carrier type term (R)
+	     Term for the category of carrier used to convey the content of the resource.
+  + $b :: Carrier type code (R)
+	  Code for the category of carrier used to convey the content of the resource.
+  + $2 :: Source (NR)
+	  Code from: Genre/Form_Code_and_Term_Source_Codes.
+  + $3 :: Materials specified (NR)
+	  Part of the described materials to which the field applies.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     338 ##$aaudio disc$2rdacarrier
+     338 ##$avideodisc$bvd$2rdacarrier
+     338 ##$bsd$2rdacarrier
+     338 ##$bvd$2rdacarrier
+     338 ##$bnb$2rdacarrier$3liner notes
+     338 ##$asheet$2rdacarrier$3liner notes
+
 ** 340 - Physical Medium (R)  
 *** Full
 *** Concise
+    Physical description information for an item that requires technical equipment
+    for its use or an item that has special conservation or storage needs.
+**** Indicators 
+***** First - Undefined
+     # - Undefined
+***** Second - Undefined
+     # - Undefined
+**** Subfield Codes
+     + $a :: Material base and configuration (R)
+     + $b :: Dimensions (R)
+     + $c :: Materials applied to surface (R)
+     + $d :: Information recording technique (R)
+     + $e :: Support (R)
+     + $f :: Production rate/ratio (R)
+     + $h :: Location within medium (R)
+     + $i :: Technical specifications of medium (R)
+     + $j :: Generation (R)
+     + $k :: Layout (R)
+     + $m :: Book format (R)
+     + $n :: Font size (R)
+     + $o :: Polarity (R)
+     + $0 :: Authority record control number or standard number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $2 :: Source (NR)
+     + $3 :: Materials specified (NR)
+     + $6 :: Linkage (NR)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $8 :: Field link and sequence number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     340 ##$amarble.
+     340 ##$aparchment$b20 cm. folded to 10 x 12 cm.
+     340 ##$3self-portrait$arice paper$b7" x 9"$ccolored inks$enone$hbetween
+     entry for April 7 and April 19, 1843.
+     340 ##$dhandwritten$dtyped.
+     340 ##$acanvas$b30 x 57 cm.$ccolored oil-base paints$ewood.
+     340 ##$3case files$aaperture cards$b9 x 19 cm.$dmicrofilm$f48x.
+     340 ##$joriginal$2rda
+     340 ##$jprinting master$2rda
+     340 ##$kdouble sided$2rda
+     340 ##$mfolio$2rda
+     340 ##$m4to$2rda
+     340 ##$ngiant print (36 point)$2rda
+     340 ##$opositive$2rda
+     340 ##$3case files$aaperture cards$b9 x 19 cm.$dmicrofilm$f48x.
+
 ** 342 - Geospatial Reference Data (R)  
 *** Full
 *** Concise
+    Description of the frame of reference for the coordinates in a data set. To
+    work with a data set a user must be able to identify how location accuracy has
+    been affected through the application of a geospatial reference method, thus
+    enabling the user to manipulate the data set to recover location accuracy.
+**** Indicators
+***** First - Geospatial reference dimension
+      0 - Horizontal coordinate system
+      1 - Vertical coordinate system
+***** Second - Geospatial reference method
+      0 - Geographic
+      1 - Map projection
+      2 - Grid coordinate system
+      3 - Local planar
+      4 - Local
+      5 - Geodetic model
+      6 - Altitude
+      7 - Method specified in $2
+      8 - Depth
+**** Subfield Codes
+  + $a :: Name (NR)
+  + $b :: Coordinate units or distance units (NR)
+  + $c :: Latitude resolution (NR)
+  + $d :: Longitude resolution (NR)
+  + $e :: Standard parallel or oblique line latitude (R)
+  + $f :: Oblique line longitude (R)
+  + $g :: Longitude of central meridian or projection center (NR)
+  + $h :: Latitude of projection center or projection origin (NR)
+  + $i :: False easting (NR)
+  + $j :: False northing (NR)
+  + $k :: Scale factor (NR)
+  + $l :: Height of perspective point above surface (NR)
+  + $m :: Azimuthal angle (NR)
+  + $n :: Azimuth measure point longitude or straight vertical longitude from pole
+	  (NR)
+  + $o :: Landsat number and path number (NR)
+  + $p :: Zone identifier (NR)
+  + $q :: Ellipsoid name (NR)
+  + $r - Semi::major axis (NR)
+  + $s :: Denominator of flattening ratio (NR)
+  + $t :: Vertical resolution (NR)
+  + $u :: Vertical encoding method (NR)
+  + $v :: Local planar, local, or other projection or grid description (NR)
+  + $w :: Local planar or local georeference information (NR)
+  + $2 :: Reference method used (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     342 01$aPolyconic$g0.9996$h0$i500,000$j0
+     342 16$aNational geodetic vertical datum of 1929$v1$bmeters$wImplicit
+     coordinates.
+     342 00$c0.0004$d0.0004$bDecimal degrees
+     342 01$aPolyconic$g0.9996$h0$i500,000$j0
+     342 05$sWorld geodetic system 72$t6378135$u298.26
+     342 16$aNational geodetic vertical datum of 1929$v1$bmeters$wImplicit
+     coordinates.
+     342 18$aLowest astronomical tide
+     342 18$aLowest astronomical tide
+     342 16$aNational geodetic vertical datum of 1929$v1$bmeters$wImplicit
+     coordinates.
+     342 00$c0.0004$d0.0004$bDecimal degrees
+     342 05$aWorld Geodetic System 1984 (WGS-
+     84)$c0.0000001$d0.0000001$bDegrees, Minutes, and Decimal
+     seconds$qWorld Geodetic System 1984 (WGS-84)$r6378137.0$s298.257223563
+     342 01$aPolyconic$g0.9996$h0$i500,000$j0
+     342 02$aUniversal Transverse Mercator$p13$k0.9996$g-
+     105.00$h0.00$i500,000$j0.0
+     342 02$aState Plane Coordinate System 27, Lambert Conformal Conic$p0405$g-
+     69.0$h0.0$i500000.0$j0.0
+     342 01$aPolyconic$g0.9996$h0$i500,000$j0
+     342 02$aState Plane Coordinate System 27, Lambert Conformal Conic$p0405$g-
+     69.0$h0.0$i500000.0$j0.0
+     342 03$vMissouri East State Plane NAD27$qClarke 1866$r6378206.4
+     M$s294.97869821
+     342 05$sWorld geodetic system 72$t6378135$u298.26
+     342 18$aNGVD 1929$t0.01$bfeet$uExplicit depth coordinate included with
+     horizontal coordinates
+
 ** 343 - Planar Coordinate Data (R)  
 *** Full
 *** Concise
+    Information about the coordinate system developed on a planar surface. The
+    information is provided to allow the user of a geospatial data set to identify
+    the quantities of distances, or distances and angles. These define the position
+    of a point on a reference plane onto which the surface of the Earth has been
+    projected.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Planar coordinate encoding method (NR)
+  + $b :: Planar distance units (NR)
+  + $c :: Abscissa resolution (NR)
+  + $d :: Ordinate resolution (NR)
+  + $e :: Distance resolution (NR)
+  + $f :: Bearing resolution (NR)
+  + $g :: Bearing units (NR)
+  + $h :: Bearing reference direction (NR)
+  + $i :: Bearing reference meridian (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     343 ##$aDistance and bearing.
+     343 ##$aCoordinate pair;$bmeters;$c22;$d22.
+     343 ##$aCoordinate pair;$e30.0;$f0.0001;$gDegrees, minutes and decimal
+     seconds;$hNorth;$bU.S. feet.
+     343 ##$aCoordinate
+     pair;$c3.224549805355;$d3.224549805355;$f0.0001;$bmeters.
+     343 ##$aCoordinate pair;$e80.0;$f0.0001;$gDegrees, minutes and decimal
+     seconds;$bmeters.
+     343 ##$aCoordinate pair;$c0.001024;$d0.001024;$hNorth;$bsurvey feet.
+     343 ##$iMagnetic.
+
 ** 344 - Sound Characteristics (R)  
 *** Full
 *** Concise
+    Technical specifications relating to the encoding of sound in a resource.
+**** Indicators 
+*****  First - Undefined
+     # - Undefined
+*****  Second - Undefined
+     # - Undefined
+**** Subfield Codes
+     + $a :: Type of recording (R)
+     + $b :: Recording medium (R)
+     + $c :: Playing speed (R)
+     + $d :: Groove characteristic (R)
+     + $e :: Track configuration (R)
+     + $f :: Tape configuration (R)
+     + $g :: Configuration of playback channels (R)
+     + $h :: Special playback characteristics (R)
+     + $0 :: Authority record control number or standard number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $2 :: Source (NR)
+     + $3 :: Materials specified (NR)
+     + $6 :: Linkage (NR)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $8 :: Field link and sequence number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     344 ##$aanalog$c33 1/3 rpm$gstereo
+     344 ##$adigital$boptical$gsurround$hDolby digital 5.1$2rda
+     344 ##$aanalog$c78 rpm
+     344 ##$aanalog$dcoarse groove$2rda
+     344 ##$aanalog$eedge track$2rda
+     344 ##$aanalog$f12 track
+     344 ##$adigital$gstereo$2rda
+     344 ##$aanalog$hDolby-B encoded$2rda
+
 ** 345 - Projection Characteristics of Moving Image (R)  
 *** Full
 *** Concise
+    Technical specifications relating to the projection of a moving image resource.
+**** Indicators
+***** First - Undefined
+     # - Undefined
+***** Second - Undefined
+     # - Undefined
+**** Subfield Codes
+     + $a :: Presentation format (R)
+     + $b :: Projection speed (R)
+     + $0 :: Authority record control number or standard number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $2 :: Source (NR)
+     + $3 :: Materials specified (NR)
+     + $6 :: Linkage (NR)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $8 :: Field link and sequence number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     345 ##$a3D$b48 fps$2rda
+     345 ##$aCinerama$b24 fps$2rda
+
 ** 346 - Video Characteristics (R)  
 *** Full
 *** Concise
+    Technical specifications relating to the encoding of analog video images in a
+    resource.
+**** Indicators
+***** First - Undefined
+     # - Undefined
+***** Second - Undefined
+     # - Undefined
+**** Subfield Codes
+     + $a :: Video format (R)
+     + $b :: Broadcast standard (R)
+     + $0 :: Authority record control number or standard number (R)
+	     Seedescription of this subfield in Appendix A: Control_Subfields.
+     + $2 :: Source (NR)
+     + $3 :: Materials specified (NR)
+     + $6 :: Linkage (NR)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $8 :: Field link and sequence number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     346 ##$aBeta$bPAL$2rda
+     346 ##$aVHS$bNTSC$2rda
+
 ** 347 - Digital File Characteristics (R)  
 *** Full
 *** Concise
+    Technical specification relating to the digital encoding of text, image, audio,
+    video, and other types of data in a resource. This information could also be
+    recorded in field 300 (Physical Description) $b (Other physical details).
+**** Indicators
+***** First - Undefined
+     # - Undefined
+***** Second - Undefined
+     # - Undefined
+**** Subfield Codes
+     + $a :: File type (R)
+     + $b :: Encoding format (R)
+     + $c :: File size (R)
+     + $d :: Resolution (R)
+     + $e :: Regional encoding (R)
+     + $f :: Transmission speed (R)
+     + $0 :: Authority record control number or standard number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $2 :: Source (NR)
+     + $3 :: Materials specified (NR)
+     + $6 :: Linkage (NR)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $8 :: Field link and sequence number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     347 ##$aaudio file$bCD audio$2rda
+     347 ##$atext file$bPDF$2rda
+     347 ##$avideo file$bBlu-Ray$2rda
+     347 ##$adata file$bXML$c182 KB$2rda
+     347 ##$aimage file$bJPEG$d3.1 megapixels$2rda
+     347 ##$avideo file$bDVD video$eregion 4$2rda
+     347 ##$aaudio file$bMP3$f32 kbps$2rda
+
 ** 351 - Organization and Arrangement of Materials (R)  
 *** Full
 *** Concise
+    Information about the organization and arrangement of a collection of items.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Organization (R)
+	     Manner in which the described materials are subdivided into smaller units, such
+	     as how record groups are divided into series and series into subseries. For
+	     computer files, contains information about the file structure or the name of
+	     the computer software or system.
+  + $b :: Arrangement (R)
+	  Pattern of arrangement of materials within a unit (e.g., alphabetical,
+	  chronological, by country, by office of origin, etc.).
+  + $c :: Hierarchical level (NR)
+	  Hierarchical position of the described materials relative to other records from
+	  the same source.
+  + $3 :: Materials specified (NR)
+	  Part of the described materials to which the field applies.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     351 ##$aOrganized into subdivisions: Lot 2962-1 Indoor Classes, Activities
+     and Displays--Lot 2962-2 Outdoor Classes--Lot 2962-3 Buildings.
+     351 ##$aFixed-length, nonhierarchical;$bMonth by carrier code and flight
+     number.
+     351 ##$3Diaries and notebooks$aOrganized into four series: I. Youth, 1846- 1852. II. Early Career,1853-1865. III. Political Life, 1866-1895. IV.
+     Retirement, 1896-1903;$bChronological arrangement.
+     351 ##$aSPSS system file.
+     351 ##$cSeries;$bAlphabetical by sitter.
+     351 ##$cSeries;$aOrganized into five subseries;$bArranged by form of
+     material.
+     351 ##$3Permits for fishery operations, 1914-24$cSubseries;$bAlphabetical
+     by state then by year of renewal and within year by permit number.
+
 ** 352 - Digital Graphic Representation (R)  
 *** Full
 *** Concise
+    Description of the method of referencing and the mechanism used to represent
+    graphic information in a data set. This information consists of the type of
+    storage technique used, the number of items in the data set, and the format in
+    which the data is stored.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Direct reference method (NR)
+  + $b :: Object type (R)
+  + $c :: Object count (R)
+  + $d :: Row count (NR)
+  + $e :: Column count (NR)
+  + $f :: Vertical count (NR)
+  + $g :: VPF topology level (NR)
+  + $i :: Indirect reference description (NR)
+  + $q :: Format of the digital image (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     352 ##$aVector.
+     352 ##$aPoint :$bEntity point.
+     352 ##$aVector :$bGT-polygon composed of chains$c(70).
+     352 ##$aVector :$i100 year floodplain boundary, 500 year floodplain
+     boundary.
+     352 ##$aRaster :$bpixel$d(5,000 x$e5,000) ;$qTIFF.
+
 ** 355 - Security Classification Control (R)  
 *** Full
 *** Concise
+    Specifics pertaining to the security classification associated with the
+    document, title, abstract, contents note, and/or the author. In addition, it
+    can contain handling instructions and external dissemination information
+    pertaining to the dissemination of the document, title, abstract, contents
+    note, and author. The field may also contain downgrading or declassification
+    data, the name of the classification system, and a country of origin code.
+**** Indicators
+***** First - Controlled element
+      0 - Document
+      1 - Title
+      2 - Abstract
+      3 - Contents note
+      4 - Author
+      5 - Record
+      8 - None of the above
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Security classification (NR)
+	     Security classification (e.g., Unclassified, Secret, Confidential) associated
+	     with the document, title, abstract, contents note, or author.
+  + $b :: Handling instructions (R)
+	  Handling instructions, e.g., who internally in the organization may handle or
+	  see the document, title, abstract, contents note, or author.
+  + $c :: External dissemination information (R)
+  + $d :: Downgrading or declassification event (NR)
+	  Data about the security classification, often a phrase pertaining to
+	  downgrading or declassification, e.g., OADR (which stands for "Original Agency
+	  Determination Required"). Dates relating to the downgrading or declassification
+	  are recorded in subfields $g or $h.
+  + $e :: Classification system (NR)
+	  Name of a security classification system, not necessarily come from a
+	  controlled list.
+  + $f :: Country of origin code (NR)
+	  Two- or three-character alphabetic MARC code indicating the country of origin
+	  of the classification. Code from: MARC_Code_List_for_Countries.
+  + $g :: Downgrading date (NR)
+	  Date pertaining to the downgrading of the document, title, abstract, contents
+	  note, or author. Downgrading involves changes to security classification, from
+	  a higher level to lower level of classification.
+  + $h :: Declassification date (NR)
+	  Date pertaining to the declassification of the document, title, abstract,
+	  contents note, or author. Declassification involves the removal of any security
+	  classification on an item.
+  + $j :: Authorization (R)
+	  Information that identifies by whose authority a change in security
+	  classification was made. The subfield contains a MARC code of the authorizing
+	  agency. See Appendix I: Organization_Code_Sources for a listing of sources used
+	  in MARC 21 records.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     355 0#$aUnclassified$bFOUO
+     355 2#$aConfidential$bNOFORN
+     355 3#$aSecret
+     355 1#$aSecret$bNOFORN$bNOCONTRACT
+     355 0#$aSecret$bFRD$cAS$d010101
+     355 0#$aSecret$bNOFORN$bWNINTEL$bNOCONTRACT$dOADR
+     355 0#$aTop Secret$cUS$cCA$fxxk
+     355 0#$aConfidential$bNOCONTRACT$cUK$g20281001
+     355 0#$aSecret$bNOFORN$h20230301
+     355 0#$aSecret$bNOFORN$h20230301$j<agency identifier>
+
 ** 357 - Originator Dissemination Control (NR)  
 *** Full
 *** Concise
+    Specifics pertaining to originator (i.e., author, producer) control of
+    dissemination of the material in hand. Subfield $a contains a specific term
+    denoting that the originator has control over the material.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Originator control term (NR)
+  + $b :: Originating agency (R)
+  + $c :: Authorized recipients of material (R)
+  + $g :: Other restrictions (R)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     357 ##$aPROPIN$bLockport Aviation$cNorthfield Avionics Project 11234$cAir
+     Frames Inc., Project 11234 Support Team
+     357 ##$aORCON$bITAC$cCIA$cDIA$cUKIA
+     357 ##$aORCON$bITAC$c313 th MIB$cDistribution List B-32-91$gMust be
+     returned to originator after 30 days
+
 ** 362 - Dates of Publication and/or Sequential Designation (R)  
 *** Full
 *** Concise
+    Beginning/ending date(s) of an item and/or the sequential designations used on
+    each part. Dates to be used in this field are chronological designations that
+    identify individual issues of the continuing resource. The sequential
+    designations are usually numeric but can be alphabetic as well. The information
+    may be formatted or unformatted. If the date information has been obtained from
+    a source other than the first and/or last issue of the item published, the
+    information is given in an unformatted note and the source of the information
+    is usually cited.
+**** Indicators
+***** First - Format of date
+      0 - Formatted style
+      1 - Unformatted note
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Dates of publication and/or sequential designation (NR)
+	     When both a sequential designation and a chronological designation are given,
+	     the chronological one is enclosed in parentheses.
+  + $z :: Source of information (NR)
+	  Citation of the source of information contained in subfield $a; used only when
+	  the first indicator position contains value 1 (unformatted notes).
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     362 0#$aVol. 1, no. 1 (Apr. 1981)-
+     362 0#$a1968-
+     362 0#$aVol. 1, no. 1 (Apr. 1983)-v. 1, no. 3 (June 1983)
+     362 1#$aBegan with 1930 issue.$zCf. Letter from Ak. State Highway Dept.,
+     Aug. 6, 1975.
+     362 1#$aCeased with 2 (1964)
+     362 0#$aVol. 77, num. 1 (enero-abr. 1981)-
+
 ** 363 - Normalized Date and Sequential Designation (R)  
 *** Full
 *** Concise
+    The numeric, alphabetic and/or normalized date designation used on the
+    bibliographic item that identifies its parts and shows the relationship of the
+    parts to the whole.
+**** Indicators
+***** First - Start/End designator
+      # - No information provided
+      0 - Starting information
+      1 - Ending information
+***** Second - State of issuance
+      # - Not specified
+      0 - Closed
+      The sequence of the publication has terminated and is no longer being issued.
+      1 - Open
+      The sequence of the publication continues to be issued.
+**** Subfield Codes
+  + $a :: First level of enumeration (NR)
+  + $b :: Second level of enumeration (NR)
+  + $c :: Third level of enumeration (NR)
+  + $d :: Fourth level of enumeration (NR)
+  + $e :: Fifth level of enumeration (NR)
+  + $f :: Sixth level of enumeration (NR)
+  + $g :: Alternative numbering scheme, first level of enumeration (NR)
+  + $h :: Alternative numbering scheme, second level of enumeration (NR)
+  + $i :: First level of chronology (NR)
+  + $j :: Second level of chronology (NR)
+  + $k :: Third level of chronology (NR)
+  + $l :: Fourth level of chronology (NR)
+  + $m :: Alternative numbering scheme, chronology (NR)
+	  Highest level of an alternative chronology scheme.
+  + $u :: First level textual designation (NR)
+	  Textual information associated with enumeration and chronology.
+  + $v :: First level of chronology, issuance (NR)
+	  For items that use coverage in subfield $i (First level of chronology) when the
+	  issuing date is different.
+  + $x :: Nonpublic note (R)
+  + $z :: Public note (R)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     363 01$i2004
+     363 01$a15$b2$i2005
+     363 00$81.1\x$i1949$v1951
+     363 10$81.2\x$i1956$v1959
+     363 00$81.1\x$a1$i1964
+     363 10$81.2\x$a19$b5$i1982
+     363 00$81.1\x$a15$i1904$jApr$k2
+     363 10$81.2\x$a44$i1933$jApr$k29
+     363 00$81.1\x$uWahlper.$a2$i1950/54$v1955
+     363 10$81.2\x$a11$i1990/95 $v1996
+     363 01$a24$b2$i1986
+
 ** 365 - Trade Price (R)  
 *** Full
 *** Concise
+    [Link_disclaimer]
+    Current price of an item or the special export price of an item in any
+    currency.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Price type code (NR)
+  + $b :: Price amount (NR)
+  + $c :: Currency code (NR)
+  + $d :: Unit of pricing (NR)
+  + $e :: Price note (NR)
+  + $f :: Price effective from (NR)
+  + $g :: Price effective until (NR)
+  + $h :: Tax rate 1 (NR)
+  + $i :: Tax rate 2 (NR)
+  + $j :: ISO country code (NR)
+	  Code from: ISO_3166-1, Codes for the Representation of Names of Countries.
+  + $k :: MARC country code (NR)
+	  Code from: MARC_Code_List_for_Countries.
+  + $m :: Identification of pricing entity (NR)
+  + $2 :: Source of price type code (NR)
+	  Code from: Price_Type_Code_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     365 ##$a01$b45.00$cUSD$d00$2onix-pt
+     365 ##$a02$b0.59$cGBP$d01$jGB$hS 0.50 17.5 0.59 .09$2onix-pt
+
 ** 366 - Trade Availability Information (R)  
 *** Full
 *** Concise
+    [Link_disclaimer]
+    Detailed information relating to the availability of items from publishers.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Publishers' compressed title identification (NR)
+  + $b :: Detailed date of publication (NR)
+  + $c :: Availability status code (NR)
+  + $d :: Expected next availability date (NR)
+  + $e :: Note (NR)
+  + $f :: Publisher's discount category (NR)
+  + $g :: Date made out of print (NR)
+  + $j :: ISO country code (NR)
+	  Code from: ISO_3166-1, Codes for the Representation of Names of Countries.
+  + $k :: MARC country code (NR)
+	  Code for the country in which the information in the field is applicable. Code
+	  from: MARC_Code_List_for_Countries.
+  + $m :: Identification of agency (NR)
+  + $2 :: Source of availability status code (NR)
+	  MARC code that identifies the source of the availability status code recorded
+	  in subfield $c. Code from: Availability_Status_Code_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     366 ##$aSteinberg Adolescence (3rd ed)$b19921200
+     366 ##$b19960517$cNP 19951205$2onix-as
+     366 ##$cRP 19951205$d19960600
+     366 ##$cOP 20011105$g20011013$jUK$2onix-as
+
 ** 377 - Associated Language (R)  
 *** Full
 *** Concise
+    Codes for languages associated with the entity described in the record.
+    Includes the language a person uses when writing for publication, broadcasting,
+    etc., a language a corporate body uses in its communications, a language of a
+    family, or a language in which a work is expressed.
+**** Indicators
+***** First - Undefined
+     # - Undefined
+***** Second - Source of code  
+     # - MARC language code
+         Code from: MARC_Code_List_for_Languages.
+     7 - Source specified in subfield $2
+**** Subfield Codes 
+    + $a :: Language code (R)
+    + $l :: Language term (R)
+    + $2 :: Source (NR)
+	    Code from: Language_Code_and_Term_Source_Codes.
+    + $6 :: Linkage (NR)
+	    See description of this subfield in Appendix A: Control_Subfields.
+    + $8 :: Field link and sequence number (R)
+	    See description of this subfield in Appendix A: Control_Subfields.
+
 ** 380 - Form of Work (R)  
 *** Full
 *** Concise
+    A class or genre to which a work belongs. May be used to differentiate a work
+    from another work with the same title.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Form of work (R)
+  + $0 :: Record control number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $2 :: Source of term (NR)
+	  Code from: Subject_Heading_and_Term_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     380 ##$aPlay
+     380 ##$aChoreographic work
+     380 ##$aTelevision program
+
 ** 381 - Other Distinguishing Characteristics of Work or Expression (R)  
 *** Full
 *** Concise
+    Any characteristic that is not accommodated in a special field that serves to
+    characterize a work or expression. Examples are an issuing body, arranged
+    statement of music, version, or a geographic term. May be used to differentiate
+    a work from another work with the same title.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Other distinguishing characteristic (R)
+  + $u :: Uniform Resource Identifier (R)
+  + $v :: Source of information (R)
+  + $0 :: Record control number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $2 :: Source of term (NR)
+	  Code from: Subject_Heading_and_Term_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     381 ##$aSouth African Law Commission
+     381 ##$aDouglas
+     381 ##$aD'Amboise
+     381 ##$aAuthorized
+     381 ##$aarranged
+     381 ##$aSelections
+
 ** 382 - Medium of Performance (R)  
 *** Full
 *** Concise
+    For manifestations: the instrumental, vocal, and/or other medium of performance
+    embodied in the manifestation.
+    For works and expressions: the instrumental, vocal, and/or other medium of
+    performance for which a musical work was originally conceived or for which a
+    musical expression is written or performed. May be used to differentiate a
+    musical work or expression from another with the same title.
+**** Indicators
+***** First - Display constant controller
+     # - No information provided
+     0 - Medium of performance
+     1 - Partial medium of performance
+***** Second - Access control
+     # - No information provided
+     0 - Not intended for access
+     1 - Intended for access
+**** Subfield Codes
+    + $a :: Medium of performance (R)
+    + $b :: Soloist (R)
+    + $d :: Doubling instrument (R)
+    + $n :: Number of performers of the same medium (R)
+    + $p :: Alternative medium of performance (R)
+    + $s :: Total number of performers (R)
+    + $v :: Note (R)
+    + $0 :: Authority record control number or standard number (R)
+   	     See description of this subfield in Appendix A: Control_Subfields.
+    + $2 :: Source of term (NR)
+   	     Code from: Musical_Instrumentation_and_Voice_Code_Source_Codes.
+    + $6 :: Linkage (NR)
+   	     See description of this subfield in Appendix A: Control_Subfields.
+    + $8 :: Field link and sequence number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     382 11$adidjeridu$n1
+     382 ##$amixed voices$aorchestra
+     382 ##$apiano
+     382 01$bflute$aorchestra
+     382 01$aflute$n1$dpiccolo$n1$dalto flute$n1$dbass flute$n1$s1
+     382 01$atrumpet$n2$atrombone$n2$s4
+     382 01$pclarinet$valternative for violin$2gnd
+     01$asoprano$n2$amezzo-soprano$n1$atenor saxophone$n1$dbass
+     382 clarinet$n1$atrumpet$n1$apiano$n1$aviolin$n1$dviola$n1$adouble
+     bass$n1$s8
+     382 ##$adidjeridu$vdidjeridu is prominent, but other instruments are not
+     identified$2gnd
 ** 383 - Numeric Designation of Musical Work (R)  
 *** Full
 *** Concise
+    A serial number, opus number, or thematic index number assigned to a musical
+    work by the composer, publisher, or a musicologist. May be used to
+    differentiate a musical work from another with the same title.
+**** Indicators
+***** First - Undefined
+     # - Undefined
+***** Second - Undefined
+     # - Undefined
+**** Subfield Codes
+     + $a :: Serial number (R)
+     + $b :: Opus number (R)
+     + $c :: Thematic index number (R)
+     + $d :: Thematic index code (NR)
+     + $e :: Publisher associated with opus number (NR)
+     + $2 :: Source (NR)
+	     Code from: Thematic_Index_Code_Source_Codes.
+     + $6 :: Linkage (NR)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $8 :: Field link and sequence number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+*** Examples ***
+    383 ##$ano. 14,$bop. 27, no. 2
+    383 ##$cBWV 211
+    383 ##$bop. 8, no. 1-4
+    383 ##$cRV 269$cRV 315$cRV 293$cRV 297$dRyom$2mlati
+    383 ##$cF. I, 22-25$dFanna$2mlati
+    383 ##$bop. 3$eAndré
+    383 ##$bop. 5$eHummel
+
 ** 384 - Key (NR)  
 *** Full
 *** Concise
+    The set of pitch relationships that establishes a single pitch class as a tonal
+    centre for a musical work or expression. May be used to differentiate a musical
+    work or expression from another with the same title.
+**** Indicators
+***** First - Key type
+      # - Relationship to original unknown
+      0 - Original key
+      1 - Transposed key
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Key (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     384 ##$aD minor
+
 * 4XX: Series Statement Fields
+** DEFINITION AND SCOPE
+   Field 490 contains series statements.
+** CONTENT DESIGNATOR HISTORY
+   Field 400 - Series Statement/Added Entry-Personal Name
+   Field 410 - Series Statement/Added Entry-Corporate Name
+   Field 411 - Series Statement/Added Entry−Meeting Name
+   These fields became local to the United States in 1999 since they were obsolete in the CAN/MARC format. They are described in Appendix H.
+   Field 440 - Series Statement/Added Entry-Title [OBSOLETE, 2008]
+   For reference purposes a description of this field is in Appendix H.
+** 490 - Series Statement (R) 
+*** Full
+*** Concise
+Series statement for a series title.
+**** Indicators
+***** First - Series tracing policy
+0 - Series not traced
+1 - Series traced
+***** Second - Undefined
+# - Undefined
+**** Subfield Codes
+  + $a :: Series statement (R)
+Series title that may also contain a statement of responsibility or other title
+information.
+  + $l :: Library of Congress call number (NR)
+LC series call number when it is given as part of the series statement.
+  + $v :: Volume/sequential designation (R)
+  + $x :: International Standard Serial Number (R)
+  + $3 :: Materials specified (NR)
+  + $6 :: Linkage (NR)
+See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+490 0#$aPelican books
+490 1#$aUniform crime reports
+490 1#$aDepartment of the Army pamphlet ;$v27-50
+490 1#$aDepartment of State publication ;$v7846.$aDepartment and Foreign
+    Service series ;$v128
+490 1#$aPediatric clinics of North America ;$vv. 2, no. 4
+490 1#$aBulletin / U.S. Department of Labor, Bureau of Labor Statistics
+490 1#$3v. 9-<10>:$aMPCHT art and anthropological monographs ;$vno. 35
+490 1#$aDepartment of State publication ;$v7846.$aDepartment and Foreign
+    Service series ;$v128
+490 1#$aAnnual census of manufactures =$aRecensement des
+    manufactures,$x0315-5587
+490 1#$aBulletin / Engineering Experiment Station ;$vno. 50$l(TA7.O74)
+490 1#$aMap / Geological Survey of Alabama ;$v158, plate 3
+490 1#$aWest Virginia University bulletin ;$vser. 74, no. 11-3.$aBulletin
+    / Experiment Station, West Virginia University ;$v111
+490 0#$aForschungen zur Geschichte Vorarlbergs ;$v6. Bd. = der ganzen
+    Reihe 13 Bd.
+490 0#$aLife series $x0023-6721
+490 1#$aLund studies in geography,$x1400-1144 ;$v101$aSer. B, Human
+    geography,$x0076-1478 ;$v48
+490 1#$3<1981->: $aReference works
+490 0#$aEducation U.S.A. special report
+
 * 5XX: Note Fields
 * 6XX: Subject Access Fields
 * 70X-75X: Added Entry Fields
