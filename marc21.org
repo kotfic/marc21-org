@@ -2,21 +2,346 @@
 ** 001 - Control Number 
 *** Full
 *** Concise
+    Control number assigned by the organization creating, using, or distributing
+    the record. The MARC code for the organization is contained in field 003
+    (Control Number Identifier).
+**** Examples
+     001 ###86104385#
+     001 ocm14919759
+     001 #####9007496
+
 ** 003 - Control Number Identifier 
 *** Full
 *** Concise
+    MARC code for the organization whose control number is contained in field 001
+    (Control Number).
+    See Appendix I: Organization_Code_Sources for a listing of sources used in MARC
+    21 records.
+**** Examples
+     003 DLC
+     003 OCoLC
+     003 DNLM
+
 ** 005 - Date and Time of Latest Transaction 
 *** Full
 *** Concise
+    Sixteen characters that indicate the date and time of the latest record
+    transaction and serve as a version identifier for the record. They are recorded
+    according to Representation of Dates and Times (ISO 8601). The date requires 8
+    numeric characters in the pattern yyyymmdd. The time requires 8 numeric
+    characters in the pattern hhmmss.f, expressed in terms of the 24-hour (00-23)
+    clock.
+**** Example
+    005 19940223151047.0
+
 ** 006 - Fixed-Length Data Elements - Additional Material Characteristics 
 *** Full
 *** Concise
+    Eighteen character positions (00-17) that provide for coding information about
+    special aspects of the item being cataloged that cannot be coded in field 008
+    (Fixed-Length Data Elements). It is used in cases when an item has multiple
+    characteristics (e.g., printed material with an accompanying cassette or a map
+    that is issued serially) and to record the coded serial aspects of nontextual
+    continuing resources.
+    Field has a generic tree structure, whereby the code given in 006/00 (Form of
+    material) determines the data elements defined for subsequent character
+    positions. Except for code s (Serial/Integrating resource), the codes in field
+    006/00 correspond to those in Leader/06 (Type of record). For each occurrence
+    of field 006, the codes defined for character positions 01-17 will be the same
+    as those defined in the corresponding field 008, character positions 18-34.
+    Configurations of field 006 are given in the following order: books, computer
+    files/electronic resources, maps, music, continuing resources, visual
+    materials, and mixed materials.
+
+**** 006--BOOKS
+     descriptions of character positions 01-17, see the descriptions of
+     esponding character positions 18-34 in the 008--BOOKS section of Control
+     d 008.
+     acter Positions
+      Form of material
+     Language material
+     Manuscript language material
+     4 - Illustrations
+     the description of positions 18-21 (Illustrations) under 008--BOOKS
+      Target audience
+     the description of position 22 (Target audience) under 008--BOOKS
+      Form of item
+     the description of position 23 (Form of item) under 008--BOOKS
+     0 - Nature of contents
+     the description of positions 24-27 (Nature of contents) under 008--BOOKS
+      Government publication
+     the description of position 28 (Government publication) under 008--BOOKS
+      Conference publication
+     the description of position 29 (Conference publication) under 008--BOOKS
+      Festschrift
+     the description of position 30 (Festschrift) under 008--BOOKS
+      Index
+     the description of position 31 (Index) under 008--BOOKS
+      Undefined
+     ains a blank (#) or a fill (|) character
+      Literary form
+     the description of position 33 (Literary form) under 008--BOOKS
+      Biography
+     the description of position 34 (Biography) under 008--BOOKS
+**** 006--COMPUTER FILES/ELECTRONIC RESOURCES
+     descriptions of character positions 01-17, see the descriptions of
+     esponding character positions 18-34 in the 008--COMPUTER_FILES section of
+     rol Field 008.
+     acter Positions
+      Form of material
+     Computer file/Electronic resource
+     4 - Undefined
+      contains a blank (#) or a fill (|) character
+      Target audience
+     the description of position 22 (Target audience) under 008--COMPUTER_FILES
+      Form of item
+     the description of position 23 (Form of item) under 008--COMPUTER_FILES
+     8 - Undefined
+      contains a blank (#) or a fill (|) character
+      Type of computer file
+     the description of position 26 (Type of computer file) under 008--COMPUTER
+     S
+      Undefined
+     ains a blank (#) or a fill (|) character
+      Government publication
+     the description of position 28 (Government publication) under 008--COMPUTER
+     S
+     7 - Undefined
+      contains a blank (#) or a fill (|) character
+**** 006--MAPS
+     descriptions of character positions 01-17, see the descriptions of
+     esponding character positions 18-34 in the 008--MAPS section of Control
+     d 008.
+     acter Positions
+      Form of material
+     Cartographic material
+     Manuscript cartographic material
+     4 - Relief
+     the description of positions 18-21 (Relief) under 008--MAPS
+     6 - Projection
+     the description of positions 22-23 (Projection) under 008--MAPS
+      Undefined
+     ains a blank (#) or a fill (|) character
+      Type of cartographic material
+     the description of position 25 (Type of cartographic material) under 008--
+     
+     0 - Undefined
+      contains a blank (#) or a fill (|) character
+      Government publication
+     the description of position 28 (Government publication) under 008--MAPS
+      Form of item
+     the description of position 23 (Form of item) under 008--MAPS
+      Undefined
+     ains a blank (#) or a fill (|) character
+      Index
+     the description of position 31 (Index) under 008--MAPS
+      Undefined
+     ains a blank (#) or a fill (|) character
+     7 - Special format characteristics
+     the description of positions 33-34 (Special format characteristics) under
+     -MAPS
+**** 006--MIXED MATERIALS
+     descriptions of character positions 01-17, see the descriptions of
+     esponding character positions 18-34 in the 008--MIXED_MATERIALS section of
+     rol Field 008.
+     acter Positions
+      Form of material
+     Mixed material
+     5 - Undefined
+      contains a blank (#) or a fill (|) character
+      Form of item
+     the description of position 23 (Form of item) under 008--MIXED_MATERIALS
+     7 - Undefined
+      contains a blank (#) or a fill (|) character
+**** 006--MUSIC
+     descriptions of character positions 01-17, see the descriptions of
+     esponding character positions 18-34 in the 008--MUSIC section of Control
+     d 008.
+     acter Positions
+      Form of material
+     Notated music
+     Manuscript notated music
+     Nonmusical sound recording
+     Musical sound recording
+     2 - Form of composition
+     the description of positions 18-19 (Form of composition) under 008--MUSIC
+      Format of music
+     the description of position 20 (Format of music) under 008--MUSIC
+      Music parts
+     the description of position 21 (Music parts) under 008--MUSIC
+      Target audience
+     the description of position 22 (Target audience) under 008--MUSIC
+      Form of item
+     the description of position 23 (Form of item) under 008--MUSIC
+     2 - Accompanying matter
+     the description of positions 24-29 (Accompanying matter) under 008--MUSIC
+     4 - Literary text for sound recordings
+     the description of positions 30-31 (Literary text for sound recordings)
+     r 008--MUSIC
+      Undefined
+     ains a blank (#) or a fill (|) character
+      Transposition and arrangement
+     the description of position 33 (Transposition and arrangement) under 008--
+     C
+      Undefined
+     ains a blank (#) or a fill (|) character
+**** 006--CONTINUING RESOURCES
+     descriptions of character positions 01-17, see the descriptions of
+     esponding character positions 18-34 in the 008--CONTINUING_RESOURCES
+     ion of Control Field 008.
+     acter Positions
+      Form of material
+     Serial/Integrating resource
+      Frequency
+     the description of position 18 (Frequency) under 008--CONTINUING_RESOURCES
+      Regularity
+     the description of position 19 (Regularity) under 008--CONTINUING_RESOURCES
+      Undefined
+     ains a blank (#) or a fill (|) character
+      Type of continuing resource
+     the description of position 21 (Type of continuing resource) under 008--
+     INUING_RESOURCES
+      Form of original item
+     the description of position 22 (Form of original item) under 008--
+     INUING_RESOURCES
+      Form of item
+     the description of position 23 (Form of item) under 008--CONTINUING
+     URCES
+      Nature of entire work
+     the description of position 24 (Nature of entire work) under 008--
+     INUING_RESOURCES
+     0 - Nature of contents
+     the description of positions 24-27 (Nature of contents) under 008--
+     INUING_RESOURCES
+      Government publication
+     the description of position 28 (Government publication) under 008--
+     INUING_RESOURCES
+      Conference publication
+     the description of position 29 (Conference publication) under 008--
+     INUING_RESOURCES
+     5 - Undefined
+      contains a blank (#) or a fill (|) character
+      Original alphabet or script of title
+     the description of position 33 (Original alphabet or script of title) under
+     -CONTINUING_RESOURCES
+      Entry convention
+     the description of position 34 (Entry convention) under 008--CONTINUING
+     URCES
+**** 006--VISUAL MATERIALS
+    For descriptions of character positions 01-17, see the descriptions of
+    corresponding character positions 18-34 in the 008--VISUAL_MATERIALS section of
+    Control Field 008.
+    Character Positions
+    00 - Form of material
+    g - Projected medium
+    k - Two-dimensional nonprojected graphic
+    o - Kit
+    r - Three-dimensional artifact or naturally occurring object
+    01-03 - Running time
+    See the description of positions 18-20 (Running time) under 008--VISUAL
+    MATERIALS
+    04 - Undefined
+    Contains a blank (#) or a fill (|) character
+    05 - Target audience
+    See the description of position 22 (Target audience) under 008--VISUAL
+    MATERIALS
+    06-10 - Undefined
+    Each contains a blank (#) or a fill (|) character
+    11 - Government publication
+    See the description of position 28 (Government publication) under 008--VISUAL
+    MATERIALS
+    12 - Form of item
+    See the description of position 29 (Form of item) under 008--VISUAL_MATERIALS
+    13-15 - Undefined
+    Each contains a blank (#) or a fill (|) character
+    16 - Type of visual material
+    See the description of position 33 (Type of visual material) under 008--VISUAL
+    MATERIALS
+    17 - Technique
+    See the description of position 34 (Technique) under 008--VISUAL_MATERIALS
+
 ** 007 - Physical Description Fixed Field 
 *** Full
 *** Concise
+      PHYSICAL DESCRIPTION FIXED FIELD--GENERAL INFORMATION (R)
+      Special information about the physical characteristics in a coded form. The
+      information may represent the whole item or parts of an item such as
+      accompanying material.
+      The physical characteristics are often related to information in other parts of
+      the MARC record especially from field 300 (Physical Description) or one of the
+      5XX note fields.
+      Field has a generic tree structure, whereby codes given in 007/00 (Category of
+      material) determine the data elements defined for subsequent character
+      positions.
+      The data elements in field 007 are positionally defined and the number of
+      character positions in field 007 depends upon the code contained in 007/00.
+      Character position 00 contains a code that identifies the category of material.
+      The fill character (|) is not allowed in this position. The fill character may
+      be used in any other character position when the cataloging agency makes no
+      attempt to code the position.
+      The categories of material for which field 007 is applicable in bibliographic
+      records are presented in the following order in the field description: map,
+      electronic resource, globe, tactile material, projected graphic, microform,
+      nonprojected graphic, motion picture, kit, notated music, remote-sensing image,
+      sound recording, text, videorecording, and unspecified.
+**** TODO Fill out these fields http://www.loc.gov/marc/bibliographic/concise/bd007.html
+***** 007--MAP
+***** 007--ELECTRONIC_RESOURCE
+***** 007--GLOBE
+***** 007--TACTILE_MATERIAL
+***** 007--PROJECTED_GRAPHIC
+***** 007--MICROFORM
+***** 007--NONPROJECTED_GRAPHIC
+***** 007--MOTION_PICTURE
+***** 007--KIT
+***** 007--NOTATED_MUSIC
+***** 007--REMOTE-SENSING_IMAGE
+***** 007--SOUND_RECORDING
+***** 007--TEXT
+***** 007--VIDEORECORDING
+***** 007--UNSPECIFIED
+
 ** 008 - Fixed-Length Data Elements 
 *** Full
 *** Concise
+      ===============================================================================
+      FIXED-LENGTH DATA ELEMENTS--GENERAL INFORMATION (NR)
+      Forty character positions (00-39) that provide coded information about the
+      record as a whole and about special bibliographic aspects of the item being
+      cataloged. These coded data elements are potentially useful for retrieval and
+      data management purposes.
+      Data elements are positionally-defined. Character positions that are not
+      defined contain a blank (#). All defined character positions must contain a
+      defined code; for some field 008 positions, this may be the fill character (|).
+      The fill character may be used (in certain character positions) when a
+      cataloging organization makes no attempt to code the character position. The
+      fill character is not allowed in field 008 positions 00-05 (Date entered on
+      file). Its use is discouraged in positions 07-10 (Date 1), 15-17 (Place of
+      publication, production, or execution), and the 008 position defined for Form
+      of item (either position 23 or 29 depending upon the 008 configuration).
+      Character positions 00-17 and 35-39 are defined the same across all types of
+      material, with special consideration for position 06. The definition of
+      character positions 18-34 was done independently for each type of material,
+      although certain data elements are defined the same in the specifications for
+      more than one type of material. When similar data elements are defined for
+      inclusion in field 008 for different types of material, they occupy the same
+      field 008 character positions.
+      In the following documentation, character positions are described in the order
+      of their listing at the beginning of this section. Field 008 positions 00-17
+      and 35-39 (All materials) for all types of material are described first,
+      followed by seven groups of sections for positions 18-34 (Books, Computer
+      files, Maps, Music, Continuing resources, Visual materials and Mixed
+      materials).
+**** TODO Fill out these fields http://www.loc.gov/marc/bibliographic/concise/bd008.html
+***** 008--ALL_MATERIALS
+***** 008--BOOKS
+***** 008--COMPUTER_FILES
+***** 008--MAPS
+***** 008--MUSIC
+***** 008--CONTINUING_RESOURCES
+***** 008--VISUAL_MATERIALS
+***** 008--MIXED_MATERIALS
+
 * 01X-09X: Numbers and Code Fields
 ** DEFINITION AND SCOPE  
    Fields 01X-09X contain standard numbers, classification numbers, codes, and other data elements relating to the record.
@@ -1397,75 +1722,801 @@
 ** 052 - Geographic Classification (R) 
 *** Full 
 *** Concise
+    Geographic classification code that represents the geographic area and, if
+    applicable, the geographic subarea and populated place name covered by an item.
+**** Indicators
+***** First - Code source
+      # - Library of Congress Classification
+      1 - U.S. Dept. of Defense Classification
+      7 - Source specified in subfield $2
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Geographic classification area code (NR)
+	     Numeric or alphanumeric code that represents the main geographic area covered
+	     by an item.
+  + $b :: Geographic classification subarea code (R)
+	  Geographic subarea code related to the geographic area coded in subfield $a.
+  + $d :: Populated place name (R)
+	  Approved form of name for a populated place.
+  + $2 :: Code source (NR)
+	  MARC code for the source of the geographic classification. Code from:
+	  Classification_Scheme_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     052 ##$a3810
+     052 1#$aBK
+     052 ##$a4034$bR4$bR8
+     052 ##$a4033$bF65
+     052 1#$aUS$b51
 
 ** 055 - Classification Numbers Assigned in Canada (R) 
 *** Full 
 *** Concise
+    Complete call number or a classification number assigned by Library and
+    Archives Canada (LAC) or a library contributing to LAC.
+**** Indicators
+***** First - Existence in LAC collection
+      # - Information not provided
+      Used in any record input by an institution other than LAC.
+      0 - Work held by LAC
+      1 - Work not held by LAC
+***** Second - Type, completeness, source of class/call number
+      0 - LC-based call number assigned by LAC
+      1 - Complete LC class number assigned by LAC
+      2 - Incomplete LC class number assigned by LAC
+      3 - LC-based call number assigned by the contributing library
+      4 - Complete LC class number assigned by the contributing library
+      5 - Incomplete LC class number assigned by the contributing library
+      6 - Other call number assigned by LAC
+      7 - Other class number assigned by LAC
+      8 - Other call number assigned by the contributing library
+      9 - Other class number assigned by the contributing library
+**** Subfield Codes
+  + $a :: Classification number (NR)
+  + $b :: Item number (NR)
+  + $2 :: Source of call/class number (NR)
+	  MARC code that identifies the classification scheme used to assign the call/
+	  class number when the second indicator position contains value 6, 7, 8, or 9.
+	  Code from: Classification_Scheme_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     055 #5$aHT154
+     055 01$aM1679.18
+     055 12$aTS800
+     055 00$aJK609$bM2
+     055 01$aM1679.18
+     055 #3$aDS598 S7$b.B34
+     055 18$aKF385 ZB5$bC6$2kfmod
+
 ** 060 - National Library of Medicine Call Number (R) 
 *** Full 
 *** Concise
+    Either a complete National Library of Medicine (NLM) call number or
+    classification number assigned by either the National Library of Medicine or by
+    other agencies using the National Library of Medicine Classification. The
+    second indicator values distinguish between content actually assigned by the
+    National Library of Medicine and content assigned by an organization other than
+    NLM.
+**** Indicators
+***** First - Existence in NLM collection
+      # - No information provided
+      Used for call numbers assigned by an organization other than NLM.
+      0 - Item is in NLM
+      1 - Item is not in NLM
+***** Second - Source of call number
+      0 - Assigned by NLM
+      4 - Assigned by agency other than NLM
+**** Subfield Codes
+  + $a :: Classification number (R)
+  + $b :: Item number (NR)
+	  NLM uses the Cutter-Sanborn Three-Figure Author Table to create item numbers
+	  and a special numbering scheme in classes W1 and W3 to create item numbers.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     060 #4$aW1$bJO706M
+     060 00$aWM 270$bMP16 no. 4 1969
+     060 10$aWA 540 AA1$bB8p 1972
+     060 #4$aWF 102$bN972a 1969
+     060 00$aW3$bNU36 no. 28 1993
+     060 #4$aW1$bDE111AL v.4 pt.A 1990$aTP 248.2 D293b 1990
+     060 00$aKK1110$aWD 320
+
 ** 061 - National Library of Medicine Copy Statement (R) 
 *** Full 
 *** Concise
+    Information added to a bibliographic record by the National Library of Medicine
+    that relates to second copies or sets of the described item that are in its
+    collections.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Classification number (R)
+  + $b :: Item number (NR)
+  + $c :: Copy information (NR)
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+
 ** 066 - Character Sets Present (NR) 
 *** Full 
 *** Concise
+    Information that indicates that the records were encoded with characters from
+    sets other than ISO 10646 (or Unicode). A detailed description of the standard
+    escape sequences used in MARC records is provided in MARC_21_Specifications_for
+    Record_Structure,_Character_Sets,_and_Exchange_Media.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Primary G0 character set (NR)
+	  Code is the Intermediate and Final characters of the escape sequence that
+	  designates and invokes the default G0 character set.
+  + $b :: Primary G1 character set (NR)
+	  Code is composed of the Intermediate and Final characters of the escape
+	  sequence that designates and invokes the default G1 character set.
+  + $c :: Alternate G0 or G1 character set (R)
+	  Code is the Intermediate and Final characters of each escape sequence that will
+	  be used to designate an alternate graphic character set used in the record.
+**** Examples
+     066 ##$a(N
+     066 ##$a$1
+     066 ##$b$)1
+
 ** 070 - National Agricultural Library Call Number (R) 
 *** Full 
 *** Concise
+    Classification or call number that is assigned by the National Agricultural
+    Library (NAL).
+**** Indicators
+***** First - Existence in NAL collection
+      0 - Item is in NAL
+      1 - Item is not in NAL
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Classification number (R)
+  + $b :: Item number (NR)
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     070 0#$a105.2$bW122
+     070 1#$aHD281.I5$bno. 5
+
 ** 071 - National Agricultural Library Copy Statement (R) 
 *** Full 
 *** Concise
+    Call number and other information added to a bibliographic record by the
+    National Agricultural Library (NAL) that relates to second copies or sets of
+    the described item that are in its collections.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Classification number (R)
+  + $b :: Item number (NR)
+  + $c :: Copy information (R)
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+
 ** 072 - Subject Category Code (R) 
 *** Full 
 *** Concise
+    Code for the subject category that is associated with the described item.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Code source
+      0 - NAL subject category code list
+      7 - Source specified in subfield $2
+**** Subfield Codes
+  + $a :: Subject category code (NR)
+	     Code for the broad subject associated with the item.
+  + $x :: Subject category code subdivision (R)
+	  Level of specificity within the broader category coded in subfield $a.
+  + $2 :: Source (NR)
+	  MARC code that identifies the thesaurus used to assign the subject category
+	  code when the second indicator position contains value 7. Code from: Subject
+	  Category_Code_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     072 #0$aK800
+     072 #7$aE5$x.510$2mesh
+     072 #7$a17$x02.1$2cosatisc
+
 ** 074 - GPO Item Number (R) 
 *** Full 
 *** Concise
+    Item number assigned to publications by the U.S. Government Printing Office
+    (GPO) to manage their distribution to libraries within its Depository Library
+    System. Numbers are assigned from the List of Classes of United States
+    Government Publications Available for Selection by Depository Libraries.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: GPO item number (NR)
+	     GPO Item No. : may be generated for display.
+  + $z :: Canceled/invalid GPO item number (R)
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     074 ##$a334-C-1
+     074 ##$a277-A-2 (MF)
+     074 ##$a1022-A$z1012-A
+
 ** 080 - Universal Decimal Classification Number (R) 
 *** Full 
 *** Concise
+    Number taken from the Universal Decimal Classification scheme.
+**** Indicators
+***** First - Type of edition
+      # - No information provided
+      0 - Full
+      1 - Abridged
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Universal Decimal Classification number (NR)
+  + $b :: Item number (NR)
+  + $x :: Common auxiliary subdivision (R)
+	  Number that qualifies the concept represented by the main UDC number.
+  + $2 :: Edition identifier (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     080 ##$a971.1/.2
+     080 ##$a631.321:631.411.3$2[edition information]
+     080 ##$a821.113.1$x(494)$2[edition information]
+
 ** 082 - Dewey Decimal Classification Number (R) 
 *** Full 
 *** Concise
+    Classification number is taken from Dewey Decimal Classification and Relative
+    Index, the Abridged Dewey Decimal Classification and Relative Index, and
+    electronic updates to either edition. Through 1997, updates were issued in
+    DC&amp; Dewey Decimal Classification Additions, Notes and Decisions.
+**** Indicators
+***** First - Type of edition
+     0 - Full edition
+     1 - Abridged edition
+     7 - Other edition specified in subfield $2
+***** Second - Source of classification number
+     # - No information provided
+     0 - Assigned by LC
+     May be used by organizations transcribing from LC copy.
+     4 - Assigned by agency other than LC
+**** Subfield Codes
+     + $a :: Classification number (R)
+     + $b :: Item number (NR)
+     + $m :: Standard or optional designation (NR)
+	     The following codes are used: a (standard) and b (optional).
+     + $q :: Assigning agency (NR)
+	     Code from: MARC_Code_List_for_Organizations.
+     + $2 :: Edition number (NR)
+     + $6 :: Linkage (NR)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $8 :: Field link and sequence number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     082 04$a388/.0919$222
+     082 14$a914.3$213
+     082 74$a839.82$25/nor$qNO-OsNB
+     082 04$a343.7306/8$a347.30368$220
+     082 00$a345.73/0772$220$ma
+     082 00$a347.305772$220$mb
+     082 04$a004$222/ger$qDE-101b
+
 ** 083 - Additional Dewey Decimal Classification Number (R) 
 *** Full 
 *** Concise
+    Classification number used for subject access. It is taken from Dewey Decimal
+    Classification and Relative Index, the Abridged Dewey Decimal Classification
+    and Relative Index, and electronic updates to either edition. Through 1997,
+    updates were issued in DC&amp; Dewey Decimal Classification Additions, Notes
+    and Decisions.
+**** Indicators
+***** First - Type of edition
+      0 - Full edition
+      1 - Abridged edition
+      7 - Other edition specified in subfield $2
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+     + $a :: Classification number (R)
+     + $c :: Classification number--Ending number of span (R)
+     + $m :: Standard or optional designation (NR)
+	     The following codes are used: a (standard) and b (optional).
+     + $q :: Assigning agency (NR)
+	     Code from: MARC_Code_List_for_Organizations.
+     + $y :: Table sequence number for internal subarrangement or add table (R)
+     + $z :: Table identification (R)
+     + $2 :: Edition number (NR)
+     + $6 :: Linkage (NR)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $8 :: Field link and sequence number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+**** Examples 
+     083 0#$z2$a4947$222
+     083 0#$a598.0994$222
+     083 0#$z2$a94$222
+
 ** 084 - Other Classification Number (R) 
 *** Full 
 *** Concise
+    Classification number from a scheme not covered by one of the other number
+    fields. The field should not be used for classification numbers assigned from a
+    source for which a subfield $2 source of number code would not be assigned.
+**** Indicators
+***** First - Undefined
+     # - Undefined
+***** Second - Undefined
+     # - Undefined
+**** Subfield Codes
+     + $a :: Classification number (R)
+     + $b :: Item number (NR)
+     + $q :: Assigning agency (NR)
+	     Code from: MARC_Code_List_for_Organizations.
+     + $2 :: Number source (NR)
+	     Code from: Classification_Scheme_Source_Codes.
+     + $6 :: Linkage (NR)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $8 :: Field link and sequence number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     084 ##$a016$a014$a018$a122$2frbnpnav
+     084 ##$aKB112.554$bU62 1980$2laclaw
+     084 ##$a330$a380$a650$a670$qDE-101$2sdnb
+     084 ##$a125$a631$qDE-600$2zdbs
+     084 ##$a8501(043)$2rueskl
+     084 ##$aCA2 PQ C07 81P52$2cacodoc
+
 ** 085 - Synthesized Classification Number Components (R) 
 *** Full 
 *** Concise
+    Information about how a synthesized classification number or a portion of a
+    synthesized classification number was built. It traces the different components
+    of a synthesized number, showing the different portions of the number and where
+    the add instructions are given. If a number was built using two or more
+    instructions, a separate field 085 is given for each instruction.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Number where instructions are found::single number or beginning number of
+	  span (R)
+  + $b :: Base number (R)
+  + $c :: Classification number::ending number of span (R)
+  + $f :: Facet designator (R)
+  + $r :: Root number (R)
+  + $s :: Digits added from classification number in schedule or external table (R)
+  + $t :: Digits added from internal subarrangement or add table (R)
+  + $u :: Number being analyzed (R)
+  + $v :: Number in internal subarrangement or add table where instructions are
+	  found (R)
+  + $w ::Table identification::Internal subarrangement or add table (R)
+  + $y :: Table sequence number for internal subarrangement or add table (R)
+  + $z :: Table identification (R)
+  + $6 :: Linkage (NR)
+	  See the description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See the description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     085 ##$81.1$b346.046$a346.046$r333$s95
+     085 ##$81.1$b599$z1$s09
+     085 ##$81.2$b599.09$z1$a093$c099$z2$s94
+     085 ##$82.1$b598$z1$s09
+     085 ##$82.2$b598.09$z1$a093$c099$z2$s94
+
 ** 086 - Government Document Classification Number (R) 
 *** Full 
 *** Concise
+    Classification number assigned to documents by designated agencies in countries
+    that have a government documents classification program.
+**** Indicators
+***** First - Number source
+      # - Source specified in subfield $2
+      Classification number other than the U.S. or Canadian scheme.
+      0 - Superintendent of Documents Classification System
+      Assigned by the U.S Government Printing Office. Supt. of Docs. no.: may be
+      generated for display.
+      1 - Government of Canada Publications: Outline of Classification
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Classification number (NR)
+  + $z :: Canceled/invalid classification number (R)
+  + $2 :: Number source (NR)
+	  MARC code that identifies the government document classification scheme used to
+	  assign the number when the first indicator position contains value #. The code
+	  may be used to generate a display constant to identify the source of the
+	  classification number. Code from: Classification_Scheme_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     086 ##$aHEU/G74.3C49$2ordocs
+     086 0#$aA 13.28:F 61/2/981 Glacier
+     086 0#$aHE 20.6209:13/45
+     086 0#$aITC 1.12:TA-503 (A)-18 AND 332-279
+     086 0#$aA 1.1:$zA 1.1/3:984
+     086 ##$aHEU/G74.3C49$2ordocs
+
 ** 088 - Report Number (R) 
 *** Full 
 *** Concise
+    Report number that is not a Standard Technical Report Number (STRN), recorded
+    in field 027.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Report number (NR)
+  + $z :: Canceled/invalid report number (R)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     088 ##$aSTRATLAB-71-98
+     088 ##$aNASA-RP-1124-REV-3 $zNASA-RP-1124-REV-2
+     088 ##$zNASA-TN-D-8008
+
 ** 09X - Local Call Numbers 
-*** Full 
-*** Concise
+*** FIELD DEFINITION AND SCOPE
+    Reserved for local call number use and local definition. For interchange purposes, documentation of the structure of the 09X fields and input conventions must be provided to exchange partners by the organization initiating the interchange.
+*** CONTENT DESIGNATOR HISTORY
+    Field 090 - Shelf Location (AM) [OBSOLETE, 1977] [USMARC only]
+
+    Field 090 - Local Call Number [OBSOLETE, 1982]
+
+    Field 091 - Microfilm Shelf Location (AM) [OBSOLETE, 1977] [USMARC only]
 
 * 1XX: Main Entry Fields
 ** DEFINITION AND SCOPE
-Fields 100, 110, 111 and 130 contain a name or a uniform title heading used as main entry.
+   Fields 100, 110, 111 and 130 contain a name or a uniform title heading used as main entry.
 
-For mixed material, this idea of authorship is not always clear-cut. The main entry may contain the name of the person, family, or entity responsible for bringing the materials together. Alternatively, the main entry may contain the name of the person, family, or entity for whom or which a collection is named.
+   For mixed material, this idea of authorship is not always clear-cut. The main entry may contain the name of the person, family, or entity responsible for bringing the materials together. Alternatively, the main entry may contain the name of the person, family, or entity for whom or which a collection is named.
 
-Descriptions of the first indicator and all subfield codes, as well as input conventions for the 100, 110, 111, and 130 fields, are given in the following General Information sections: X00, X10, X11, and X30. The second indicator is described in the specific section for each field.
+   Descriptions of the first indicator and all subfield codes, as well as input conventions for the 100, 110, 111, and 130 fields, are given in the following General Information sections: X00, X10, X11, and X30. The second indicator is described in the specific section for each field.
 ** 100 - Main Entry - Personal Name (NR) 
 *** Full
 *** Concise
+    Personal name used as a main entry in a bibliographic record.
+**** Indicators
+***** First - Type of personal name entry element
+      0 - Forename
+      Forename or a name consisting of words, initials, letters, etc., that are
+      formatted in direct order.
+      1 - Surname
+      Single or multiple surname formatted in inverted order or a single name without
+      forenames that is known to be a surname.
+      3 - Family name
+      Name represents a family, clan, dynasty, house, or other such group and may be
+      formatted in direct or inverted order.
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Personal name (NR)
+	     Surname and/or forename; letters, initials, abbreviations, phrases, or numbers
+	     used in place of a name; or a family name.
+  + $b :: Numeration (NR)
+	  Roman numeral or a roman numeral and a subsequent part of a forename when the
+	  first indicator value is 0.
+  + $c :: Titles and words associated with a name (R)
+  + $d :: Dates associated with a name (NR)
+	  Dates of birth, death, or flourishing, or any other date associated with a
+	  name.
+  + $e :: Relator term (R)
+	  Describes the relationship between a name and a work.
+  + $f :: Date of a work (NR)
+	  Date of publication used with a title of a work in a name/title field.
+  + $g :: Miscellaneous information (NR)
+	  Not more appropriately contained in another defined subfield.
+  + $j :: Attribution qualifier (R)
+	  Attribution information for names when the responsibility is unknown,
+	  uncertain, fictitious or pseudonymous.
+  + $k :: Form subheading (R)
+  + $l :: Language of a work (NR)
+	  Name of a language(s) used with a title of a work in a name/title field.
+  + $n :: Number of part/section of a work (R)
+	  Number designation for a part or section of a work used with a title in a name/
+	  title field.
+  + $p :: Name of part/section of a work (R)
+	  Name designation of a part or section of a work used with a title in a name/
+	  title field.
+  + $q :: Fuller form of name (NR)
+	  More complete form of the name contained in subfield $a.
+  + $t :: Title of a work (NR)
+	  Uniform title, a title page title of a work, or a series title used in a name/
+	  title field.
+  + $u :: Affiliation (NR)
+	  Affiliation or address of the name.
+  + $0 :: Authority record control number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $4 :: Relator code (R)
+	  A MARC code for the relationship between a name and a work. Code from: MARC
+	  Code_List_for_Relators.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     100 1#$aBach, Johann Sebastian.$4aut$0(DE-101c)310008891
+     100 3#$aFarquhar family.
+     100 1#$aMorgan, John Pierpont,$d1837-1913,$ecollector.
+     100 0#$aJohn,$cthe Baptist, Saint.
+     100 0#$aJohn$bII Comnenus,$cEmperor of the East,$d1088-1143.
+     100 0#$a110908.
+     100 0#$aDr. X.
+     100 0#$aAuthor of The diary of a physician,$d1807-1877.
+     100 0#$aClaude,$cd'Abbeville, pere,$dd. 1632.
+     100 0#$aHoward.
+     100 1#$aFitzgerald, David.
+     100 1#$aChiang, Kai-shek,$d1887-1975.
+     100 1#$aWatson,$cRev.
+     100 1#$aQ., Mike.
+     100 1#$aBlackbeard, Author of,$d1777-1852.
+     100 1#$aLe Conte, John Eatton,$d1784-1860.
+     100 1#$aEl-Abiad, Ahmed H.,$d1926-
+     100 0#$aJohn Paul$bII,$cPope,$d1920-
+     100 1#$aSeuss,$cDr.
+     100 1#$aChurchill, Winston,$cSir,$d1874-1965.
+     100 1#$aWard, Humphrey,$cMrs.,$d1851-1920.
+     100 1#$aWalle-Lissnijder,$cvande.
+     100 0#$aThomas,$cAquinas, Saint,$d1225?-1274.
+     100 0#$aBlack Foot,$cChief,$dd. 1877$c(Spirit)
+     100 1#$aLevi, James,$dfl. 1706-1739.
+     100 1#$aJoannes Aegidius, Zamorensis,$d1240 or 41-ca. 1316.
+     100 0#$aH. D.$q(Hilda Doolittle),$d1886-1961.
+     100 1#$aGresham, G. A.$q(Geoffrey Austin)
+     100 1#$aSmith, Elizabeth$q(Ann Elizabeth)
+     100 1#$aBeeton,$cMrs.$q(Isabella Mary),$d1836-1865.
+     100 1#$a`Atthawimonbandit (To),$cPhra,$d1883-1973.
+     100 1#$aBrown, B. F.$uChemistry Dept., American University.
+     100 0#$aE.S.,$cMeister,$d15th cent.,$jFollower of
+     100 1#$aReynolds, Joshua,$cSir,$d1723-1792,$jPupil of
+
 ** 110 - Main Entry - Corporate Name (NR) 
 *** Full
 *** Concise
+    Corporate name used as a main entry in a bibliographic record.
+**** Indicators
+***** First - Type of corporate name entry element
+      0 - Inverted name
+          Corporate name begins with a personal name in inverted order.
+      1 - Jurisdiction name
+          Name of a jurisdiction that is also an ecclesiastical entity or is a
+          jurisdiction name under which a corporate name or a title of a work is entered.
+      2 - Name in direct order
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Corporate name or jurisdiction name as entry element (NR)
+	  Name of a corporate body or the first entity when subordinate units are
+	  present; a jurisdiction name under which a corporate body, city section, or a
+	  title of a work is entered; or a jurisdiction name that is also an
+	  ecclesiastical entity.
+  + $b :: Subordinate unit (R)
+	  Name of a subordinate corporate unit, a name of a city section, or a name of a
+	  meeting entered under a corporate or jurisdiction name.
+  + $c :: Location of meeting (NR)
+	  Place name or a name of an institution where a meeting was held.
+  + $d :: Date of meeting or treaty signing (R)
+	  Date a meeting was held or, in a name/title field, the date a treaty was
+	  signed.
+  + $e :: Relator term (R)
+	  Describes the relationship between a name and a work.
+  + $f :: Date of a work (NR)
+	  Date of publication used with a title of a work in a name/title field.
+  + $g :: Miscellaneous information (NR)
+	  Name of the other party to a treaty in a name/title field; a subelement that is
+	  not more appropriately contained in subfield $c, $d, or $n in a meeting entered
+	  under a corporate name; or a data element that is not more appropriately
+	  contained in another defined subfield in any other type of corporate name
+	  field.
+  + $k :: Form subheading (R)
+  + $l :: Language of a work (NR)
+	  Name of language(s) used with a title in a name/title field.
+  + $n :: Number of part/section/meeting (R)
+	  Number designation for a meeting entered under a corporate name or for a part
+	  or section of a work used with a title in a name/title field.
+  + $p :: Name of part/section of a work (R)
+	  Name designation of a part or section of a work used with a title in a name/
+	  title field.
+  + $t :: Title of a work (NR)
+	  Uniform title, a title page title of a work, or a series title used in a name/
+	  title field.
+  + $u :: Affiliation (NR)
+	  Affiliation or address of the name.
+  + $0 :: Authority record control number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $4 :: Relator code (R)
+	  MARC code for the relationship between a name and a work. Code from: MARC_Code
+	  List_for_Relators.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     110 1#$aUnited States.$bCourt of Appeals (2nd Circuit)
+     110 2#$aSeminar Naturschutz und Landwirtschaft.$0(DE-101b)200568-2
+     110 0#$aNewman (Jean and Dorothy) Industrial Relations Library.
+     110 2#$aJ.C. Penney Co.
+     110 1#$aCyprus (Archdiocese)
+     110 1#$aPennsylvania.$bState Board of Examiners of Nursing Home
+     Administrators.
+     110 1#$aJalisco (Mexico).$tLey que aprueba el plan regional urbano de
+     Guadalajara, 1979-1983.
+     110 1#$aUnited States.$bPresident (1981-1989 : Reagan)
+     110 2#$aPRONAPADE (Firm)
+     110 1#$aBirmingham (Ala.)
+     110 2#$aScientific Society of San Antonio (1904- )
+     110 2#$aSt. James Church (Bronx, New York, N.Y.)
+     110 1#$aUnited States.$bCongress.$bJoint Committee on the Library.
+     110 1#$aParis.$bMontmartre.
+     110 2#$aCatholic Church.$bConcilium Plenarium Americae Latinae$d(1899 :
+     $cRome, Italy)
+     110 2#$aInternational Labour Organisation.$bEuropean Regional Conference$n
+     (2nd :$d1968 :$cGeneva, Switzerland)
+     110 2#$aEastman Kodak Company,$edefendant-appellant.
+     110 1#$aMinnesota.$bConstitutional Convention$d(1857 :$gRepublican)
+     110 1#$aUnited States.$bCongress$n(97th, 2nd session :$d1982).$bHouse.
+     110 2#$aNew York Public Library.$kManuscript$pAulendorf Codex.
+     110 1#$aUnited States.$bNational Technical Information Service.$u5205 Port
+     Royal Road, Springfield, VA 22161.
+     110 2#$aJ.H. Bufford &amp; Co.$4pop
+
 ** 111 - Main Entry - Meeting Name (NR) 
 *** Full
 *** Concise
+    Meeting or conference name used as a main entry in a bibliographic record.
+**** Indicators
+***** First - Type of meeting name entry element
+      0 - Inverted name
+      Meeting name begins with a personal name in inverted order.
+      1 - Jurisdiction name
+      Jurisdiction name under which a meeting name is entered.
+      2 - Name in direct order
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Meeting name or jurisdiction name as entry element (NR)
+	  Name of a meeting, or the first entity when subordinate units are present; or a
+	  jurisdiction name under which a meeting name is entered.
+  + $c :: Location of meeting (NR)
+	  Place name or a name of an institution where a meeting was held.
+  + $d :: Date of meeting (NR)
+  + $e :: Subordinate unit (R)
+	  Name of a subordinate unit entered under a meeting name.
+  + $f :: Date of a work (NR)
+	  Date of publication used with a title of a work in a name/title field.
+  + $g :: Miscellaneous information (NR)
+	  Not more appropriately contained in another defined subfield.
+  + $j :: Relator term (R)
+	  Describes the relationship between a name and a work.
+  + $k :: Form subheading (R)
+  + $l :: Language of a work (NR)
+	  Name of a language(s) used with a title of a work in a name/title field.
+  + $n :: Number of part/section/meeting (R)
+	  Number of a meeting or a number designation for a part or section of a work.
+  + $p :: Name of part/section of a work (R)
+	  Name designation of a part or section of a work used with a title in a name/
+	  title field.
+  + $q :: Name of meeting following jurisdiction name entry element (NR)
+	  Name of a meeting that is entered under a jurisdiction name contained in
+	  subfield $a.
+  + $t :: Title of a work (NR)
+	  Uniform title, a title page of a work, or a series title used in a name/title
+	  field.
+  + $u :: Affiliation (NR)
+	  Affiliation or address of the name.
+  + $0 :: Authority record control number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $4 :: Relator code (R)
+	  MARC code for the relationship between a name and a work. Code from: MARC_Code
+	  List_for_Relators.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     111 2#$aExpo '70$c(Osaka, Japan)
+     111 2#$aSymposium Internacional "Manuel Pedroso" In Memoriam$d(1976 :
+         $cGuanajuato, Mexico)
+     111 1#$aChicago.$qCartography Conference.
+     111 2#$aGovernor's Conference on Aging (N.Y.)$d(1982 :$cAlbany, N.Y.)
+     111 2#$aEsto '84$d(1984 :$cToronto, Ont).$eRaamatunaituse Komitee.
+     111 2#$aWorld Peace Conference$n(1st :$d1949 :$cParis, France and Prague,
+         Czechoslovakia)
+     111 2#$aWhite House Conference on Library and Information Services$d(1979
+         :$cWashington, D.C.).$eOhio Conference Delegation.
+     111 2#$aInternational Symposium on Quality Control (1974- )$n(3rd :$d1978
+         :$cTokyo, Japan)
+     111 2#$aNational Conference on Physical Measurement of the
+         Disabled,$n2nd,$cMayo Clinic,$d1981,$gProjected, not held.
+     111 1#$aParis.$qPeace Conference,$d1919.
+     111 2#$aSymposium on the Underground Disposal of Radioactive Wastes$d(1979
+         :$cOtaniemi, Finland)$4fnd
+
 ** 130 - Main Entry - Uniform Title (NR) 
 *** Full
 *** Concise
+    Uniform title used as a main entry in a bibliographic record.
+**** Indicators
+***** First - Nonfiling characters
+      0-9 - Number of nonfiling characters
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Uniform title (NR)
+  + $d :: Date of treaty signing (R)
+  + $f :: Date of a work (NR)
+	  Date of publication used with a title of a work in a name/title field.
+  + $g :: Miscellaneous information (NR)
+  + $h :: Medium (NR)
+	  Media qualifier.
+  + $k :: Form subheading (R)
+  + $l :: Language of a work (NR)
+  + $m :: Medium of performance for music (R)
+  + $n :: Number of part/section of a work (R)
+  + $o :: Arranged statement for music (NR)
+  + $p :: Name of part/section of a work (R)
+  + $r :: Key for music (NR)
+  + $s :: Version (NR)
+  + $t :: Title of a work (NR)
+	  Title-page title of an item.
+  + $0 :: Authority record control number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     130 0#$aBible.$pO.T.$pFive Scrolls.$lHebrew.$sBiblioteca apostolica
+         vaticana.$kManuscript.$nUrbiniti Hebraicus 1.$f1980.
+     130 0#$aKathy (Motion picture : 1981)
+     130 0#$aElektroshlakovyi pereplav.
+     130 0#$aSiège d'Orléans (Mystery play)
+     130 0#$aBeowulf.
+     130 0#$aDialogue (Montreal, Quebec : 1962).$lEnglish.
+     130 0#$aTosefta.$lEnglish.$f1977.
+     130 0#$aKing Kong (1933)
+     130 0#$aGone with the wind (Motion picture).$hSound recording.
+     130 0#$aConvention for the Protection of Human Rights and Fundamental
+         Freedoms$d(1950).$kProtocols, etc.,$d1963 Sept. 16.
+     130 0#$aPortrait and biographical album of Isabella County,
+         Mich.$kSelections.
+     130 0#$aVedas.$pRgveda.$lItalian &amp; Sanskrit.$kSelections.
+     130 0#$aConcertos,$mviolin,string orchestra,$rD major.
+     130 0#$aAnnale Universiteit van Stellenbosch.$nSerie A2,$pSöologie.
+     130 0#$aBible.$pN.T.$pPhilippians.$lEnglish.$sRevised Standard.$f1980.
+     130 0#$aSongs, unacc.
 
 * 20X-24X: Title and Title-Related Fields
 ** DEFINITION AND SCOPE
@@ -1494,27 +2545,381 @@ Descriptions of the first indicator and all subfield codes, as well as input con
 ** 210 - Abbreviated Title (R) 
 *** Full
 *** Concise
+    Title as abbreviated for indexing or identification. An abbreviated key title
+    is supplied by ISSN centers, based on the Key Title (Field 222). Other
+    abbreviated titles are supplied by cataloging agencies, including abstracting
+    and indexing services.
+**** Indicators
+***** First - Title added entry
+      0 - No added entry
+      1 - Added entry
+***** Second - Type
+      # - Abbreviated key title
+      0 - Other abbreviated title
+**** Subfield Codes
+  + $a :: Abbreviated title (NR)
+  + $b :: Qualifying information (NR)
+	  Abbreviated form of the parenthetical qualifying information contained in the
+	  key title (field 222).
+  + $2 :: Source (R)
+	  Code from: Abbreviated_Title_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     210 0#$aManage. improv. cost reduct. goals
+     210 0#$aSurg. clin. North Am.
+     210 0#$aPlant prot. bull.$b(Faridabad)
+     210 0#$aAnnu. rep. - Dep. Public Welfare$b(Chic.)
+
 ** 222 - Key Title (R) 
 *** Full
 *** Concise
+    Unique title for a continuing resource that is assigned in conjunction with an
+    ISSN recorded in field 022 by national centers under the auspices of the ISSN
+    Network.
+    A note formatted as ISSN [number] = [Key Title] may be generated from data in
+    field 022 (International Standard Serial Number) and field 222.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Nonfiling characters
+      0 - No nonfiling characters
+      1-9 - Number of nonfiling characters
+**** Subfield Codes
+  + $a :: Key title (NR)
+  + $b :: Qualifying information (NR)
+	  Parenthetical information that that qualifies the title to make it unique.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     222 #0$aViva$b(New York)
+     222 #0$aCauses of death
+     222 #4$aDer Öffentliche Dienst$b(Köln)
+     222 #0$aJournal of polymer science. Part B. Polymer letters
+     222 #0$aEconomic education bulletin$b(Great Barrington)
+
 ** 240 - Uniform Title (NR) 
 *** Full
 *** Concise
+    Uniform title for an item when the bibliographic description is entered under a
+    main entry field that contains a personal (field 100), corporate (110), or
+    meeting (111) name.
+**** Indicators
+***** First - Uniform title printed or displayed
+      0 - Not printed or displayed
+      1 - Printed or displayed
+***** Second - Nonfiling characters
+      0-9 - Number of nonfiling characters
+**** Subfield Codes
+  + $a :: Uniform title (NR)
+  + $d :: Date of treaty signing (R)
+  + $f :: Date of a work (NR)
+  + $g :: Miscellaneous information (NR)
+	  Not more appropriately contained in another defined subfield.
+  + $h :: Medium (NR)
+	  Media qualifier.
+  + $k :: Form subheading (R)
+  + $l :: Language of a work (NR)
+  + $m :: Medium of performance for music (R)
+  + $n :: Number of part/section of a work (R)
+  + $o :: Arranged statement for music (NR)
+  + $p :: Name of part/section of a work (R)
+  + $r :: Key for music (NR)
+  + $s :: Version (NR)
+  + $0 :: Authority record control number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     240 10$aLaws, etc. (1969-1970)
+     240 10$aTreaties, etc.$gPoland,$d1948 Mar. 2.$kProtocols, etc.,$d1951 Mar.
+     6
+     240 10$aPoems.$kSelections
+     240 10$aInstitutiones.$nLiber 2.$nCapitulum 5.$lEnglish
+     240 10$aFidelio$n(1814).$sLibretto.$lEnglish &amp; German
+     240 10$aWerke, Org$0(DE-101c)300847858
+     240 10$aVariations,$mpiano, 4 hands,$nK. 501,$rG major
+     240 10$aLieder, unacc.
+     240 14$aThe Pickwick papers.$lFrench
+
 ** 242 - Translation of Title by Cataloging Agency (R) 
 *** Full
 *** Concise
+    Translation of the title proper that is made by the cataloging agency when the
+    translated title does not appear as a parallel title on the item. For a note,
+    the introductory phrase Title translated: may be generated based on the field
+    tag for display.
+**** Indicators
+***** First - Title added entry
+      0 - No added entry
+      1 - Added entry
+***** Second - Nonfiling characters
+      0 - No nonfiling characters
+      1-9 - Number of nonfiling characters
+**** Subfield Codes
+  + $a :: Title (NR)
+	     Title proper, exclusive of the designation of number or name of part and any
+	     alternative title.
+  + $b :: Remainder of title (NR)
+	  Includes parallel, alternative, and other title information.
+  + $c :: Statement of responsibility, etc. (NR)
+	  Statement of responsibility and/or any remaining title statement data that are
+	  not more appropriately contained in one of the other subfields.
+  + $h :: Medium (NR)
+  + $n :: Number of part/section of a work (R)
+  + $p :: Name of part/section of a work (R)
+  + $y :: Language code of translated title (NR)
+	  Code from: MARC_Code_List_for_Languages.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     242 10$aWorld of art.$yeng
+     242 04$aThe Arab East.$yeng
+     242 00$aLand surveying and agriculture equipment.$yeng
+     242 00$aAnnals of chemistry$nSeries C,$pOrganic chemistry and
+     biochemistry.$yeng
+     242 14$aThe Mirror.$yeng
+
 ** 243 - Collective Uniform Title (NR) 
 *** Full
 *** Concise
+    Generic title that is constructed by the cataloger to collect works by a
+    prolific author. Brackets that customarily enclose a collective uniform title
+    are not carried in the MARC record. They may be generated based on the field
+    tag.
+**** Indicators
+***** First - Uniform title printed or displayed
+      0 - Not printed or displayed
+      1 - Printed or displayed
+***** Second - Nonfiling characters
+      0-9 - Number of nonfiling characters
+**** Subfield Codes
+  + $a :: Uniform title (NR)
+  + $d :: Date of treaty signing (R)
+  + $f :: Date of a work (NR)
+  + $g :: Miscellaneous information (NR)
+  + $h :: Medium (NR)
+  + $k :: Form subheading (R)
+  + $l :: Language of a work (NR)
+  + $m :: Medium of performance for music (R)
+  + $n :: Number of part/section of a work (R)
+  + $o :: Arranged statement for music (NR)
+  + $p :: Name of part/section of a work (R)
+  + $r :: Key for music (NR)
+  + $s :: Version (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     243 10$aWorks.$f1983
+     243 10$aSpeeches
+     243 00$aLaws, etc.
+     243 10$aOrchestra music.$kSelections
+
 ** 245 - Title Statement (NR) 
 *** Full
 *** Concise
+    Title and statement of responsibility area of the bibliographic description of
+    a work.
+**** Indicators
+***** First - Title added entry
+      0 - No added entry
+          No title added entry is made, either because no title added entry is desired or
+          because the title added entry is not traced the same as the title in field 245.
+      1 - Added entry
+          Desired title added entry is the same as the title in field 245.
+***** Second - Nonfiling characters
+      0 - No nonfiling characters
+      1-9 - Number of nonfiling characters
+**** Subfield Codes
+  + $a :: Title (NR)
+  + $b :: Remainder of title (NR)
+  + $c :: Statement of responsibility, etc. (NR)
+  + $f :: Inclusive dates (NR)
+	  Time period during which the entirety of the contents of the described
+	  materials were created.
+  + $g :: Bulk dates (NR)
+	  Time period during which the bulk of the described materials were created.
+  + $h :: Medium (NR)
+  + $k :: Form (R)
+	  Term that is descriptive of the form of the described materials, determined by
+	  an examination of their physical character, subject of their intellectual
+	  content, or the order of information within them (e.g., daybooks, diaries,
+	  directories, journals, memoranda, etc.).
+  + $n :: Number of part/section of a work (R)
+  + $p :: Name of part/section of a work (R)
+  + $s :: Version (NR)
+	  Name, code, or description of a copy of the described materials that was
+	  generated at different times or for different audiences.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     245 00$a[Man smoking at window].
+     245 03$aLe Bureau$h[filmstrip] =$bLa Oficina = Das Büro.
+     245 00$aHeritage Books archives.
+           $pUnderwood biographical dictionary.
+           $nVolumes 1 &amp; 2 revised
+           $h[electronic resource] /
+           $cLaverne Galeener-Moore.
+     245 10$aStatistics :
+           $bfacts or fiction.
+     245 10$a--as others see us.
+     245 04$aThe Year book of medicine.
+     245 18$aThe ... annual report to the Governor.
+     245 14$aHē Monē tou Horous Sina.
+     245 15$aThe “winter mind” :$bWilliam Bronk and American letters /$cBurt
+             Kimmelman.
+     245 00$aProceedings /$c...
+     245 10$aUnder the hill, or, The story of Venus and Tannhauser.
+     245 00$aHamlet ;$bRomeo and Juliette ; Othello ...
+     245 00$aOklahoma$h[sound recording] ;$bCarousel ; South Pacific ...
+     245 00$aPortals to the world.$pSelected Internet resources.$pMaldives$h
+             [electronic resource] /$ccreated and maintained by the Asian Division,
+             Area Studies Directorate.
+     245 00$aLord Macaulay's essays ;$band, Lays of ancient Rome.
+     245 00$aMap of Nelson, Richmond, Motueka :$bscale 1:20000.
+     245 00$aFocus on grammar$h[electronic resource] :$bbasic level.
+     245 00$aLove from Joy :$bletters from a farmer’s wife.$nPart III,$p1987-
+             1995, At the bungalow.
+     245 04$aThe plays of Oscar Wilde /$cAlan Bird.
+     245 10$aHow to play chess /$cKevin Wicker ; with a foreword by David
+             Pritchard ; illustrated by Karel Feuerstein.
+     245 10$aProject directory /$cTDC = Répertoire des projets / CDT.
+     245 14$aThe analysis of the law /$cSir Matthew Hale. The students companion
+             / Giles Jacob.
+     245 00$aManagement report.$nPart I /$cU.S. Navy's Military Sealift Command.
+     245 00$aConcerto per piano n. 21, K 467$h[sound recording] /$cW.A. Mozart.
+             L’assedio di Corinto. Ouverture / G. Rossini.
+     245 00$aShort-Harrison-Symmes family papers,$f1760-1878.
+     245 00$kRecords,$f1939-1973$g1965-1972.
+     245 00$a[Geode]$h[realia].
+     245 03$aLa mer$h[sound recording] ;$bKhamma ; Rhapsody for clarinet and
+             orchestra /$cClaude Debussy.[Item lacking a collective title]
+     245 10$aFour years at Yale :$kdiaries,$f1903 Sept. 16-1907 Oct. 5.
+     245 00$aPL 17 Hearing Files$kCase Files$f1974$pDistrict 6$hmicrofilm
+             (jacketted in fiche).
+     245 14$aThe charity ball :$ba comedy in four acts :$ktypescript,$f1889 /
+           $cby David Belasco and Henry C. DeMille.
+     245 00$aMore!$n3 /$cHerbert Puchta ... [et al.].
+     245 10$aZentralblatt für Bakteriologie, Parasitenkunde,
+             Infektionskrankheiten und Hygiene.$n1. Abt. Originale.$nReihe
+             B,$pHygiene, Krankenhaushygiene, Betriebshygiene, pråventive Medizin.
+     245 00$aAnnual report of the Minister of Supply and Service Canada under
+             the Corporations and Labour Unions Returns Act.$nPart II,$pLabour
+             unions =$bRapport annuel du ministre des Approvisionnements et services
+             Canada présenté sous l'empire et des syndicates ouvriers.$nPartie
+             II,$pSyndicats ouvriers.
+     245 10$aDirector's report of the Association of Insurance
+             Adjusters.$sMember release.
+     245 00$aWho is it?
+     245 10$aAhab’s wife, or, The star-gazer :$ba novel /$cby Sena Jeter Naslund
+             ; illustrations by Christopher Wormell.
+
 ** 246 - Varying Form of Title (R) 
 *** Full
 *** Concise
+    Varying forms of the title appearing on different parts of an item or a portion
+    of the title proper, or an alternative form of the title when the form differs
+    substantially from the title statement in field 245 and if they contribute to
+    the further identification of the item.
+**** Indicators
+***** First - Note/added entry controller
+      0 - Note, no added entry
+      1 - Note, added entry
+      2 - No note, no added entry
+      3 - No note, added entry
+***** Second - Type of title
+      # - No type specified
+      0 - Portion of title
+      1 - Parallel title
+      2 - Distinctive title
+      3 - Other title
+      4 - Cover title
+      5 - Added title page title
+      6 - Caption title
+      7 - Running title
+      8 - Spine title
+**** Subfield Codes
+  + $a :: Title proper/short title (NR)
+  + $b :: Remainder of title (NR)
+  + $f :: Date or sequential designation (NR)
+	  Dates or volume and issue numbers that relate the variant title to the record
+	  when a note is generated from the field.
+  + $g :: Miscellaneous information (NR)
+  + $h :: Medium (NR)
+  + $i :: Display text (NR)
+  + $n :: Number of part/section of a work (R)
+  + $p :: Name of part/section of a work (R)
+  + $5 :: Institution to which field applies (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     246 0#$iAdded title page title on some issues:$aAnnual report
+     246 13$aCalifornia State Assembly file analysis
+     246 1#$aFour corners power review
+     246 1#$iPanel title:$aWelcome to big Wyoming
+     246 1#$iAlso known as:$aCOMPENDEX
+     246 1#$iAugmented title:$aDevelopment of electro-optical laser velocimeter
+             system for flame studies
+     246 10$aLRMP
+     246 11$aNihon
+     246 12$aCreating jobs$f1980
+     246 13$aCalifornia State Assembly file analysis
+     246 15$aMurshid al-Sudan$f1982-1983
+     246 3#$aBEEC bulletin
+     246 17$aB.E.E.C. bulletin
+     246 04$a<variant title>$g(varies slightly)
+     246 1#$iAt head of title:$aScience and public affairs$fJan. 1970-Apr. 1974
+     246 1#$iTitle on container:$aNew Brunswick royal gazette
+     246 1#$iAlternate issues published with title:$aChicago daily telegraph
+     246 3#$a<title of reissue>;$5DLC
+
 ** 247 - Former Title (R) 
 *** Full
 *** Concise
+    Former title proper used when one cataloging record represents several titles
+    associated with an entity.
+**** Indicators
+***** First - Title added entry
+      0 - No added entry
+      1 - Added entry
+***** Second - Note controller
+      0 - Display note
+      1 - Do not display note
+**** Subfield Codes
+  + $a :: Title (NR)
+  + $b :: Remainder of title (NR)
+  + $f :: Date or sequential designation (NR)
+	  Dates or volume and issue numbers that relate the former variant title to the
+	  record.
+  + $g :: Miscellaneous information (NR)
+  + $h :: Medium (NR)
+  + $n :: Number of part/section of a work (R)
+  + $p :: Name of part/section of a work (R)
+  + $x :: International Standard Serial Number (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     247 10$aEverywoman's magazine$fv. 1-24, Jan. 1948-57.
+     247 10$aJournalism bulletin$fMar. 1924-Nov. 1927
+     247 01$a<former title>$g(varies slightly)
+
 * 25X-28X: Edition, Imprint, Etc. Fields
 ** DEFINITION AND SCOPE
 Descriptive information concerning the item described in a bibliographic record other than title related data. Data recorded includes the edition statement, imprint and other publication source information, addresses, descriptive data related to specific forms of material, and addresses. Together with the other 2XX and the 3XX fields, this data constitutes what is referred to as the body of the bibliographic record.
@@ -1530,33 +2935,371 @@ Descriptive information concerning the item described in a bibliographic record 
 ** 250 - Edition Statement (NR)  
 *** Full
 *** Concise
+    Information relating to the edition of a work as determined by applicable
+    cataloging rules.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Edition statement (NR)
+  + $b :: Remainder of edition statement (NR)
+	  Usually, a statement of personal or corporate responsibility and/or a parallel
+	  edition statement.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     250 ##$a2nd ed.
+     250 ##$aSpecial education ed.
+     250 ##$aMedium-high voice ed.
+     250 ##$aRev. as of Jan. 1, 1958.
+     250 ##$a4th ed. /$brevised by J.G. Le Mesurier and E. McIntosh, Repr. with
+             corrections.
+     250 ##$aRev. ed. /$bwith revisions, an introduction, and a chapter on
+             writing by E.B. White, 2nd ed. / with the assistance of Eleanor Gould
+             Packard.
+     250 ##$aCanadian ed. =$bÉd. canadienne.
+
 ** 254 - Musical Presentation Statement (NR)  
 *** Full
 *** Concise
+    Musical presentation statement for printed or manuscript music that describes
+    the format of the edition, which may differ from that of another edition of the
+    same work.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Musical presentation statement (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     254 ##$aFull score.
+     254 ##$aComposer's facsimile study score.
+     254 ##$aScore and set of parts.
+     254 ##$aPartition, réproduction du manuscrit de l'auteur.
+
 ** 255 - Cartographic Mathematical Data (R)  
 *** Full
 *** Concise
+    Mathematical data associated with cartographic material, including celestial
+    charts. This data may also be coded in field 034 (Coded Mathematical Data).
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Statement of scale (NR)
+	  Entire scale statement including any equivalency statements, vertical scales or
+	  vertical exaggeration statements for relief models and other three-dimensional
+	  items.
+  + $b :: Statement of projection (NR)
+  + $c :: Statement of coordinates (NR)
+  + $d :: Statement of zone (NR)
+	  Used for celestial charts.
+  + $e :: Statement of equinox (NR)
+  + $f - Outer G::ring coordinate pairs (NR)
+  + $g - Exclusion G::ring coordinate pairs (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     255 ##$aScale not given.
+     255 ##$aScale [ca. 1:90,000].
+     255 ##$aScale [1:6,336,000]. 1" = 100 miles. Vertical scale [1:192,000].
+     1/16" = approx. 1000'.
+     255 ##$aScale not given ;$bConic proj.
+     255 ##$aScale 1:22,000,000 ;$bConic proj.$c(E 72°--E 148°/N 13°--N 18°).
+     255 ##$aScale 1:250,000$c(E 32°30'--E 34°30'/N 35°30'--N 35°00').
+     255 ##$aScales vary$d(Zones +90° to +81° to 63°, -81° to 98° ;$eeq. 1950).
+     255 ##$aScale not given$d(RA 0 hr. to 24 hr./Decl. +90° to -90° ;$eeq.
+     1980).
+
 ** 256 - Computer File Characteristics (NR)  
 *** Full
 *** Concise
+    Characteristics of a computer file, such as the type of file (e.g., Computer
+    programs), the number of records, statements, etc. (e.g., 1250 records, 5076
+    bytes).
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Computer file characteristics (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     256 ##$aComputer data (2 files : 876,000, 775,000 records).
+     256 ##$aComputer programs (2 files : 4300, 1250 bytes).
+     256 ##$aData (1 file : 350 records).
+
 ** 257 - Country of Producing Entity (R)  
 *** Full
 *** Concise
+    Name or abbreviation of the name of the country(s) where the principal offices
+    of the producing entity(s) of a resource are located.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Country of producing entity (R)
+	  May contain the abbreviation [S.l.] when the country is unknown.
+  + $2 :: Source (NR)
+	  Code from: Subject_Heading_and_Term_Source_Codes.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields .
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields .
+**** Examples
+     257 ##$aU.S.
+     257 ##$a[S.l.].
+     257 ##$aItaly ; France.
+     257 ##$aFrance$aGermany$aItaly$2naf
+     257 ##$aUnited States$2naf
+     257 ##$aItaly$2naf
+
 ** 258 - Philatelic Issue Data (R)  
 *** Full
 *** Concise
+    Issuing jurisdiction and denomination information about philatelic material,
+    such as postage stamps, postal stationery (postal cards, etc., made available
+    by a postal administration bearing a stamped impression (indicium) of
+    denomination), revenue stamps (tax stamps), postage due stamps, and registered
+    mail stamps. These are usually valid within a defined area and carry a value
+    signifying prepayment or payment due for services or taxes.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Issuing jurisdiction (NR)
+  + $b :: Denomination (NR)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     258 ##$aNewfoundland :$b5 pence.
+     258 ##$aNippon :$b120.
+     258 ##$aUnited States of America and other jurisdictions :$bvarious
+     denominations.
+
 ** 260 - Publication, Distribution, etc. (Imprint) (R)  
 *** Full
 *** Concise
+    Information relating to the publication, printing, distribution, issue,
+    release, or production of a work.
+**** Indicators
+***** First - Sequence of publishing statements
+     # - Not applicable/No information provided/Earliest available publisher
+     2 - Intervening publisher
+     3 - Current/latest publisher
+***** Second - Undefined
+     # - Undefined
+**** Subfield Codes
+     + $a :: Place of publication, distribution, etc. (R)
+	     May contain the abbreviation [S.l.] when the place is unknown.
+     + $b :: Name of publisher, distributor, etc. (R)
+	     May contain the abbreviation [s.n.] when the name is unknown.
+     + $c :: Date of publication, distribution, etc. (R)
+	     May contain multiple dates (e.g., dates of publication and copyright).
+     + $e :: Place of manufacture (R)
+     + $f :: Manufacturer (R)
+	     May contain the abbreviation [s.n.] when the name is unknown.
+     + $g :: Date of manufacture (R)
+     + $3 :: Materials specified (NR)
+     + $6 :: Linkage (NR)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $8 :: Field link and sequence number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     260 ##$aParis :$bGauthier-Villars ;$aChicago :$bUniversity of Chicago
+             Press,$c1955.
+     260 2#$31980-May 1993$aLondon :$bVogue
+     260 ##$aNew York, N.Y. :$bElsevier,$c1984.
+     260 ##$a[S.l.] :$bInsight Press,$c1981.
+     260 ##$aWashington, D.C. (1649 K St., N.W., Washington 20006) :$bWider
+             Opportunities for Women,$c1979 printing, c1975.
+     260 ##$aBelfast [i.e. Dublin :$bs.n.],$c1946 [reprinted 1965]
+     260 ##$a[S.l. :$bs.n.,$c15--?]
+     260 ##$aNew York ;$aBerlin :$bSpringer Verlag,$c1977.
+     260 ##$a[Reston, Va.?] :$bU.S. Geological Survey ;$aWashington, D.C. :
+           $bFor sale by the Supt. of Docs., U.S. G.P.O.,$c1986-
+     260 ##$aParis :$bGauthier-Villars ;$aChicago :$bUniversity of Chicago
+             Press,$c1955.
+     260 ##$aLondon :$bMacmillan,$c1971$g(1973 printing)
+     260 ##$c1908-1924.
+     260 ##$a[S.l. :$bs.n.],$c1970$e(London :$fHigh Fidelity Sound Studios)
+     260 ##$aParis :$bImpr. Vincent,$c1798$a[i.e. Bruxelles :$bMoens,$c1883]
+     260 ##$aChicago, etc. :$bTime Inc.
+     260 ##$aLondon :$bArts Council of Great Britain,$c1976$e(Twickenham :$fCTD
+             Printers,$g1974)
+     260 ##$aHarmondsworth :$bPenguin,$c1949$g(1963 printing)
+     260 2#$31980-May 1993$aLondon :$bVogue
+     260 3#$3June 1993-$aLondon :$bElle
+
 ** 263 - Projected Publication Date (NR)  
 *** Full
 *** Concise
+    Projected date of publication used in bibliographic records for works that have
+    not yet been published.
+**** Indicators
+***** First - Undefined
+      # - Undefined
+***** Second - Undefined
+      # - Undefined
+**** Subfield Codes
+  + $a :: Projected publication date (NR)
+	  Six-digit date recorded in the pattern yyyymm (4 digits for the year; 2 digits
+	  for the month). A hyphen (-) is used for an unknown portion of the date.
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     263 ##$a200102[The item is to be published in Jan./Feb. 2001.]
+     263 ##$a199412
+     263 ##$a1998--
+
 ** 264 - Production, Publication, Distribution, Manufacture, and Copyright Notice (R)  
 *** Full
 *** Concise
+    Statement relating to the publication, printing, distribution, issue, release,
+    or production of a work.
+**** Indicators
+***** First - Sequence of statements
+     # - Not applicable/No information provided/Earliest
+     2 - Intervening
+     3 - Current/latest
+***** Second - Function of entity
+     0 - Production
+     1 - Publication
+     2 - Distribution
+     3 - Manufacture
+     4 - Copyright notice date
+**** Subfield Codes
+     + $a :: Place of production, publication, distribution, manufacture (R)
+     + $b :: Name of producer, publisher, distributor, manufacturer (R)
+     + $c :: Date of production, publication, distribution, manufacture, or copyright
+	     notice (R)
+     + $3 :: Materials specified (NR)
+     + $6 :: Linkage (NR)
+	     See description of this subfield in Appendix A: Control_Subfields.
+     + $8 :: Field link and sequence number (R)
+	     See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     264 #1$aBoston : $b[publisher not identified], $c2010.
+     264 #3$aCambridge : $bKinsey Printing Company
+     264 #1$a[Place of publication not identified] : $bABC Publishers, $c2009.
+     264 #2$aSeattle : $bIverson Company
+     264 #4$c©2002
+     264 #4$c1983
+     264 #4$ccopyright 2005
+
 ** 270 - Address (R)  
 *** Full
 *** Concise
+    An address (as well as electronic access information such as email, telephone,
+    fax, TTY, etc. numbers) for contacts related to the content of the
+    bibliographic item. Multiple addresses, such as mailing addresses and addresses
+    corresponding to the physical location of an item or facilities, are recorded
+    in separate occurrences of field 270.
+    Styles used for identifying the portions of telephone, fax, and related numbers
+    (i.e., country code, city/area code, exchange/line number, and any extension)
+    varies greatly. In field 270, periods, spaces, and parentheses used to divide
+    the portions of a number are replaced with hyphens. The portions of numbers
+    recorded in subfields $j, $k, $l, and $n are recorded in the order [country
+    code]-[area/city code]- [exchange/line number]. The exchange/line number
+    portion often includes internal separators which are replaced by hyphens. If an
+    extension is also given, it is appended to the telephone number preceded by a
+    space and " x".
+**** Indicators
+***** First - Level
+      # - No level specified
+      1 - Primary
+      2 - Secondary
+***** Second - Type of address
+      # - No type specified
+      0 - Mailing
+      7 - Type specified in subfield $i
+**** Subfield Codes
+  + $a :: Address (R)
+  + $b :: City (NR)
+  + $c :: State or province (NR)
+  + $d :: Country (NR)
+  + $e :: Postal code (NR)
+  + $f :: Terms preceding attention name (NR)
+  + $g :: Attention name (NR)
+  + $h :: Attention position (NR)
+  + $i :: Type of address (NR)
+  + $j :: Specialized telephone number (R)
+  + $k :: Telephone number (R)
+  + $l :: Fax number (R)
+  + $m :: Electronic mail address (R)
+  + $n :: TDD or TTY number (R)
+  + $p :: Contact person (R)
+  + $q :: Title of contact person (R)
+  + $r :: Hours (R)
+  + $z :: Public note (R)
+  + $4 :: Relator code (R)
+  + $6 :: Linkage (NR)
+	  See description of this subfield in Appendix A: Control_Subfields.
+  + $8 :: Field link and sequence number (R)
+	  See description of this subfield in Appendix A: Control_Subfields.
+**** Examples
+     270 ##$aNational Bureau of Economic Research$a1050 Massachusetts
+             Ave.$bCambridge$cMA$e02138-5398$k1-617-868-3900$mwebmaster@nber.org
+     270 1#$aSt. Louis County Government Center, Room
+             212$bClayton$cMO$e63143$k1-314-878-0238$pMarilyn Saunders
+     270 1#$aBuckley School$a305 S. First St.$bBuckley$cMI$e49620
+     270 20$aNational Labor Relations Board$a1099 14th St.,
+             N.W.$bWashington$cDC$e20570-0001
+     270 27$iU.S. business address$aEditorial Inca$a9610 SW 58th
+             St.$bMiami$cFL$e33173
+     270 ##$aNo address given/sin dirección
+     270 1#$fDr.$gGeorge Smith$hDirector$a8899 South Lobo
+             St.$bVancouver$cBC$dCanada$eV2N 1Z5$j1-800-543-1234$k1-604-947-
+             1255$l1-604-947-0505$mGSMITHBC
+     270 10$gc/o M. Ballweg$a87 Woodward Ave., Staten Island$cNY$e10314$k1-718-
+             761-5679
+     270 17$iOffice:$a325 Spring St.$bNew York$cNY$e10013
+     270 27$iBilling address:$aSears Credit$b7023 Albert Pick
+             Rd.$cGreensboro$dNC$e27409$dUSA$j1-800-347-8425
+     270 ##$aP.O. Box 50007$bPasadena$cCA$e91115$j1-213-681-2626 (24 hour
+             hotline)
+     270 ##$aFlorence Bain Center$a5470 Beaverkill Road$bColumbia$cMD$k1-410-
+             964-0415 (Eve)$k1-410-461-0275 (Day)
+     270 ##$aP.O. Box 74$aStaten Island$cNY$kno phone/sin teléfono
+     270 ##$aLibrary of Congress$aNetwork Development and MARC Standards
+             Office$bWashington$cDC$dU.S.$e20540-4402$l1-202-707-
+             0115$mndmso@loc.gov
+     270 ##$k1-800-522-7116$n1-800-523-3494 (TTY)
+     270 ##$a666 Broadway$bNew York$cNY$e10012$j1-800-221-4602$k1-212-460-
+             9330$pDonna M. Rosenthal
+     270 ##$aHannah More Academy Center, 12035 Reisterstown
+             Rd.$bReisterstown$cMD$e21136$k1-410-887-1139$pIan J. Forrest$qBureau
+             Chief
+     270 ##$aJohn Hopkins University$a5457 Twin Knolls
+             Road$bColumbia$cMD$e21045$k+1-410-997-8045$rM-F 8:30am-5:00pm USA EST
+     270 ##$aOCLC Online Computer Library Center, Inc.$a6565 Frantz
+             Road$bDublin$cOH$e43017-3395$k1-614-764-6000$moclc@oclc.org$4org
+
 * 3XX: Physical Description, Etc. Fields
 ** DEFINITION AND SCOPE
 Information pertaining to physical characteristics, graphic representation, physical arrangement, publication frequency, and security information. For digital items, fields are provided for recording reference and coordinate data.
@@ -2754,11 +4497,1056 @@ See description of this subfield in Appendix A: Control_Subfields.
 490 1#$3<1981->: $aReference works
 490 0#$aEducation U.S.A. special report
 
-* 5XX: Note Fields
-* 6XX: Subject Access Fields
-* 70X-75X: Added Entry Fields
-* 76X-78X: Linking Entry Fields
-* 80X-83X: Series Added Entry Fields
-* 841-88X: Holdings, Location, Alternate Graphics, Etc. Fields
 
+* TODO Finish Concise content for fiels 5XX - 8XX
+* 5XX: Note Fields
+** DEFINITION AND SCOPE
+   Fields 500-59X contain bibliographic notes. Each note is entered as a separate 5XX field. General notes are recorded in field 500 (General Note). Specialized notes are contained in fields 501-586. Prefer a specific note field if there is one when inputting specialized note information in the 5XX notes area. Otherwise, use a 500 General Note.
+
+   Information that appears in the notes area on printed output or machine displays is not always recorded in a specially defined 5XX note field. Data is sometimes carried in a structured or coded form in another field (e.g., field 086 (Government Document Classification Number) or field 310 (Current Publication Frequency)). Some of the fields that contain information that is grouped with 5XX note fields in displays and on printed products are listed below.
+
+   086 - Government Document Classification Number
+   246 - Varying Form of Title
+   247 - Former Title or Title Variations
+   310 - Current Publication Frequency
+   321 - Former Publication Frequency
+   362 - Dates of Publication and/or Sequential Designation
+   76X-78X - Linking Entry Fields
+** CONTENT DESIGNATOR HISTORY
+   Field 503 - Bibliographic History Note (BK, CF, MU) [OBSOLETE, 1993]
+   Both indicators were undefined. The subfield codes were: $a Bibliographic history note, $6 Linkage. Bibliographic history information may be contained in field 500 (General Note).
+
+   Field 512 - Earlier or Later Volumes Separately Cataloged Note (SE) [OBSOLETE, 1990]
+   Both indicator positions were undefined. The subfield codes were: $a (Earlier or later volumes separately cataloged note), $6 (Linkage). Earlier or later volumes separately cataloged information may be contained in field 500 (General Note).
+
+   Field 517 - Categories of Films Note (Archival) (VM) [OBSOLETE, 1985]
+   The first indicator was defined as Specifies whether fiction or nonfiction (0 = Nonfiction, 1 = Fiction). The second indicator position was undefined. The subfield codes were: $a (Different formats), $b (Content descriptors), $c (Additional animation techniques). Genre information may be contained in field 655 (Index Termâˆ'Genre/Form).
+
+   Field 523 - Time Period of Content Note (CF) [OBSOLETE, 1993]
+   Both indicator positions were undefined. The subfield codes were: $a (Time period of content note), $b (Dates of data collection note), $6 (Linkage). Data previously recorded in this field is now recorded in field 500 (General Note), field 513 (Type of Report and Period Covered Note), subfield $b (Period covered), or field 518 (Date/Time and Place of an Event Note).
+
+   Field 527 - Censorship Note (VM) [OBSOLETE, 1990]
+   Both indicator positions were undefined. The subfield codes were: $a (Censorship note), $6 (Linkage). Censorship information may be contained in field 500 (General Note).
+
+   Field 537 - Source of Data Note (CF) [OBSOLETE, 1993]
+   The first indicator was defined as Display constant controller ( = Publications, 8 = No display constant generated). The second indicator was undefined. The subfield codes were: $a (Source of data note), $6 (Linkage). Source of data information may be contained in field 500 (General Note) or included in field 567 (Methodology Note).
+
+   Field 542 - Information Relating to Copyright Status [NEW, 2008]
+
+   Field 543 - Solicitation Information Note [OBSOLETE, 1983] [USMARC only, AM]
+   The indicators were undefined. The subfield code was: $a (Solicitation information note). Solicitation information may be contained in field 583 (Action Note).
+
+   Field 563 - Binding Information [NEW, 2002]
+
+   Field 570 - Editor Note (SE) [OBSOLETE, 1990]
+   Both indicator positions were undefined. The subfield codes were: $a (Editor note), $z (Source of note information), $6 (Linkage). Editor information may be contained in field 500 (General Note).
+
+   Field 582 - Related Computer Files Note (CF) [OBSOLETE, 1993]
+   The first indicator was defined as Display constant controller ( = Related files, 8 = No display constant generated). The second indicator was undefined. The subfield codes were: $a (Related computer files note), $6 (Linkage). Related computer files information may be contained in fields 580 (Linking Entry Complexity Note) and 787 (Nonspecific Relationship Entry).
+
+   588 - Source of Description Note [NEW, 2009]
+** 500 - General Note (R) 
+*** Full
+*** Concise
+** 501 - With Note (R) 
+*** Full
+*** Concise
+** 502 - Dissertation Note (R) 
+*** Full
+*** Concise
+** 504 - Bibliography, etc. Note (R) 
+*** Full
+*** Concise
+** 505 - Formatted Contents Note (R) 
+*** Full
+*** Concise
+** 506 - Restrictions on Access Note (R) 
+*** Full
+*** Concise
+** 507 - Scale Note for Graphic Material (NR) 
+*** Full
+*** Concise
+** 508 - Creation/Production Credits Note (R) 
+*** Full
+*** Concise
+** 510 - Citation/References Note (R) 
+*** Full
+*** Concise
+** 511 - Participant or Performer Note (R) 
+*** Full
+*** Concise
+** 513 - Type of Report and Period Covered Note (R) 
+*** Full
+*** Concise
+** 514 - Data Quality Note (NR) 
+*** Full
+*** Concise
+** 515 - Numbering Peculiarities Note (R) 
+*** Full
+*** Concise
+** 516 - Type of Computer File or Data Note (R) 
+*** Full
+*** Concise
+** 518 - Date/Time and Place of an Event Note (R) 
+*** Full
+*** Concise
+** 520 - Summary, etc. (R) 
+*** Full
+*** Concise
+** 521 - Target Audience Note (R) 
+*** Full
+*** Concise
+** 522 - Geographic Coverage Note (R) 
+*** Full
+*** Concise
+** 524 - Preferred Citation of Described Materials Note (R) 
+*** Full
+*** Concise
+** 525 - Supplement Note (R) 
+*** Full
+*** Concise
+** 526 - Study Program Information Note (R) 
+*** Full
+*** Concise
+** 530 - Additional Physical Form available Note (R) 
+*** Full
+*** Concise
+** 533 - Reproduction Note (R) 
+*** Full
+*** Concise
+** 534 - Original Version Note (R) 
+*** Full
+*** Concise
+** 535 - Location of Originals/Duplicates Note (R) 
+*** Full
+*** Concise
+** 536 - Funding Information Note (R) 
+*** Full
+*** Concise
+** 538 - System Details Note (R) 
+*** Full
+*** Concise
+** 540 - Terms Governing Use and Reproduction Note (R) 
+*** Full
+*** Concise
+** 541 - Immediate Source of Acquisition Note (R) 
+*** Full
+*** Concise
+** 542 - Information Relating to Copyright Status (R) 
+*** Full
+*** Concise
+** 544 - Location of Other Archival Materials Note (R) 
+*** Full
+*** Concise
+** 545 - Biographical or Historical Data (R) 
+*** Full
+*** Concise
+** 546 - Language Note (R) 
+*** Full
+*** Concise
+** 547 - Former Title Complexity Note (R) 
+*** Full
+*** Concise
+** 550 - Issuing Body Note (R) 
+*** Full
+*** Concise
+** 552 - Entity and Attribute Information Note (R) 
+*** Full
+*** Concise
+** 555 - Cumulative Index/Finding Aids Note (R) 
+*** Full
+*** Concise
+** 556 - Information About Documentation Note (R) 
+*** Full
+*** Concise
+** 561 - Ownership and Custodial History (R) 
+*** Full
+*** Concise
+** 562 - Copy and Version Identification Note (R) 
+*** Full
+*** Concise
+** 563 - Binding Information (R) 
+*** Full
+*** Concise
+** 565 - Case File Characteristics Note (R) 
+*** Full
+*** Concise
+** 567 - Methodology Note (R) 
+*** Full
+*** Concise
+** 580 - Linking Entry Complexity Note (R) 
+*** Full
+*** Concise
+** 581 - Publications About Described Materials Note (R) 
+*** Full
+*** Concise
+** 583 - Action Note (R) 
+*** Full
+*** Concise
+** 584 - Accumulation and Frequency of Use Note (R) 
+*** Full
+*** Concise
+** 585 - Exhibitions Note (R) 
+*** Full
+*** Concise
+** 586 - Awards Note (R) 
+*** Full
+*** Concise
+** 588 - Source of Description Note (R) 
+*** Full
+*** Concise
+** 59X - Local Notes 
+*** Full
+*** Concise
+
+* 6XX: Subject Access Fields
+** DEFINITION AND SCOPE
+   6XX fields contain subject access entries and terms. Most of these fields contain subject added entries or access terms based on the lists and authority files identified in the second indicator (Subject heading system/thesaurus) or in subfield $2 (Source of subject heading or term). One field contains uncontrolled subject access data.
+
+   For mixed materials and collections under archival control, considerable use is made of the 6XX fields to reflect the subject content of the described materials through controlled and uncontrolled headings and terms. The 7XX fields are used less frequently to provide access.
+
+   Descriptions of the first indicator and all subfield codes, as well as input conventions for the 600, 610, 611, and 630 fields, are given in the following General Information sections: X00, X10, X11 and X30. The second indicator is described in the specific section for each field. All content designators for the 650-658 fields are described in the specific section for each field.
+** CONTENT DESIGNATOR HISTORY
+   Field 600-651 - Subject added entries
+   Indicator 2 - Subject heading system/thesaurus
+   In 1982 the use of the second indicator value in subject added entry fields 600-651 was expanded from specifying the organization that assigned the subject added entry to specifying the subject heading system, thesaurus, or authority file used by an organization to assign the subject added entry. Accordingly, values 0-3 and 5-6 became authoritative-agency data elements and their definitions were changed to the names of the list or authority file. The definition of value 4 was changed from Other subject heading. Prior to 1975, value 5 was defined in the visual materials specifications as Subject heading to be printed only in LC book catalog. Prior to 1977, value 5 was defined in the archival and manuscripts control specifications as National Union Catalog of Manuscripts (NUCMC) subject heading.
+
+   Field 648 - Subject Added Entry-Chronological Term [NEW, 2002]
+
+   Field 652 - Subject Added Entry-Reversed Geographic [OBSOLETE, 1980]
+   Field 652 was an agency-defined field used by the Library of Congress for reversed geographic added entries assigned to materials classed in LC classification number span G1000-G9999. For each regular Topic-Place subject heading assigned, a reversed Place--Topic heading was also assigned. Both indicator positions were undefined. The subfield codes were: $a (Geographic name or place element), $x (General subject subdivision), $y (Chronological subject subdivision), $z (Geographic subject subdivision).
+
+   Field 662 - Subject Added Entry - Hierarchical Place Name [NEW, 2005]
+
+   Field 680 - PRECIS Descriptor String [OBSOLETE, 1991] [CAN/MARC only]
+   PRECIS Descriptor String is a sequence of subject index terms in which each term is preceded by a code which determines how it should appear in entries generated by a computer. The first indicator was undefined. The second indicator values 0-9 were used to link alternative subject statements to the corresponding Dewey classification number. Subfields $a-$z contained the text of the PRECIS Descriptor String.
+
+   Field 681 - PRECIS Subject Indicator Number (SIN) [OBSOLETE, 1991] [CAN/MARC only]
+   PRECIS Subject Indicator Number (SIN) is a fixed-length number ending in a modulus 11 check digit. It identifies uniquely the address of the PRECIS data consisting of string and Reference Indicator Number (RIN). The first indicator was undefined. The second indicator values 0-9 were used to link the indicator to the corresponding PRECIS string and other associated subject data. Only subfield $a (PRECIS subject indicator number (SIN)) was defined.
+
+   Field 683 - PRECIS Reference Indicator Number (RIN) [OBSOLETE, 1991] [CAN/MARC only]
+   PRECIS Reference Indicator Number (RIN) is a fixed-length number ending in a modulus 11 check digit which identifies the address of a term in the machine-held thesaurus used as the source of 'See' and 'See also' references in a printed index. The first indicator was undefined. The second indicator values 0-9 were used to link the index numbers to the corresponding PRECIS descriptor string. Only subfield $a (Reference indicator number (RIN)) was defined.
+** 600 - Subject Added Entry - Personal Name (R) 
+*** Full
+*** Concise
+** 610 - Subject Added Entry - Corporate Name (R) 
+*** Full
+*** Concise
+** 611 - Subject Added Entry - Meeting Name (R) 
+*** Full
+*** Concise
+** 630 - Subject Added Entry - Uniform Title (R) 
+*** Full
+*** Concise
+** 648 - Subject Added Entry - Chronological Term (R) 
+*** Full
+*** Concise
+** 650 - Subject Added Entry - Topical Term (R) 
+*** Full
+*** Concise
+** 651 - Subject Added Entry - Geographic Name (R) 
+*** Full
+*** Concise
+** 653 - Index Term - Uncontrolled (R) 
+*** Full
+*** Concise
+** 654 - Subject Added Entry - Faceted Topical Terms (R) 
+*** Full
+*** Concise
+** 655 - Index Term - Genre/Form (R) 
+*** Full
+*** Concise
+** 656 - Index Term - Occupation (R) 
+*** Full
+*** Concise
+** 657 - Index Term - Function (R) 
+*** Full
+*** Concise
+** 658 - Index Term - Curriculum Objective (R) 
+*** Full
+*** Concise
+** 662 - Subject Added Entry - Hierarchical Place Name (R) 
+*** Full
+*** Concise
+** 69X - Local Subject Access Fields (R) 
+*** Full
+*** Concise
+* 70X-75X: Added Entry Fields
+** DEFINITION AND SCOPE
+   Added entries that provide additional access to a bibliographic record from names and/or titles having various relationships to a work. Added entries are made for persons, corporate bodies, and meetings having some form of responsibility for the creation of the work, including intellectual and publishing responsibilities. Also included are added entries for other titles under authority control related to the work for which the record is made, such as other editions, etc. Field 740 contains a title not under authority control for a part of the item being cataloged, or a related item. Added entries are assigned to records for persons, corporate bodies, meetings, and titles which are not given access through subject or series entries. Fields 752-754 provide for access to an item through other aspects of its content or description.
+
+   Descriptions of the first indicator and all subfield codes, as well as input conventions for the 700, 710, 711, and 730 fields are given in the following General Information sections: X00, X10, X11, and X30. The second indicator is described in the specific section for each field. All content designators for fields 720, 740-754 are described in the specific section for each field.
+
+   Added entry fields are not used as often in bibliographic records for materials under archival control as they are for materials under other types of control. In archival control, greater use is made of the 6XX fields for access.
+** CONTENT DESIGNATOR HISTORY
+   Field 705 - Added Entry - Personal Name (Performer) (MU) [OBSOLETE, 1980] [USMARC only]
+
+   Field 715 - Added Entry - Corporate Name (Performing Group) (MU) [OBSOLETE, 1980] [USMARC only]
+
+   Field 751 - Geographic Name/Area Name Entry [OBSOLETE] [CAN/MARC only]
+
+   Field 751 - Added Entry - Geographic Name [NEW, 2007]
+
+   Field 755 - Added Entry - Physical Characteristics [OBSOLETE, 1995]
+** 700 - Added Entry - Personal Name (R) 
+*** Full
+*** Concise
+** 710 - Added Entry - Corporate Name (R) 
+*** Full
+*** Concise
+** 711 - Added Entry - Meeting Name (R) 
+*** Full
+*** Concise
+** 720 - Added Entry - Uncontrolled Name (R) 
+*** Full
+*** Concise
+** 730 - Added Entry - Uniform Title (R) 
+*** Full
+*** Concise
+** 740 - Added Entry - Uncontrolled Related/Analytical Title (R) 
+*** Full
+*** Concise
+** 751 - Added Entry - Geographic Name (R) 
+*** Full
+*** Concise
+** 752 - Added Entry - Hierarchical Place Name (R) 
+*** Full
+*** Concise
+** 753 - System Details Access to Computer Files (R) 
+*** Full
+*** Concise
+** 754 - Added Entry - Taxonomic Identification (R) 
+*** Full
+*** Concise
+* 76X-78X: Linking Entry Fields
+** TODO These content description sections need to be cleaned up quite a bit
+** INICATORS & SUBFIELDS
+First Indicator         Second Indicator
+Note controller         all except 780 and 785 - Display constant controller
+0 - Display note        # - [Field-related phrase]
+1 - Do not display note 0 - Parent [772 only]
+                        8 - No display constant generated
+
+                        780 - Type of relationship
+                        0 - Continues
+                        1 - Continues in part
+                        2 - Supersedes
+                        3 - Supersedes in part
+                        4 - Formed by the union of ... and ...
+                        5 - Absorbed
+                        6 - Absorbed in part
+                        7 - Separted from
+
+                        785 - Type of relationship
+                        0 - Continued by
+                        1 - Continued in part by
+                        2 - Superseded by
+                        3 - Superseded in part by
+                        4 - Absorbed by
+                        5 - Absorbed in part by
+                        6 - Split into ... and ...
+                        7 - Merged with ... to form ...
+                        8 - Changed back to
+
+Subfield Codes
+Descriptive information                Numbers/codes
+$a - Main entry heading (NR)           $e - Language code (NR) [775 only]
+$b - Edition (NR)                      $f - Country code (NR) [775 only]
+$c - Qualifying information (NR) [all  $r - Report number (R) [all except 760,
+except 773]                            762, and 777]
+$d - Place, publisher, and date of     $u - Standard Technical Report Number
+publication (NR)                       (NR) [all except 760, 762, and 777]
+$g - Related parts (R)                 $v - Source contribution (NR) [786 only]
+$h - Physical description (NR)         $w - Record control number (R)
+$i - Relationship information (R)      $x - International Standard Serial
+$j - Period of content [786 only] (R)  Number (NR)
+[786 only]                             $y - CODEN designation (NR)
+$k - Series data for related item (R)  $z - International Standard Book Number
+[all except 760 and 762]               (R) [all except 760, 762, and 777]
+$m - Material specific details (NR)
+$n - Note (R)                          Control subfields
+$o - Other item identifier (R)         $4 - Relationship code (R)
+$p - Abbreviated title (NR) [773 and   $3 - Materials specified (NR) [773 only]
+786 only]                              $6 - Linkage (NR)
+$q - Enumeration and first page [773   $7 - Control subfield (NR)
+only] (NR) [773 only]                  $8 - Field link and sequence number (R)
+$s - Uniform title (NR)
+$t - Title (NR)
+
+** DEFINITION AND SCOPE 
+Information that identifies other related bibliographic items. Each of the
+linking entry fields specifies a different relationship between the target item
+described by the record and a related item. These relationships fall into three
+classes: 1) related items that assist the user in continuing to search but are
+not physically required to obtain the target item (e.g., former entries for
+continuing resources, translations of the target item); 2) related items that
+have to be obtained physically in order to use the target item (e.g., the host
+item for a component part: a journal issue containing a specific article); 3)
+related items that are constituent units of a larger whole (e.g., the
+individual photographs contained in a visual material collection). The linking
+entry fields are designed to generate a note in a display of the record in
+which they appear. They can also provide machine linkage between the
+bibliographic record for the target item and the bibliographic record for the
+related item, if the related item is covered by a separate record; and/or
+facilitate indexing.
+
+** TERMS USED IN LINKING ENTRY FIELDS
+Target Item - Bibliographic item that is the principal or primary unit covered
+by the description for which the record was constructed. The target item is the
+item to which the information in character positions 06 (Type of record) and 07
+(Bibliographic level) of the Leader, and field 245 (Title Statement) apply.
+Related Item - Bibliographic item that has a chronological, horizontal
+(different versions), or vertical (hierarchical) relationship with a target
+item, and for which the linking entry field is formulated.
+Component Part - Bibliographic item that is physically part of another
+bibliographic item such that the retrieval of the part is dependent on the
+physical identification and location of the host item (e.g., a chapter in a
+book, an article in a journal). (Field 774)
+Constituent Unit - Bibliographic item that is part of another item. The
+constituent unit is physically separate from the item of which it is considered
+a part. (Fields 770, 774)
+Host Item - Bibliographic item that either physically contains (as in the case
+of the component part), or bibliographically includes (as in the case of a
+constituent unit), the subpart that is the target item for the record. For
+example, if a record describes a journal article, the host is the journal; if a
+record describes one digital item in a set, the host is the set. (Fields 772,
+773)
+Chronological Relationship - Relationship in time between bibliographic items
+(e.g., the relation of a serial to its predecessors and successors). (Fields
+777, 780, 785)
+Horizontal Relationship - Relationship between versions of a bibliographic item
+in different languages, formats, media, etc. (Fields 765, 767, 775, 776)
+Vertical Relationship - Hierarchical relationship of the whole to its parts and
+the parts to the whole (e.g., a journal article to the journal, collective
+title of conference proceedings to individual titles of contributions,
+subseries to main entry series). (Fields 760, 762, 770)
+
+** RECORD LINKS AND NOTES 
+Linking Entry Fields (fields 760-787) - Fields carry descriptive data
+concerning the related item, the control number for the record of the related
+item, or both. Minimal content designation is provided for the data concerning
+the related item that is used in the linking entry fields. For data operations
+requiring fuller content designation such as indexing and sorting, subfield $w
+(control number for the related item) allows the system to follow that link to
+the related record to obtain fully content-designated data. Moreover, the coded
+data in control subfield $7 allows some types of indexing without reference to
+the actual related record. The value used in the first indicator position of a
+linking entry field determines whether a note is to be generated from the
+linking entry field or from field 580.
+In fields 76X-78X the general resource to resource relationship is indicated by
+the choice of tag with some more specific relationships indicated by indicators
+in fields 772, 780, and 785. Subfield $i is used to indicate relationships not
+expressed in the tag or indicator, thus is appropriate for more specific
+relationship designations. If it is desirable to make the specific relationship
+information available in a coded form, subfield $4 is used.
+Linking Entry Complexity Note (field 580) - Linking Entry Fields are designed
+to support generation of a note concerning the related item in a display of the
+record for the target item. When the relationship is too complex to be
+expressed using relationship information expressed by the tag indicator, or $i
+or $4 subfields, and the data from the linking entry field or the linked
+record, the note is recorded in the Linking Entry Complexity Note field. When
+used, this field appears in addition to any relevant 760-787 linking entry
+field, and no note is generated from the linking entry field.
+Added Entries (fields 700-730) - When an added entry is desired for a title
+used in a linking field, the added entry is recorded in the appropriate 700-730
+field. Linking fields are not intended to take the place of added entries.
+Likewise, an added entry in field 700-730 does not take the place of a linking
+field, as it cannot cause a note to be generated or carry a record link.
+Component Parts/Constituent Units - Linking entry field 773 (Host Item Entry)
+is used to link the record for a component part that is an integral part of
+another item to the record for the other item. For example, in records for
+journal articles, it contains an identification of the journal. The exact
+location of the article in the journal is recorded in subfield $g of field 773.
+The record for the host item or any larger bibliographic unit may include
+information about constituent units, recorded in the repeatable field 774
+(Constituent Unit Entry). Information about each constituent would be recorded
+in a separate occurrence of field 774.
+
+**** GUIDELINES FOR APPLYING CONTENT DESIGNATORS ****
+** INDICATORS
+First Indicator - Note controller
+Whether or not a display note is to be generated from the field.
+0 - Display note
+Note is to be generated from the data in the linking entry field (or from the
+related record identified in the field).
+780 00$tAmerican journal of religious psychology and education
+1 - Do not display note
+Note is not to be generated from the data in the linking entry field (or from
+the related record). Value 1 is used when the display constant associated with
+the linking field does not adequately describe the relationship. In this case,
+a note for display is recorded in field 580. The 760-787 field is recorded to
+provide the machine linkage and field 580 is used for display.
+Second Indicator - Display constant controller [all except 780 and 785]
+Controls display constants preceding the data in linking entry fields 760-777
+and 786-787. For the print constants, see the description of the second
+indicator in the sections for each linking entry field.
+# - Field-related phrase
+0 - Parent 772 only
+8 - No display constant generated
+Second Indicator - Type of relationship 780
+Identifies the type of relationship in field 780 only. See the description
+under the section for field 780 (Preceding Entry). For that field, the display
+constants are specified in Input Conventions.
+0 - Continues
+1 - Continues in part
+2 - Supersedes
+3 - Supersedes in part
+4 - Formed by the union of ... and ...
+5 - Absorbed
+6 - Absorbed in part
+7 - Separted from
+Second Indicator - Type of relationship [785]
+Identifies the type of relationship in field 785. See the description under the
+section for field 785 (Succeeding Entry). For that field, the display constants
+are specified in Input Conventions.
+0 - Continued by
+1 - Continued in part by
+2 - Superseded by
+3 - Superseded in part by
+4 - Absorbed by
+5 - Absorbed in part by
+6 - Split into ... and ...
+7 - Merged with ... to form ...
+8 - Changed back to
+** SUBFIELD CODES
+As a general rule, each subfield defined for the linking entry fields
+corresponds to a field or field block that would be used to describe the
+related item in a separate record. A separate bibliographic record for the
+related item may or may not exist. For example, subfield $a (Main entry
+heading), corresponds to the 1XX (Main Entries) block; subfield $t (Title)
+corresponds to field 245 (Title Statement), and so on. The rules and practices
+applied to formulating the data in the linking entry fields are usually the
+same as would be followed for formulating the data about a related item in a
+separate bibliographic record except that the information provided need not be
+as complete. The fullness of the bibliographic information about the related
+item recorded in the linking entry fields should be based on the intended use
+of the links. When the related item is represented by a separate bibliographic
+record, recording only the basic bibliographic details (e.g., title, and
+relationship information) is usually sufficient.
+$a - Main entry heading
+Main entry heading data (without the content designators) from field 100 (Main
+Entry-Personal Name), 110 (Main Entry-Corporate Name), or 111 (Main Entry-
+Meeting Name) in the related record. Individual components of the name or
+uniform title are not recorded in a separate subfield as they would be in a 1XX
+field.
+    Related record:
+100 1#$aMellor, Alec.
+245 10$aStrange masonic stories
+    Linking entry:
+775 0#$aMellor, Alec.$tStrange masonic stories$eeng
+$b - Edition
+Name of the edition from field 250 (Edition Statement) of the related record.
+    Related record:
+245 04$aThe Wall Street journal.
+250 ##$aSouthwest ed.
+    Linking entry:
+775 0#$tWall Street journal$bSouthwest ed.
+$c - Qualifying information [all except 773]
+Data needed to distinguish between two titles. This information is generally
+parenthetical information supplied by the cataloger. In pre-AACR 2 records for
+serials, subfield $c contains the information usually taken from subfield $b
+(Qualifying information) of field 222 (Key Title).
+$d - Place, publisher, and date of publication
+Publication information from subfields $a, $b, and/or $c of field 260
+(Publication, Distribution, etc. (Imprint)) of the related record.
+$e - Language code [775 only]
+Language code from field 008/35-37 (Language) of the related record.
+          Related record:
+008/35-37 fre
+          Linking entry:
+775       1#$tDiscours du budget$efre
+$f - Country code [775 only]
+Country code from field 008/15-17 (Place of publication, production, or
+execution) of the related record.
+$g - Related parts
+Data that indicates the specific piece or pieces of the related item that are
+involved in the relationship with the resource described in the 1XX/245 of the
+record, such as dates and volumes. The related parts information includes the
+location of a component part in a target item.
+772 1#$tDevelopmental biology$x0012-1606$g1972-1974
+773 0#$tHorizon$gVol. 17, no. 98 (Feb. 1948), p. 78-159
+$h - Physical description
+Physical description of the related item.
+$i - Relationship information
+Designation of a relationship between the resource described in the 76X-78X
+field and the resource described in the 1XX/245 of the record. This may be in
+the form of uncontrolled text or a controlled text value. The second indicator
+contains value 8 (No display constant generated) except in fields 780 and 785
+when data in this subfield is intended to be displayed. The data in subfield $i
+can be displayed preceding the other data contained in the field.
+100 1# $aVerdi, Giuseppe, $d1813-1901.
+245 10 $aOtello :$bin full score /$cGiuseppe Verdi.
+700 1# $iLibretto based on (work) $aShakespeare, William, $d1564-1616.
+    $tOthello.
+787 08 $ireproduction of (manifestation) $aVerdi, Giuseppe, $d1813-1901.
+    $tOtello.$d Milan: Ricordi, c1913
+ 
+User display:
+Verdi, Giuseppe, $d 1813-1901. Otello : in full score / Giuseppe Verdi
+    Reproduction of Verdi, Giuseppe, 1813-1901. Otello. Milan : Ricordi,
+   c1913
+    Libretto based on Shakespeare, William, $d 1564-1616. Othello.
+245 00 136th Street, southeastern section of the Bronx.
+300 ## $a 11 slides.
+774 08 $iComponent item:$o NYDA.1993.010.00132.$n[DIAPimage]. $tView SE
+    from Mill Brook Houses on rooftop on Cypress Ave. Between 136th St.
+    and 137th St.,$d93/05
+$j - Period of content [786 only]
+Beginning, and if appropriate, the ending date(s) of the content of the related
+item. The information is recorded according to Representation of dates and
+times (ISO 8601). The date requires 8 numeric characters in the pattern
+yyyymmdd (4 for the year, 2 for the month, and 2 for the day). The time
+requires 8 numeric characters in the pattern hhmmss.f (2 for the hour, 2 for
+the minute, 2 for the second, and 2 for a decimal fraction of the second,
+including the decimal point). The 24-hour clock (00-23) is used. An indication
+of the basis on which the source time period of content information was
+determined is also recorded in this subfield.
+$k - Series data for related item [all except 760 and 762]
+Series entry from the 4XX (Series Statement) or 8XX (Series Added Entry) of the
+related record. Note: The parentheses that enclose the series statement are not
+carried in the MARC record. They may be system generated as display constants
+associated with the presence of subfield $k.
+$m - Material specific details
+Material specific information (e.g., for maps, the mathematical data
+information relating to the related item).
+$n - Note
+Note about the related bibliographic item.
+$o - Other item identifier
+Numbers, codes, etc. used to identify an item when these identifiers are not
+appropriate for one of the more specific subfields (e.g., subfield $z (ISBN)).
+Examples include item or accession numbers.
+774 00$oNYDA.1993.010.00132$n[DIAPimage].$tView SE from Mill Brook Houses
+    on rooftop on Cypress Ave. between 136th St. and 137th St.,$d93/05
+$p - Abbreviated title [773 and 786 only]
+Abbreviated title from field 210 (Abbreviated Title) of the related record.
+$q - Enumeration and first page [773 only]
+Enumeration and pagination designations that are formed using the rules for the
+creation of the Enumeration and Location segments of the SICI (Serial Item and
+Contribution Identifier). These provide reference to the enumeration and first
+page data elements for the constituent unit of the host item described in the
+773 field.
+773 0#$7nnas$tCalifornia journal.$gVol. 24, pt. B no. 9 (Sept. 1993), p.
+    235-48$q24:B:9<235
+$r - Report number [all except 760, 762, and 777]
+Report number from field 088 (Report Number) of the related record.
+$s - Uniform title
+Title from field 240 (Uniform Title) or field 243 (Collective Uniform Title) of
+the related record. When subfield $s is used in a linking field for related
+legal materials or translations, subfield $t is usually also included in the
+linking field.
+$t - Title
+Title information from subfields $a, $f, $g, $k, $n, and $p of fields 130 (Main
+Entry - Uniform Title) and 245 (Title Statement) of the related record.
+Individual components of the title are not separately subfield coded. (Prior to
+1981, subfield $t was sometimes derived from subfield $a of field 222 (Key
+Title) when the key title was present on the record.)
+    Related record:
+245 00$aArmy, Navy, Air Force register.
+580 ##$aMerged with: Army, Navy, Air Force journal, to form ...
+    Linking entry:
+785 17$tArmy, Navy, Air Force journal
+$u - Standard Technical Report Number [all except 760, 762, and 777]
+Standard Technical Report Number from field 027 (Standard Technical Report
+Number) of the related record. Note: The initialism STRN: that precedes the
+number is not carried in the MARC record. It may be system generated as a
+display constant associated with the presence of subfield $u.
+$v - Source contribution [786 only]
+Brief statement identifying the information contributed by a source to a data
+set. It is used primarily with linking field 786 (Data Source Entry).
+786 0#$aDefense Mapping Agency.$tReno, NV-CA west digital terrain
+    elevation data$vData for reformatting to DEM format
+$w - Record control number
+System control number of the related record preceded by the MARC code, enclosed
+in parentheses, for the agency to which the control number applies. See
+Appendix I: Organization_Code_Sources for a listing of sources used in MARC 21
+records.
+780 00$tTechniques of biochemical and biophysical morphology$w
+    (DLC)###72000153#$w(OCoLC)1021945
+780 00$tReview of existential psychology &amp; psychiatry$w
+    (DLC)sf#77000170#
+785 17$tAdult correctional services in Canada$w(CaOONL)840790694E
+$x - International Standard Serial Number
+ISSN for a serial title from field 022 (International Standard Serial Number)
+in the related record. (The ISSN is an agency-assigned data element. ISSN's are
+assigned to serial publications by national centers under the auspices of the
+ISSN Network.) Note: The initialism ISSN that precedes the number is not
+carried in the MARC record. It may be system generated as a display constant
+associated with the presence of subfield $x.
+245 00$aAnnual law review /$cUniversity of Western Australia.
+785 00$tUniversity of Western Australia law review$x0042-0328$w
+    (OCoLC)1587621
+$y - CODEN designation
+CODEN designation, a unique identifier for scientific and technical periodical
+titles, from field 030 (CODEN Designation) in the related record. Note: The
+acronym CODEN that precedes the number is not carried in the MARC record. It
+may be system generated as a display constant associated with the presence of
+subfield $y.
+780 00$tIllinois journal of mathematics$yIJMTAW$w(DLC)###59003745#
+$z - International Standard Book Number [all except 760, 762, and 777]
+ISBN from field 020 (International Standard Book Number) in the related record.
+(The ISBN is an agency-assigned data element.) Note: The initialism ISBN that
+precedes the number is not carried in the MARC record. It may be system
+generated as a display constant associated with the presence of subfield $z.
+$3 - Materials specified [773 only]
+Part of the described materials to which the field applies.
+$4 - Relationship code
+Designation in coded form of a relationship between the resource described in
+the 76X-78X field and the resource described in the 1XX/245 of the record.
+$6 - Linkage
+See description of this subfield in Appendix A: Control_Subfields.
+$7 - Control subfield
+Up to four character positions (designated 0, 1, etc.) that indicate special
+characteristics of the linked entry. Because the definitions of the codes in
+subfield $7 are dependent on the character position in which they occur, the
+coding of any character position mandates that each preceding character
+position contains a code or the fill character (|); succeeding character
+positions need not be used. For example, if position 0 and 1 are not applicable
+but position 2 is applicable, then position 0 and 1 contain code n (Not
+applicable) or a fill character.
+/0 - Type of main entry heading
+Code indicating either the type of name contained in subfield $a or the uniform
+title in subfield $t. The codes correspond to the 1XX tag in the record for the
+related item: 100 (Main Entry-Personal Name), 110 (Main Entry-Corporate Name),
+111 (Main Entry-Meeting Name), and 130 (Main Entry-Uniform Title). Code n is
+used when no other codes apply.
+p Personal name
+c Corporate name
+m Meeting name
+u Uniform title
+n Not applicable
+/1 - Form of name
+Code indicating the form of the name contained in subfield $a. The code
+corresponds to the value of the first indicator in the 1XX field in the record
+for the related item, and must thus be interpreted in conjunction with the
+value in position 0.If position 0 = p (Personal name), position 1 contains one
+of the following codes:
+0 Forename
+1 Surname
+3 Family name
+If position 0 = c (Corporate name) or m (Meeting name), position 1 contains one
+of the following codes:
+0 Inverted name
+1 Jurisdiction name
+2 Name in direct order
+If position 0 = u (Uniform title) or n (Not applicable), position 1 contains:
+n Not applicable
+/2 - Type of record
+Code indicating the type of record for the related item. The code corresponds
+to the code in Leader/06 (Type of record) in the record for the related item.
+a Language material
+c Notated music
+d Manuscript notated music
+e Cartographic material
+f Manuscript cartographic material
+g Projected medium
+i Nonmusical sound recording
+j Musical sound recording
+k Two-dimensional nonprojectable graphic
+m Computer file
+o Kit
+p Mixed material
+r Three-dimensional artifact or naturally occurring object
+t Manuscript language material
+/3 - Bibliographic level from Leader/07 of related record
+Code indicating the bibliographic level of the related item. The code
+corresponds to that in Leader/07 in the record for the related item.
+a Monographic component part
+b Serial component part
+c Collection
+d Subunit
+i Integrating resource
+m Monograph/item
+s Serial
+772 1#$7unas$tPost boy (London, England)
+773 0#$7p1am$aDesio, Ardito, 1897-$tGeographical features of the
+    Karakorum.$dMilano : ISMEO, 1991
+$8 - Field link and sequence number
+See description of this subfield in Appendix A: Control_Subfields.
+
+** INPUT CONVENTIONS
+Establishing a link - Links are established reciprocally in related
+bibliographic records. A linking entry field links to a related item which may
+be represented in a file by a record. When related records exist, each record
+may contain a corresponding linking entry. In some cases the reciprocal linking
+entries use the same field tags, in others they have corresponding field tags.
+The reciprocal field tags are as shown below:
+
+Record                             Related_record
+760 (Main Series Entry)            762 (Subseries Entry)
+765 (Original Language Entry)      767 (Translation Entry)
+770 (Supplement/Spec. Issue Entry) 772 (Supplement Parent Entry)
+773 (Host Item Entry)              774 (Constituent Unit Entry)
+775 (Other Edition)                775 (Other Edition)
+776 (Additional Physical Form)     776 (Additional Physical Form)
+777 (Issued With Entry)            777 (Issued With Entry)
+780 (Preceding Entry)              785 (Succeeding Entry)
+787 (Nonspec. Relationship Entry)  787 (Nonspec. Relationship Entry)
+
+Definitions of the second indicator values for reciprocal fields 780 and 785
+are also reciprocal as shown below:
+
+2nd_indicator_of_780           2nd_indicator_of_785
+0-Continues                    0-Continued by
+1-Continues in part            1-Continued in part by
+2-Supersedes                   2-Superseded by
+3-Supersedes in part           3-Superseded in part by
+4-Formed by union of... and... 7-Merged with... to form...
+5-Absorbed                     4-Absorbed by
+6-Absorbed in part             5-Absorbed in part by
+7-Separated from               6-Split into... and...
+------                         8-Changed back to...
+Punctuation - Ends with the punctuation contained in the 1XX field of the
+related record. The linking entry fields do not end in a mark of punctuation
+unless an abbreviation, initial/letter, or other data that ends with a period
+is present, or subfield $a is the last subfield.
+780 00$tJournal of the Australian Mathematical Society. Series A, Pure
+    mathematics
+780 00$aAssociation of American Library Schools.$tDirectory of American
+    Library Schools$w(DLC)sc#84007016#
+Order of subfields - Control subfields should be given in the following order
+when more than one is present: subfield $6, then subfield $3, and subfield $7
+recorded last.
+Initial articles - Initial articles in the entry of the related record are
+omitted in linking entry fields except in entries where the intent is to file
+on the initial article.
+    Related record:
+245 04$aThe Journal of microbiology.
+    Linking entry:
+780 00$tJournal of microbiology
+    Related record:
+110 1#$aEl Salvador.$bDirección General de Estadística.
+245 10$aResúmen estadístico de la República de El Salvador.
+    Linking entry:
+780 01$aEl Salvador. Dirección General de Estadística.$tResúmen
+    estadístico de la República de El Salvador
+** CONTENT DESIGNATOR HISTORY 
+Fields 760-787 originally were defined only in the serials specifications and
+contained information describing relationships between bibliographic items that
+did not necessarily facilitate indexing or provide a machine link to the record
+for the related item. In 1977, subfield $w (Record control number) was defined
+in these fields to facilitate linkage among records within a given system and
+across systems.
+
+In 1981, the following fields were validated for the books specifications and
+subfield $r was defined to permit linkage through report numbers of technical
+report materials: 765, 767, 770, 772, 775, 776, 780, 785, and 787.
+
+When the record-linking technique was fully developed in 1982, field 773 (Host
+Item Entry) was defined for all MARC specifications to accommodate the
+cataloging of component parts. The definitions of several other subfields were
+either broadened or more narrowly defined at that time.
+
+Field 786 - Data Source Entry [NEW, 1995]
+Field 787 - Nonspecific Relationship Entry [RENAMED, 2009]
+
+$c - Place of publication (SE) [REDEFINED, 1976]
+$d - Dates of publication (SE) [OBSOLETE, 1976]
+$g - Relationship dates [REDEFINED, 1982]
+Subfield $g was broadened in 1982 as part of the record-linking specifications,
+specifically to include the location information of a component part in a host
+item.
+$b - Edition [NEW, 1982]
+$d - Place, publisher, and date of publication [NEW, 1982]
+$g - Relationship information [RENAMED, 2009]
+$i - Display text [REDEFINED, 2009]
+$k - Series data for related item [NEW, 1982]
+$s - Uniform title [NEW, 1982]
+$q - Parallel title [OBSOLETE, 1990]
+$q - Enumeration and first page [NEW, 2003]
+$7 - Control subfield [NEW, 1982]
+Prior to 1982, edition statements and publication statements were recorded in
+subfield $c, and uniform titles were recorded in subfield $t.
+$7/1 - Form of name2 - Multiple surname [OBSOLETE, 1996]
+Use of the Form of name code 2 (Multiple surname) was made obsolete when code 1
+(Single surname) was redefined as surname to be used for headings with either
+single or multiple surnames.
+$7/2 - Type of record
+    $b - Archival and manuscripts control [OBSOLETE, 1995]
+$7/3 - Bibliographic level from Leader/07 of related record
+    p - Pamphlet [OBSOLETE] [CAN/MARC only]
+
+$4 - Relationship code [NEW, 2009]
+
+
+
+** 760 - Main Series Entry (R) 
+*** Full
+*** Concise
+** 762 - Subseries Entry (R) 
+*** Full
+*** Concise
+** 765 - Original Language Entry (R) 
+*** Full
+*** Concise
+** 767 - Translation Entry (R) 
+*** Full
+*** Concise
+** 770 - Supplement/Special Issue Entry (R) 
+*** Full
+*** Concise
+** 772 - Supplement Parent Entry (R) 
+*** Full
+*** Concise
+** 773 - Host Item Entry (R) 
+*** Full
+*** Concise
+** 774 - Constituent Unit Entry (R) 
+*** Full
+*** Concise
+** 775 - Other Edition Entry (R) 
+*** Full
+*** Concise
+** 776 - Additional Physical Form Entry (R) 
+*** Full
+*** Concise
+** 777 - Issued With Entry (R) 
+*** Full
+*** Concise
+** 780 - Preceding Entry (R) 
+*** Full
+*** Concise
+** 785 - Succeeding Entry (R) 
+*** Full
+*** Concise
+** 786 - Data Source Entry (R) 
+*** Full
+*** Concise
+** 787 - Other Relationship Entry (R) 
+*** Full
+*** Concise
+* 80X-83X: Series Added Entry Fields
+** FIELD DEFINITION AND SCOPE
+Fields 800-830 contain series added entries for series associated with a title. These fields are used to trace a series added entry when the form of series present in the 490 Series Statement field cannot serve additionally as a series added entry.
+
+A description of the first indicator and all subfield codes, as well as input conventions for the 800, 810, 811, and 830 fields, are given in the following General Information sections: X00, X10, X11, and X30. The second indicator is described in the specific section for each field.
+** CONTENT DESIGNATOR HISTORY
+   Field 840 - Series Added Entry - Title [OBSOLETE, 1980]
+   Field 840 was made obsolete when the decision was made to use field 830 for both uniform titles and conventional titles that are not entered under a name. For field 840, the first indicator was undefined; the second was defined for nonfiling characters (values 0-9). The subfield codes were: $a (Title), $h (Medium), $v (Volume or number).
+** 800 - Series Added Entry - Personal Name (R) 
+*** Full
+*** Concise
+** 810 - Series Added Entry - Corporate Name (R) 
+*** Full
+*** Concise
+** 811 - Series Added Entry - Meeting Name (R) 
+*** Full
+*** Concise
+** 830 - Series Added Entry - Uniform Title (R) 
+*** Full
+*** Concise
+* 841-88X: Holdings, Location, Alternate Graphics, Etc. Fields
+** DEFINITION AND SCOPE
+   Descriptions for data elements which are an integral part of the MARC 21 Format for Bibliographic Data and data elements which may appear either in bibliographic records or in separate MARC holdings records.
+
+   Field 850 is a bibliographic record field that contains minimal holdings location data. Field 852 contains more extensive location data. Field 856 covers information about the location of electronic resources. These fields are described fully in this format. Fields 841-845, 853-855, and 863-878 are only listed here.
+
+   Full descriptions for them appear in the MARC 21 Format for Holdings Data. The holdings format should be consulted for field descriptions and information concerning the inclusion of fields 841-845, 853-855, and 863-878 in bibliographic records.
+
+   Fields 880, 882, 886 and 887 have special uses described in this document.
+** CONTENT DESIGNATOR HISTORY
+   Field 851 - Location (AM, MP, VM) [OBSOLETE, 1993]
+   Both indicator positions were undefined. The subfield codes were: $a (Name (custodian or owner)), $b (Institutional division), $c (Street address), $d (Country), $e (Location of units), $f (Item number), $g (Repository location code), $3 (Materials specified), $6 (Linkage). Location information may be contained in holdings/bibliographic field 852 (Location). 
+
+   Field 870 - Variant Personal Name (BK, AM, MP, MU, VM, SE) [OBSOLETE, 1987]
+
+   Field 871 - Variant Corporate Name (BK, AM, MP, MU, VM, SE) [OBSOLETE, 1987]
+
+   Field 872 - Variant Conference or Meeting Name (BK, AM, MP, MU, VM, SE) [OBSOLETE, 1987]
+
+   Field 873 - Variant Uniform Title Heading (BK, AM, MP, MU, VM, SE) [OBSOLETE, 1987]
+
+   Fields 870, 871, 872, and 873 were defined for the serials specifications in 1979. The subfield codes were the same as the corresponding heading field, with the addition of subfield $j (Tag and sequence number of the field for which the 87X field is a variant). The first indicator in each field was the same as in the corresponding 1XX, 4XX, 6XX, 7XX, or 8XX heading field. The second indicator specified the form of heading: Indicator 2 - Form of heading
+   0 - ALA form, as authenticated by LC
+   1 - AACR 1 form, as authenticated by LC
+   2 - ALA form, not yet authenticated by LC
+   3 - AACR 1 form, not yet authenticated by LC
+
+   Field 882 - Replacement Record Information [NEW, 2007]
+
+   Field 887 - Non-MARC Information Field [NEW, 2001]
+
+** 841 - Holdings Coded Data Values (NR) 
+*** Full
+*** Concise
+** 842 - Textual Physical Form Designator (NR) 
+*** Full
+*** Concise
+** 843 - Reproduction Note (R) 
+*** Full
+*** Concise
+** 844 - Name of Unit (NR) 
+*** Full
+*** Concise
+** 845 - Terms Governing Use and Reproduction (R) 
+*** Full
+*** Concise
+** 850 - Holding Institution (R) 
+*** Full
+*** Concise
+** 852 - Location (R) 
+*** Full
+*** Concise
+** 853 - Captions and Pattern - Basic Bibliographic Unit (R) 
+*** Full
+*** Concise
+** 854 - Captions and Pattern - Supplementary Material (R) 
+*** Full
+*** Concise
+** 855 - Captions and Pattern - Indexes (R) 
+*** Full
+*** Concise
+** 856 - Electronic Location and Access (R) 
+*** Full
+*** Concise
+** 863 - Enumeration and Chronology - Basic Bibliographic Unit (R) 
+*** Full
+*** Concise
+** 864 - Enumeration and Chronology - Supplementary Material (R) 
+*** Full
+*** Concise
+** 865 - Enumeration and Chronology - Indexes (R) 
+*** Full
+*** Concise
+** 866 - Textual Holdings - Basic Bibliographic Unit (R) 
+*** Full
+*** Concise
+** 867 - Textual Holdings - Supplementary Material (R) 
+*** Full
+*** Concise
+** 868 - Textual Holdings - Indexes (R) 
+*** Full
+*** Concise
+** 876 - Item Information - Basic Bibliographic Unit (R) 
+*** Full
+*** Concise
+** 877 - Item Information - Supplementary Material (R) 
+*** Full
+*** Concise
+** 878 - Item Information - Indexes (R) 
+*** Full
+*** Concise
+** 880 - Alternate Graphic Representation (R) 
+*** Full
+*** Concise
+** 882 - Replacement Record Information (NR) 
+*** Full
+*** Concise
+** 886 - Foreign MARC Information Field (R) 
+*** Full
+*** Concise
+** 887 - Non-MARC Information Field (R) 
+*** Full
+*** Concise
+
+
+* TODO Finish Apendex and other areas
 * Heading Fields - General Information
+* Appendix A: Control Subfields
+* Appendix B: Full Level Record Examples
+* Appendix C: Minimal Level Record Examples
+* Appendix D: Multiscript Records
+* Appendix E: Alphabetical List of Ambiguous Headings
+* Appendix F: Initial Definite and Indefinite Articles
+* Appendix G: Format Changes for Update No. 14 (April 2012)
+* Appendix H: Local Data Elements
+* Appendix I: Organization Code Sources
